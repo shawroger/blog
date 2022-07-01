@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+ 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+ 
+      <title>BLOG - Matable 文档</title>
+
+      <link rel="icon" sizes="any" href="/favico.ico">
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml">
+      
+      
+      <script src="https://cdn.bootcdn.net/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+          
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/mathtex-script-type.min.js" integrity="sha384-zWYbd0NBwgTsgIdFKVprSfTh1mbMPe5Hz1X3yY4Sd1h/K1cQoUe36OGwAGz/PcDy" crossorigin="anonymous"></script>
+              
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+                  <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        renderMathInElement(document.body, {
+                            delimiters: [
+                                {left: "$$", right: "$$", display: true },
+                                {left: "$", right: "$", display: false }, 
+                            ]
+                        });
+                    });
+
+                    window.$ZOLA_CONFIG = {
+                        base: "/",
+                        title: "BLOG",
+                        author: "Roger",
+                        navs:  ["Home","Categories","Tags","About",].map(function(e){return e.toLowerCase();}),
+                    }; 
+                </script>
+                  
+          
+      
+
+      
+          <link rel="stylesheet" href="/site.css">
+          
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+          
+      
+
+      
+      
+    </head>
+
+    <body> 
+        <div class="container"> 
+            <div id="mobile-navbar" class="mobile-navbar">
+                <div class="mobile-header-logo">
+                  <a href="/" class="logo">BLOG</a>
+                </div>
+                <div class="mobile-navbar-icon icon-out">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+            
+
+            <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+              <ul class="mobile-menu-list">
+                
+                    <li class="mobile-menu-item">
+                        <a href="/">
+                            Home
+                        </a> 
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="/categories">
+                            Categories
+                        </a> 
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="/tags">
+                            Tags
+                        </a> 
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="/about">
+                            About
+                        </a> 
+                    </li>
+                
+              </ul>
+            </nav>
+
+            <header id="header">
+                
+                <div class="logo"><a href="/">BLOG</a></div>
+                <nav class="menu">
+                    <ul>
+                        
+                            <li>
+                                <a href="/">
+                                    Home
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/categories">
+                                    Categories
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/tags">
+                                    Tags
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/about">
+                                    About
+                                </a>
+                            </li>
+                        
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+                <div class="content" id="mobile-panel">
+                    
+                    
+
+
+
+<article class="post article-content">
+    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="/matable/">Matable 文档</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2020.04.25&nbsp;&nbsp; 共 931 字</span>
+            
+        </div>
+    </header>
+
+    <div class="post-content">
+      <h1 id="matable">Matable</h1>
+<p><code>Matable</code>是一个高效便利的 <code>XLSX文件转网页</code> 的开源工具。</p>
+<p><code>Matable</code>支持自定义配置，支持各种检索模式，使用简单方便。</p>
+<p><code>Matable</code>是一个开源的项目，其使用了如下的开源项目</p>
+<ul>
+<li>
+<p><a href="https://vuejs.org/">vue</a></p>
+</li>
+<li>
+<p><a href="https://github.com/axios/axios">axios</a></p>
+</li>
+<li>
+<p><a href="https://muse-ui.org/">muse-ui</a></p>
+</li>
+</ul>
+<p><img src="https://pic.imgdb.cn/item/610e0dfc5132923bf8e69301.jpg" alt="demo" /></p>
+<span id="continue-reading"></span>
+<h1 id="kuai-su-kai-shi">快速开始</h1>
+<pre style="background-color:#31333d;">
+<code class="language-bash" data-lang="bash"><span style="font-weight:bold;color:#a3cbe3;">git</span><span style="color:#ffffffc4;"> clone https://github.com/shawroger/Matable.git</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<p>或者直接在一个目录准备一个<code>data.xlsx</code>和<code>index.html</code>文件，并在<code>index.html</code>中加入如下内容</p>
+<pre style="background-color:#31333d;">
+<code class="language-html" data-lang="html"><span style="font-weight:bold;color:#dbbb3d;">&lt;!</span><span style="color:#db7c6d;">DOCTYPE </span><span style="color:#ffffff;">html</span><span style="font-weight:bold;color:#dbbb3d;">&gt;</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#dbbb3d;">&lt;</span><span style="color:#db7c6d;">html</span><span style="font-weight:bold;color:#dbbb3d;">&gt;</span><span style="color:#ffffffc4;">
+	</span><span style="font-weight:bold;color:#dbbb3d;">&lt;</span><span style="color:#db7c6d;">head</span><span style="font-weight:bold;color:#dbbb3d;">&gt;</span><span style="color:#ffffffc4;">
+		</span><span style="font-weight:bold;color:#dbbb3d;">&lt;</span><span style="color:#ffffff;">meta </span><span style="color:#e8a64b;">charset</span><span style="font-weight:bold;color:#db7c6d;">=</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">utf-8</span><span style="font-weight:bold;color:#dbbb3d;">&quot; /&gt;</span><span style="color:#ffffffc4;">
+		</span><span style="font-weight:bold;color:#dbbb3d;">&lt;</span><span style="color:#ffffff;">meta </span><span style="color:#e8a64b;">http-equiv</span><span style="font-weight:bold;color:#db7c6d;">=</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">X-UA-Compatible</span><span style="font-weight:bold;color:#dbbb3d;">&quot; </span><span style="color:#e8a64b;">content</span><span style="font-weight:bold;color:#db7c6d;">=</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">IE=edge</span><span style="font-weight:bold;color:#dbbb3d;">&quot; /&gt;</span><span style="color:#ffffffc4;">
+		</span><span style="font-weight:bold;color:#dbbb3d;">&lt;</span><span style="color:#ffffff;">meta </span><span style="color:#e8a64b;">name</span><span style="font-weight:bold;color:#db7c6d;">=</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">viewport</span><span style="font-weight:bold;color:#dbbb3d;">&quot; </span><span style="color:#e8a64b;">content</span><span style="font-weight:bold;color:#db7c6d;">=</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">width=device-width,initial-scale=1.0</span><span style="font-weight:bold;color:#dbbb3d;">&quot; /&gt;</span><span style="color:#ffffffc4;">
+		</span><span style="font-weight:bold;color:#dbbb3d;">&lt;</span><span style="color:#ffffff;">link </span><span style="color:#e8a64b;">href</span><span style="font-weight:bold;color:#db7c6d;">=</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">/matable.css</span><span style="font-weight:bold;color:#dbbb3d;">&quot; </span><span style="color:#e8a64b;">rel</span><span style="font-weight:bold;color:#db7c6d;">=</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">stylesheet</span><span style="font-weight:bold;color:#dbbb3d;">&quot; /&gt;</span><span style="color:#ffffffc4;">
+		</span><span style="font-weight:bold;color:#dbbb3d;">&lt;</span><span style="color:#ffffff;">title</span><span style="font-weight:bold;color:#dbbb3d;">&gt;</span><span style="color:#ffffffc4;">Matable Demo</span><span style="font-weight:bold;color:#dbbb3d;">&lt;/</span><span style="color:#ffffff;">title</span><span style="font-weight:bold;color:#dbbb3d;">&gt;</span><span style="color:#ffffffc4;">
+	</span><span style="font-weight:bold;color:#dbbb3d;">&lt;/</span><span style="color:#db7c6d;">head</span><span style="font-weight:bold;color:#dbbb3d;">&gt;</span><span style="color:#ffffffc4;">
+	</span><span style="font-weight:bold;color:#dbbb3d;">&lt;</span><span style="color:#db7c6d;">body</span><span style="font-weight:bold;color:#dbbb3d;">&gt;</span><span style="color:#ffffffc4;">
+		</span><span style="font-weight:bold;color:#dbbb3d;">&lt;</span><span style="color:#ffffff;">div </span><span style="color:#e8a64b;">id</span><span style="font-weight:bold;color:#db7c6d;">=</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">root</span><span style="font-weight:bold;color:#dbbb3d;">&quot;&gt;&lt;/</span><span style="color:#ffffff;">div</span><span style="font-weight:bold;color:#dbbb3d;">&gt;</span><span style="color:#ffffffc4;">
+		</span><span style="font-weight:bold;color:#dbbb3d;">&lt;</span><span style="color:#db7c6d;">script </span><span style="color:#e8a64b;">src</span><span style="font-weight:bold;color:#db7c6d;">=</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">/matable.js</span><span style="font-weight:bold;color:#dbbb3d;">&quot;&gt;&lt;/</span><span style="color:#db7c6d;">script</span><span style="font-weight:bold;color:#dbbb3d;">&gt;</span><span style="color:#ffffffc4;">
+		</span><span style="font-weight:bold;color:#dbbb3d;">&lt;</span><span style="color:#db7c6d;">script</span><span style="font-weight:bold;color:#dbbb3d;">&gt;</span><span style="color:#ffffffc4;">
+			</span><span style="font-weight:bold;color:#dbbb3d;">const </span><span style="font-weight:bold;color:#a3cbe3;">Matable </span><span style="color:#db7c6d;">= </span><span style="color:#e7e7e7;">window</span><span style="color:#ffffffc4;">.</span><span style="color:#a3cbe3;">Matable</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+			</span><span style="font-weight:bold;color:#dbbb3d;">const </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">createConf </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">Matable</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+			</span><span style="font-weight:bold;color:#dbbb3d;">const </span><span style="font-weight:bold;color:#a3cbe3;">table01 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">createConf</span><span style="color:#ffffffc4;">([</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">data-01.xlsx</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">Table 01</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">], {</span><span style="color:#ffffffc4;">
+				name</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="font-weight:bold;color:#dbbb3d;">&quot;&quot;</span><span style="color:#ffffffc4;">,</span><span style="color:#ffffffc4;">
+				age</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="color:#db7c6d;">0</span><span style="color:#ffffffc4;">,</span><span style="color:#ffffffc4;">
+			});</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+			</span><span style="color:#e7e7e7;">Matable</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">init</span><span style="color:#ffffffc4;">({ copyright</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="color:#ffffff;">true</span><span style="color:#ffffffc4;">, title</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">My Demo</span><span style="font-weight:bold;color:#dbbb3d;">&quot; </span><span style="color:#ffffffc4;">})</span><span style="color:#ffffffc4;">
+				.</span><span style="color:#a2ba43;">add</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">table01</span><span style="color:#ffffffc4;">)</span><span style="color:#ffffffc4;">
+				.</span><span style="color:#a2ba43;">render</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">#root</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+		</span><span style="font-weight:bold;color:#dbbb3d;">&lt;/</span><span style="color:#db7c6d;">script</span><span style="font-weight:bold;color:#dbbb3d;">&gt;</span><span style="color:#ffffffc4;">
+	</span><span style="font-weight:bold;color:#dbbb3d;">&lt;/</span><span style="color:#db7c6d;">body</span><span style="font-weight:bold;color:#dbbb3d;">&gt;</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#dbbb3d;">&lt;/</span><span style="color:#db7c6d;">html</span><span style="font-weight:bold;color:#dbbb3d;">&gt;</span><span style="color:#ffffffc4;">
+</span></code></pre><h1 id="api">API</h1>
+<p>所有的实例方法都支持链式操作</p>
+<h2 id="init">init</h2>
+<p>创建一个<code>Matable</code>实例</p>
+<h2 id="config">config</h2>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#a3cbe3;">type </span><span style="color:#ffffffc4;">ValidSearchMode </span><span style="color:#db7c6d;">= </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">key</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">; </span><span style="font-weight:bold;color:#a3cbe3;">val</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">; </span><span style="font-weight:bold;color:#a3cbe3;">weight</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">number </span><span style="color:#ffffffc4;">}[];</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">type </span><span style="color:#ffffffc4;">SearchConfig </span><span style="color:#db7c6d;">= </span><span style="color:#ffffffc4;">{</span><span style="color:#ffffffc4;">
+	</span><span style="font-weight:bold;color:#a3cbe3;">mode</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string </span><span style="color:#db7c6d;">| </span><span style="color:#e7e7e7;">null </span><span style="color:#db7c6d;">| </span><span style="color:#ffffffc4;">ValidSearchMode </span><span style="color:#db7c6d;">| </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">[];</span><span style="color:#ffffffc4;">
+	</span><span style="font-weight:bold;color:#a3cbe3;">able</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">boolean</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+	</span><span style="font-weight:bold;color:#a3cbe3;">label</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+	</span><span style="font-weight:bold;color:#a3cbe3;">$$val</span><span style="color:#db7c6d;">?: </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+	</span><span style="font-weight:bold;color:#a3cbe3;">sort</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">boolean</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+};</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">interface </span><span style="color:#ffffffc4;">Config {</span><span style="color:#ffffffc4;">
+	</span><span style="font-weight:bold;color:#a3cbe3;">data</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+	</span><span style="font-weight:bold;color:#a3cbe3;">title</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+	</span><span style="font-weight:bold;color:#a3cbe3;">index</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">boolean</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+	</span><span style="font-weight:bold;color:#a3cbe3;">footer</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">boolean</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+	</span><span style="font-weight:bold;color:#a3cbe3;">config</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">SearchConfig[];</span><span style="color:#ffffffc4;">
+	</span><span style="font-weight:bold;color:#a3cbe3;">removeFirstLine</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">boolean</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+	</span><span style="color:#a2ba43;">onLoadData</span><span style="color:#db7c6d;">: </span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">data</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">Array&lt;{ [</span><span style="color:#ffffff;">p</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">]</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string </span><span style="color:#ffffffc4;">}&gt;</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#e7e7e7;">void</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+	</span><span style="color:#a2ba43;">onChangePage</span><span style="color:#db7c6d;">: </span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">page</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">number</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#e7e7e7;">void</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+	</span><span style="color:#a2ba43;">onSortData</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">(</span><span style="color:#ffffffc4;">
+		</span><span style="color:#ffffff;">key</span><span style="color:#db7c6d;">?: </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">,</span><span style="color:#ffffffc4;">
+		</span><span style="color:#ffffff;">order</span><span style="color:#db7c6d;">?: 1 |</span><span style="color:#ffffffc4;"> -</span><span style="color:#db7c6d;">1</span><span style="color:#ffffffc4;">
+	) </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#e7e7e7;">void </span><span style="color:#db7c6d;">| </span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">a</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">, </span><span style="color:#ffffff;">b</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#e7e7e7;">number</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+	</span><span style="color:#a2ba43;">injectJson</span><span style="color:#db7c6d;">: </span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">config</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">Config</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#ffffffc4;">Record&lt;</span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">, </span><span style="color:#e7e7e7;">string </span><span style="color:#db7c6d;">| </span><span style="color:#e7e7e7;">number</span><span style="color:#ffffffc4;">&gt;;</span><span style="color:#ffffffc4;">
+	</span><span style="font-weight:bold;color:#a3cbe3;">meta</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">{</span><span style="color:#ffffffc4;">
+		[</span><span style="color:#ffffff;">key</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">]</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">any</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+	};</span><span style="color:#ffffffc4;">
+}</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<p><code>Config</code>是合法的<code>Matable</code>配置的数据，<code>Matable</code>用其来生成动态表单。</p>
+<p>完整的<code>Config</code>类型比较复杂，因此一般使用<code>createConf</code>函数来创建一个<code>Config</code>类型数据。</p>
+<h2 id="render">render</h2>
+<p>渲染到指定的节点</p>
+<h2 id="createconf">createConf</h2>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#db7c6d;">export </span><span style="color:#a3cbe3;">function </span><span style="color:#a2ba43;">createConf</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffffc4;">
+	</span><span style="color:#ffffff;">info</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string </span><span style="color:#db7c6d;">| </span><span style="color:#ffffffc4;">[</span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">, </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">] </span><span style="color:#db7c6d;">| </span><span style="color:#ffffffc4;">{ [</span><span style="color:#ffffff;">key</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">]</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string </span><span style="color:#ffffffc4;">},</span><span style="color:#ffffffc4;">
+	</span><span style="color:#ffffff;">row</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">{ [</span><span style="color:#ffffff;">key</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">]</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">RowData },</span><span style="color:#ffffffc4;">
+	</span><span style="color:#ffffff;">mergeConfig</span><span style="color:#db7c6d;">?: </span><span style="color:#ffffffc4;">Partial&lt;Config&gt; </span><span style="color:#db7c6d;">| </span><span style="color:#ffffffc4;">Record&lt;</span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">, </span><span style="color:#e7e7e7;">number </span><span style="color:#db7c6d;">| </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">&gt;</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#dbbb3d;">)</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">Config;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<p>创建一个合法的<code>Matable</code>数据配置</p>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#a3cbe3;">const </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">createConf </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">Matable</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">table </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">createConf</span><span style="color:#ffffffc4;">(</span><span style="color:#ffffffc4;">
+	[</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">$FILE.xlsx</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">Table Title</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">],</span><span style="color:#ffffffc4;">
+	{</span><span style="color:#ffffffc4;">
+		</span><span style="color:#707180;">/// 在后文说明 的RowData 配置</span><span style="color:#ffffffc4;">
+	},</span><span style="color:#ffffffc4;">
+	{</span><span style="color:#ffffffc4;">
+		</span><span style="color:#707180;">/// 自定义排序</span><span style="color:#ffffffc4;">
+		</span><span style="color:#a2ba43;">onSortData</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">key</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#ffffffc4;">{</span><span style="color:#ffffffc4;">
+			</span><span style="color:#db7c6d;">if </span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">key </span><span style="color:#db7c6d;">=== </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">age</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">) {</span><span style="color:#ffffffc4;">
+				</span><span style="color:#db7c6d;">return </span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">a</span><span style="color:#ffffffc4;">, </span><span style="color:#ffffff;">b</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="font-weight:bold;color:#a3cbe3;">a </span><span style="color:#db7c6d;">- </span><span style="font-weight:bold;color:#a3cbe3;">b</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+			}</span><span style="color:#ffffffc4;">
+		},</span><span style="color:#ffffffc4;">
+	}</span><span style="color:#ffffffc4;">
+);</span><span style="color:#ffffffc4;">
+</span></code></pre><h2 id="createmode">createMode</h2>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#db7c6d;">export </span><span style="color:#a3cbe3;">function </span><span style="color:#a2ba43;">createMode</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">row</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">{</span><span style="color:#ffffffc4;">
+	[</span><span style="color:#ffffff;">key</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">]</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">RowData;</span><span style="color:#ffffffc4;">
+}</span><span style="font-weight:bold;color:#dbbb3d;">)</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">Partial&lt;GlobalConfig&gt;;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<p>创建合法的<code>Matable</code>数据检索模式</p>
+<p>即生成<code>createConf</code>的第二个函数参数。</p>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#a3cbe3;">const </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">createMode</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">Select </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">Matable</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">mode </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">createMode</span><span style="color:#ffffffc4;">({</span><span style="color:#ffffffc4;">
+	姓名X</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="color:#ffffff;">false</span><span style="color:#ffffffc4;">, </span><span style="color:#707180;">// 不显示此项，其实直接删去即可</span><span style="color:#ffffffc4;">
+	姓名0</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="color:#ffffff;">null</span><span style="color:#ffffffc4;">, </span><span style="color:#707180;">// 无检索模式</span><span style="color:#ffffffc4;">
+	姓名1</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">=</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">, </span><span style="color:#707180;">// 全字匹配</span><span style="color:#ffffffc4;">
+	姓名2</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="font-weight:bold;color:#dbbb3d;">&quot;&quot;</span><span style="color:#ffffffc4;">, </span><span style="color:#707180;">// 部分匹配</span><span style="color:#ffffffc4;">
+	姓名3</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">&gt;=</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">, </span><span style="color:#707180;">// 全字匹配 + 排序</span><span style="color:#ffffffc4;">
+	姓名4</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">&gt;</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">, </span><span style="color:#707180;">// 部分匹配 + 排序</span><span style="color:#ffffffc4;">
+	姓名5</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="color:#db7c6d;">0</span><span style="color:#ffffffc4;">, </span><span style="color:#707180;">// 排序</span><span style="color:#ffffffc4;">
+	姓名6</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="color:#ffffffc4;">[</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">甲</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">乙</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">], </span><span style="color:#707180;">// 数据分类</span><span style="color:#ffffffc4;">
+	姓名7</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="font-weight:bold;color:#a3cbe3;">Select</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">from</span><span style="color:#ffffffc4;">([</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">甲</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">乙</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">]), </span><span style="color:#707180;">// 数据分类 + 排序</span><span style="color:#ffffffc4;">
+});</span><span style="color:#ffffffc4;">
+</span></code></pre><h2 id="parsemode">parseMode</h2>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#db7c6d;">export </span><span style="color:#a3cbe3;">function </span><span style="color:#a2ba43;">parseMode</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">label</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">, </span><span style="color:#ffffff;">mode</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">RowData</span><span style="font-weight:bold;color:#dbbb3d;">)</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">SearchConfig;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<p>生成一列的数据检索模式</p>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#a3cbe3;">const </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">parseMode </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">Matable</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#707180;">// 全字匹配 + 排序</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">mode </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">parseMode</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">姓名</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">&gt;=</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span></code></pre><h2 id="shi-li-fang-fa-resolvedata">实例方法 resolveData</h2>
+<p><code>resolveData</code> 是实例上的一个运行时方法，允许在页面挂载后读取从<code>config</code>获取的数据。</p>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#db7c6d;">export </span><span style="color:#a3cbe3;">type </span><span style="color:#ffffffc4;">ITableData </span><span style="color:#db7c6d;">= </span><span style="color:#ffffffc4;">Array&lt;{ [</span><span style="color:#ffffff;">p</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">]</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string </span><span style="color:#ffffffc4;">}&gt;;</span><span style="color:#ffffffc4;">
+</span><span style="color:#db7c6d;">export </span><span style="color:#a3cbe3;">function </span><span style="color:#a2ba43;">resolveData</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">config</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">Config</span><span style="font-weight:bold;color:#dbbb3d;">)</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">null </span><span style="color:#db7c6d;">| </span><span style="color:#ffffffc4;">ITableData;</span><span style="color:#ffffffc4;">
+</span></code></pre><pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">matable </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">Matable</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">init</span><span style="color:#ffffffc4;">({</span><span style="color:#ffffffc4;">
+	</span><span style="color:#707180;">/*...*/</span><span style="color:#ffffffc4;">
+})</span><span style="color:#ffffffc4;">
+	.</span><span style="color:#a2ba43;">config</span><span style="color:#ffffffc4;">(</span><span style="color:#707180;">/*config*/ </span><span style="color:#ffffffc4;">[</span><span style="font-weight:bold;color:#a3cbe3;">conf_1</span><span style="color:#ffffffc4;">])</span><span style="color:#ffffffc4;">
+	.</span><span style="color:#a2ba43;">render</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">#root</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#707180;">// 必须执行 render 后才可使用 `resolveData` 方法</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">data_01 </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">matable</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">resolveData</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">conf_1</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span></code></pre><h2 id="select">Select</h2>
+<p><code>Select</code> 是一个静态类，提供了两个静态函数</p>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#db7c6d;">export </span><span style="color:#a3cbe3;">type </span><span style="color:#ffffffc4;">SelectMapper </span><span style="color:#db7c6d;">= </span><span style="color:#ffffffc4;">(</span><span style="color:#ffffffc4;">
+	</span><span style="color:#ffffff;">key</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">,</span><span style="color:#ffffffc4;">
+	</span><span style="color:#ffffff;">index</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">number</span><span style="color:#ffffffc4;">
+) </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#ffffffc4;">{</span><span style="color:#ffffffc4;">
+	</span><span style="font-weight:bold;color:#a3cbe3;">key</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+	</span><span style="font-weight:bold;color:#a3cbe3;">val</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+	</span><span style="font-weight:bold;color:#a3cbe3;">weight</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">number</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+};</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#db7c6d;">export </span><span style="color:#a3cbe3;">class </span><span style="color:#ffffffc4;">Select {</span><span style="color:#ffffffc4;">
+	</span><span style="color:#dbbb3d;">static </span><span style="font-weight:bold;color:#a3cbe3;">defaultMap</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">SelectMapper;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+	</span><span style="color:#dbbb3d;">static </span><span style="color:#a2ba43;">from</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">arr</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">Array&lt;</span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">&gt;, </span><span style="color:#ffffff;">mapper</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">SelectMapper</span><span style="font-weight:bold;color:#dbbb3d;">)</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">ValidSearchMode;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+	</span><span style="color:#dbbb3d;">static </span><span style="color:#a2ba43;">range</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffffc4;">
+		</span><span style="color:#ffffff;">fromTo</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">[</span><span style="color:#e7e7e7;">number</span><span style="color:#ffffffc4;">, </span><span style="color:#e7e7e7;">number</span><span style="color:#ffffffc4;">],</span><span style="color:#ffffffc4;">
+		</span><span style="color:#a2ba43;">mapper</span><span style="color:#db7c6d;">: </span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">n</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">number</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">
+	</span><span style="font-weight:bold;color:#dbbb3d;">)</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">ValidSearchMode;</span><span style="color:#ffffffc4;">
+}</span><span style="color:#ffffffc4;">
+</span></code></pre><h3 id="select-from">Select.from</h3>
+<p>将一个 <code>string[]</code> 转为一个 <code>ValidSearchMode</code>。</p>
+<p>其最直接的应用是实现<code>数据分类 + 排序</code>的检索模式。</p>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#a3cbe3;">const </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">createMode</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">Select </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">Matable</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">mode </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">createMode</span><span style="color:#ffffffc4;">({</span><span style="color:#ffffffc4;">
+	DEMO</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="font-weight:bold;color:#a3cbe3;">Select</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">from</span><span style="color:#ffffffc4;">([</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">A</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">B</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">C</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">]), </span><span style="color:#707180;">// 数据分类 + 排序</span><span style="color:#ffffffc4;">
+});</span><span style="color:#ffffffc4;">
+</span></code></pre><h3 id="select-range">Select.range</h3>
+<p>提供一个快速生成序列的函数。</p>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#a3cbe3;">const </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">createMode</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">Select </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">Matable</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">mode </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">createMode</span><span style="color:#ffffffc4;">({</span><span style="color:#ffffffc4;">
+	</span><span style="color:#707180;">// 即为 [&quot;1班&quot;, &quot;2班&quot;, &quot;3班&quot;,... ,&quot;16班&quot;]</span><span style="color:#ffffffc4;">
+	班级</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="font-weight:bold;color:#a3cbe3;">Select</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">range</span><span style="color:#ffffffc4;">([</span><span style="color:#db7c6d;">1</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">17</span><span style="color:#ffffffc4;">], </span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">i</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="font-weight:bold;color:#a3cbe3;">i </span><span style="color:#db7c6d;">+ </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;"> 班</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">), </span><span style="color:#707180;">// 数据分类 + 排序</span><span style="color:#ffffffc4;">
+});</span><span style="color:#ffffffc4;">
+</span></code></pre><h1 id="ming-xie">鸣谢</h1>
+<h2 id="open-source">Open Source</h2>
+<p>再次感谢以下的开源项目，没有这些优秀的开源项目，也不可能有<code>Matable</code>的诞生</p>
+<ul>
+<li>
+<p><a href="https://vuejs.org/">vue</a></p>
+</li>
+<li>
+<p><a href="https://github.com/axios/axios">axios</a></p>
+</li>
+<li>
+<p><a href="https://muse-ui.org/">muse-ui</a></p>
+</li>
+</ul>
+<h2 id="da-shang">打赏</h2>
+<p>如果您对这个项目感兴趣的话，可以打赏来支持我，反正随缘。</p>
+<div style="display: flex; justify-content: space-around; margin-top: 40px;">
+<img alt="支付宝收款" src="https://pic.imgdb.cn/item/62a170f309475431293fc35c.jpg" width="200" />
+<img alt="微信收款" src="https://pic.imgdb.cn/item/62a1710309475431293fd711.jpg" width="200" />
+</div>
+
+    </div>
+
+    
+    
+
+    <div class="post-footer">
+        
+            
+                <div class="post-tags">
+                    
+                        <a href="&#x2F;tags&#x2F;ecamscript&#x2F;">#ECAMScript</a>
+                    
+                        <a href="&#x2F;tags&#x2F;wen-dang&#x2F;">#文档</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                        <a class="previous" href="&#x2F;jie-jue-githubwu-fa-jia-zai-de-wen-ti&#x2F;">‹ 解决 Github 无法加载的问题</a>
+                    
+                    
+                        <a class="next" href="&#x2F;yin-le-de-zou-xiang-cong-gu-dian-dao-xian-dai&#x2F;">音乐的走向 —— 从古典到现代 ›</a>
+                    
+                    
+                    
+                </div>
+            
+
+        
+
+    </div>
+
+    
+    
+</article>
+
+
+                        
+                <div id="footer">
+                    <a href="/">Roger &copy; <span id="footer-year">2021</span></a>
+                </div>
+                </div>
+            </main>
+            
+            
+            
+             
+            
+        </div>
+
+    
+    <script type="text/javascript" src="/phomina.js" ></script>
+    <script type="text/javascript" src="/custom.js" ></script>
+    <script type="text/javascript" src="/fslightbox.js" ></script>
+    
+    </body>
+
+</html>

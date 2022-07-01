@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>BLOG - 个人推荐</title>
+        <link>/</link>
+        <description></description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="/tags/ge-ren-tui-jian/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Sun, 29 Mar 2020 17:36:33 +0000</lastBuildDate>
+        <item>
+            <title>推荐一些软件</title>
+            <pubDate>Sun, 29 Mar 2020 17:36:33 +0000</pubDate>
+            <link>/tui-jian-yi-xie-ruan-jian/</link>
+            <guid>/tui-jian-yi-xie-ruan-jian/</guid>
+            <description>&lt;h1 id=&quot;bei-jing&quot;&gt;背景&lt;&#x2F;h1&gt;
+&lt;p&gt;在 2020 年 3 月 29 日，我难以忍受电脑的卡顿，决心优化电脑，卸载一些无用庞大的软件，更新一波 APP，然后重塑一个新的环境。&lt;&#x2F;p&gt;
+&lt;p&gt;我的行动开始于斩除一个名为 alibabaprotect 的服务，在此过程中我发现一些好的软和方法，特在此记录。&lt;&#x2F;p&gt;
+</description>
+        </item>
+    </channel>
+</rss>

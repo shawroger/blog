@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>BLOG - Github</title>
+        <link>/</link>
+        <description></description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="/tags/github/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Mon, 20 Apr 2020 10:03:34 +0000</lastBuildDate>
+        <item>
+            <title>解决 Github 无法加载的问题</title>
+            <pubDate>Mon, 20 Apr 2020 10:03:34 +0000</pubDate>
+            <link>/jie-jue-githubwu-fa-jia-zai-de-wen-ti/</link>
+            <guid>/jie-jue-githubwu-fa-jia-zai-de-wen-ti/</guid>
+            <description>&lt;h1 id=&quot;bei-jing&quot;&gt;背景&lt;&#x2F;h1&gt;
+&lt;p&gt;很明显，Github 上面的东西太多，以至于几乎都打不开。&lt;&#x2F;p&gt;
+&lt;p&gt;对此我们只需要修改本机的 hosts 文件就可以解决这个问题，能不科学上网就不科学上网了。&lt;&#x2F;p&gt;
+</description>
+        </item>
+    </channel>
+</rss>

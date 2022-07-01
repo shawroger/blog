@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>BLOG - 纪录</title>
+        <link>/</link>
+        <description></description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="/categories/ji-lu/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Mon, 07 Sep 2020 11:32:57 +0000</lastBuildDate>
+        <item>
+            <title>运营小程序之心路历程</title>
+            <pubDate>Mon, 07 Sep 2020 11:32:57 +0000</pubDate>
+            <link>/yun-ying-xiao-cheng-xu-zhi-xin-lu-li-cheng/</link>
+            <guid>/yun-ying-xiao-cheng-xu-zhi-xin-lu-li-cheng/</guid>
+            <description>&lt;h1 id=&quot;yuan-qi&quot;&gt;缘起&lt;&#x2F;h1&gt;
+&lt;p&gt;在此之前，我并没有尝试过微信小程序的开发，虽然之前我对微信小程序有所谅解，但是我还是觉得它的局限性比较多，不能拥抱广泛的前端生态，所以一直没有此过多关心。&lt;&#x2F;p&gt;
+&lt;p&gt;直至去年，三国杀推出了一个新武将张昌蒲，我对她繁琐的计算感到困惑，游戏过程中也是经常手忙脚乱，频频出错。&lt;&#x2F;p&gt;
+&lt;p&gt;然而对于这种纯计算的数学问题，我首先想到的就是利用编程来对它进行暴力穷举，虽然这个逻辑比较复杂，但是还是可以成功写出来的，然后我就在浏览器里面跑了一下，结果还是可以认可的。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>新 · 宁中公案</title>
+            <pubDate>Sun, 15 Sep 2019 09:50:38 +0000</pubDate>
+            <link>/xin-zhu-zhong-gong-an/</link>
+            <guid>/xin-zhu-zhong-gong-an/</guid>
+            <description>&lt;h1 id=&quot;qi-yi&quot;&gt;其一&lt;&#x2F;h1&gt;
+&lt;p&gt;在今年高考临近之时，要求班上所有人都给她写信。&lt;&#x2F;p&gt;
+&lt;p&gt;大部分人苦于学习时间紧迫，疲于应付，随便写写草率敷衍。&lt;&#x2F;p&gt;
+&lt;p&gt;惟有潘政科，敢说真话，在信中真情实感地写到：&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;你就像一个装在盒子里的西瓜，看起来光鲜亮丽，其实里面已经烂透了&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;于是被班主任教训了两个小时。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>兼巽志正体实录</title>
+            <pubDate>Sat, 16 Feb 2019 09:04:56 +0000</pubDate>
+            <link>/jian-xun-zhi-zheng-ti-shi-lu/</link>
+            <guid>/jian-xun-zhi-zheng-ti-shi-lu/</guid>
+            <description>&lt;h1 id=&quot;xu&quot;&gt;序&lt;&#x2F;h1&gt;
+&lt;p&gt;世之喪道者也久矣，由是人心相危者也苦矣。&lt;&#x2F;p&gt;
+&lt;p&gt;然今世觀盡，若問載道者，謂誰以當？&lt;&#x2F;p&gt;
+&lt;p&gt;惟九日宇龍世俊可稱之，雖今見或無名乏功，然日後大材，孰可輕之邪？&lt;&#x2F;p&gt;
+&lt;p&gt;蛟龍之升，起於微泉&lt;&#x2F;p&gt;
+&lt;p&gt;朝日之明，出於星夜&lt;&#x2F;p&gt;
+&lt;p&gt;覆世之才，亦見於危樓枯燈之下。&lt;&#x2F;p&gt;
+&lt;p&gt;特作此志以紀之。&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;二〇一七年 十月十九日&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+</description>
+        </item>
+        <item>
+            <title>兼  巽  志</title>
+            <pubDate>Sat, 16 Feb 2019 09:04:56 +0000</pubDate>
+            <link>/jian-xun-zhi/</link>
+            <guid>/jian-xun-zhi/</guid>
+            <description>&lt;h1 id=&quot;xu&quot;&gt;序&lt;&#x2F;h1&gt;
+&lt;p&gt;世之丧道者也久矣，由是人心相危者也苦矣。&lt;&#x2F;p&gt;
+&lt;p&gt;然今世观尽，若问载道者，谓谁以当？&lt;&#x2F;p&gt;
+&lt;p&gt;惟九日宇龙世俊可称之，虽今见或无名乏功，然日后大材，孰可轻之邪？&lt;&#x2F;p&gt;
+&lt;p&gt;蛟龙之升，起于微泉&lt;&#x2F;p&gt;
+&lt;p&gt;朝日之明，出于星夜&lt;&#x2F;p&gt;
+&lt;p&gt;覆世之才，亦见于危楼枯灯之下。&lt;&#x2F;p&gt;
+&lt;p&gt;特作此志以纪之。&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;二〇一七年 十月十九日&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+</description>
+        </item>
+        <item>
+            <title>神们自己</title>
+            <pubDate>Sat, 16 Feb 2019 08:15:23 +0000</pubDate>
+            <link>/shen-men-zi-ji/</link>
+            <guid>/shen-men-zi-ji/</guid>
+            <description>&lt;p&gt;不禁又拿起了挂在胸前的照片。&lt;&#x2F;p&gt;
+&lt;p&gt;照片上的人，英俊潇洒，玉树临风，高挺的鼻梁上，架看精致的眼镜， 可惜遮住了一半的俊美五官。&lt;&#x2F;p&gt;
+&lt;p&gt;我感慨万分，赶忙把校牌又放了回去。&lt;&#x2F;p&gt;
+&lt;p&gt;仿佛听见有人风传，说有一个高二学弟好帅，这事竟然传到了我的耳里。&lt;&#x2F;p&gt;
+&lt;p&gt;“又在瞎说，唉，尽传我的谣言…”&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>宁中公案</title>
+            <pubDate>Thu, 14 Feb 2019 15:30:34 +0000</pubDate>
+            <link>/zhu-zhong-gong-an/</link>
+            <guid>/zhu-zhong-gong-an/</guid>
+            <description>&lt;h1 id=&quot;xu&quot;&gt;序&lt;&#x2F;h1&gt;
+&lt;p&gt;民国一〇六年，吾登于南山之上，四野尽收眼内，草木动而不息。&lt;&#x2F;p&gt;
+&lt;p&gt;草木无常，人亦如也。时人之谈笑雅言，若不录之，则必失之。&lt;&#x2F;p&gt;
+&lt;p&gt;今于南山之巅，名士云集之地，特辑以公案，形以盛况。&lt;&#x2F;p&gt;
+&lt;p&gt;鄙人不才，闲记其文，特为序也。&lt;&#x2F;p&gt;
+&lt;p&gt;至于此文，先以为传，后以为事，传以录人，事以纳情。&lt;&#x2F;p&gt;
+&lt;p&gt;先以传传名士之风，后以事事雅行之状。&lt;&#x2F;p&gt;
+&lt;p&gt;所以者何？当以正世风、抒己志耳。&lt;&#x2F;p&gt;
+&lt;p&gt;—— 特谢舍予之录本，鄙人文笔不佳，望勿见笑。&lt;&#x2F;p&gt;
+</description>
+        </item>
+    </channel>
+</rss>

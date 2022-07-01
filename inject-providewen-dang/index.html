@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+ 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+ 
+      <title>BLOG - inject-provide 文档</title>
+
+      <link rel="icon" sizes="any" href="/favico.ico">
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml">
+      
+      
+      <script src="https://cdn.bootcdn.net/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+          
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/mathtex-script-type.min.js" integrity="sha384-zWYbd0NBwgTsgIdFKVprSfTh1mbMPe5Hz1X3yY4Sd1h/K1cQoUe36OGwAGz/PcDy" crossorigin="anonymous"></script>
+              
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+                  <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        renderMathInElement(document.body, {
+                            delimiters: [
+                                {left: "$$", right: "$$", display: true },
+                                {left: "$", right: "$", display: false }, 
+                            ]
+                        });
+                    });
+
+                    window.$ZOLA_CONFIG = {
+                        base: "/",
+                        title: "BLOG",
+                        author: "Roger",
+                        navs:  ["Home","Categories","Tags","About",].map(function(e){return e.toLowerCase();}),
+                    }; 
+                </script>
+                  
+          
+      
+
+      
+          <link rel="stylesheet" href="/site.css">
+          
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+          
+      
+
+      
+      
+    </head>
+
+    <body> 
+        <div class="container"> 
+            <div id="mobile-navbar" class="mobile-navbar">
+                <div class="mobile-header-logo">
+                  <a href="/" class="logo">BLOG</a>
+                </div>
+                <div class="mobile-navbar-icon icon-out">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+            
+
+            <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+              <ul class="mobile-menu-list">
+                
+                    <li class="mobile-menu-item">
+                        <a href="/">
+                            Home
+                        </a> 
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="/categories">
+                            Categories
+                        </a> 
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="/tags">
+                            Tags
+                        </a> 
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="/about">
+                            About
+                        </a> 
+                    </li>
+                
+              </ul>
+            </nav>
+
+            <header id="header">
+                
+                <div class="logo"><a href="/">BLOG</a></div>
+                <nav class="menu">
+                    <ul>
+                        
+                            <li>
+                                <a href="/">
+                                    Home
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/categories">
+                                    Categories
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/tags">
+                                    Tags
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/about">
+                                    About
+                                </a>
+                            </li>
+                        
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+                <div class="content" id="mobile-panel">
+                    
+                    
+
+
+
+<article class="post article-content">
+    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="/inject-providewen-dang/">inject-provide 文档</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2020.03.31&nbsp;&nbsp; 共 1253 字</span>
+            
+        </div>
+    </header>
+
+    <div class="post-content">
+      <h1 id="inject-provide">Inject-Provide</h1>
+<blockquote>
+<p><a href="https://gitee.com/shawroger/inject-provide">项目地址</a></p>
+</blockquote>
+<blockquote>
+<p>当前版本：<code>V0.3.5</code></p>
+</blockquote>
+<p><code>inject-provide</code> 是一个极简洁的 <strong>nodejs</strong> 注入框架，运行过程中需要装饰器的支持，建议使用 <strong>TypeScript</strong> 作为运行环境。</p>
+<span id="continue-reading"></span><h1 id="an-zhuang">安装</h1>
+<pre style="background-color:#31333d;">
+<code class="language-bash" data-lang="bash"><span style="color:#ffffffc4;"> </span><span style="font-weight:bold;color:#a3cbe3;">npm</span><span style="color:#ffffffc4;"> install inject-provide</span><span style="color:#ffffff;"> --save
+</span></code></pre>
+<p>需要安装<code>Typescript</code>，并在 <code>tsconfig.json</code> 中开启 <code>&quot;experimentalDecorators&quot;: true</code> 配置</p>
+<pre style="background-color:#31333d;">
+<code class="language-json" data-lang="json"><span style="color:#ffffffc4;">{
+	</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">compilerOptions</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">: {
+		</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">target</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">es5</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">,
+		</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">module</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">esnext</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">,
+		</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">strict</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#dbbb3d;">true</span><span style="color:#ffffffc4;">,
+		</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">importHelpers</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#dbbb3d;">true</span><span style="color:#ffffffc4;">,
+		</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">moduleResolution</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">node</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">,
+		</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">esModuleInterop</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#dbbb3d;">true</span><span style="color:#ffffffc4;">,
+		</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">allowSyntheticDefaultImports</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#dbbb3d;">true</span><span style="color:#ffffffc4;">,
+		</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">sourceMap</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#dbbb3d;">true</span><span style="color:#ffffffc4;">,
+		</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">experimentalDecorators</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#dbbb3d;">true</span><span style="color:#ffffffc4;">,
+		</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">baseUrl</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">.</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">,
+		</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">paths</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">: {
+			</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">/*</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">: [</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">./*</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">]
+		},
+		</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">lib</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">: [</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">esnext</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">dom</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">dom.iterable</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">scripthost</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">]
+	},
+	</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">include</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">: [</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">src/**/*.ts</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">src/**/*.tsx</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">main.ts</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">],
+	</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">exclude</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">: [</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffff;">node_modules</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">]
+}
+</span></code></pre><h1 id="ji-ben-shi-yong">基本使用</h1>
+<p><code>inject-provide</code> 的使用方法非常简单，只有 7 个 API。</p>
+<ul>
+<li>
+<p>注入： Inject, AutoInjected</p>
+</li>
+<li>
+<p>提供：Provide, Offer</p>
+</li>
+<li>
+<p>注册：createStore</p>
+</li>
+<li>
+<p>默认库：rootStore</p>
+</li>
+<li>
+<p>注入库工具类：storeController</p>
+</li>
+<li>
+<p>事件处理：createEvent</p>
+</li>
+</ul>
+<h2 id="chuang-jian-zhu-ru-ku">创建注入库</h2>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">createStore </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">inject-provide</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+
+</span><span style="color:#db7c6d;">export </span><span style="font-weight:bold;color:#a3cbe3;">newStore</span><span style="color:#ffffffc4;"> = </span><span style="font-weight:bold;color:#a3cbe3;">createStore</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">newStore</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">);
+</span></code></pre>
+<p>这一步创建过程是可选的，<code>inject-provide</code> 已经构建了一个默认的根注入库，即 <code>rootStore</code>，在所有不指明的注入 store 都会默认注入到 <code>rootStore</code>中。</p>
+<h2 id="ti-gong-lei">提供类</h2>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">Provide</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">rootStore </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">inject-provide</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+</span><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">newStore </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">./my-store</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+
+@</span><span style="color:#a2ba43;">Provide</span><span style="color:#ffffffc4;">({
+	name</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="color:#a2ba43;">symbol</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">ProvideCar</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">)
+	</span><span style="font-weight:bold;color:#a3cbe3;">store</span><span style="color:#ffffffc4;">: [</span><span style="font-weight:bold;color:#a3cbe3;">newStore</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">rootStore</span><span style="color:#ffffffc4;">],
+	args</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="color:#ffffffc4;">[</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">BMW</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">]
+})
+</span><span style="color:#a3cbe3;">class </span><span style="color:#ffffffc4;">ProvideCar {
+	</span><span style="color:#a3cbe3;">constructor</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#dbbb3d;">public </span><span style="color:#ffffff;">name</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#ffffffc4;">{}
+
+	</span><span style="color:#a2ba43;">getName</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#ffffffc4;">{
+		</span><span style="color:#db7c6d;">return </span><span style="font-weight:bold;color:#a3cbe3;">this</span><span style="color:#ffffffc4;">.name;
+	}
+}
+</span></code></pre>
+<p>其中，<code>Provide</code> 的 name 参数是可选的，为空的时候会将类的 toString() 形式作为注入的令牌注入到 <code>rootStore</code> 中。</p>
+<p><code>Provide</code> 的 store 参数是可选的，为空的时候会注入到 <code>rootStore</code> 中，支持传入数组和单个 Store，但是在数组中如果仍希望注入到 <code>rootStore</code> 则需要手动加入。</p>
+<p><code>Provide</code> 的 args 参数也是可选的，args 即为构造函数中未被注入的参数，按顺序暴露在 args 参数数组中，在提交到注入库的时候会被初始化。</p>
+<h2 id="shi-yong-zhu-ru-fu-wu">使用注入服务</h2>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">Inject </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">inject-provide</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+</span><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">ProvideCar </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">./provide-car</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+</span><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">newStore </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">./my-store</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+
+</span><span style="color:#a3cbe3;">class </span><span style="color:#ffffffc4;">UseCar {
+	</span><span style="color:#a3cbe3;">constructor</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffffc4;">@</span><span style="color:#a2ba43;">Inject</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">ProvideCar</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">newStore</span><span style="color:#ffffffc4;">) </span><span style="color:#dbbb3d;">public </span><span style="color:#ffffff;">car</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">ProvideCar</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#ffffffc4;">{}
+
+	</span><span style="color:#a2ba43;">getCarName</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#ffffffc4;">{
+		</span><span style="color:#db7c6d;">return </span><span style="font-weight:bold;color:#a3cbe3;">this</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">car</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">getName</span><span style="color:#ffffffc4;">();
+	}
+}
+</span></code></pre>
+<p>其中，<code>Inject</code> 的第一个参数是令牌，建议使用类名作为令牌，为空的时候会注入到 <code>rootStore</code> 中。</p>
+<p>第二个参数为目标的注入库，<code>inject-provide</code> 会在在该库中查找待注入的数据，默认为 <code>rootStore</code>。</p>
+<h2 id="shi-yong-zi-dong-zhu-ru">使用自动注入</h2>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">AutoInject </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">inject-provide</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+</span><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">UseCar </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">./use-car</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">result </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">AutoInject</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">UseCar</span><span style="color:#ffffffc4;">);
+</span><span style="font-weight:bold;color:#a3cbe3;">result</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">getCarName</span><span style="color:#ffffffc4;">(); </span><span style="color:#707180;">//BMW
+</span></code></pre><h1 id="jin-jie-ji-qiao">进阶技巧</h1>
+<h2 id="can-shu-zhu-ru">参数注入</h2>
+<p>在构造函数中，如果有多个需要注入和不注入的参数，要把需要注入的参数放在前面</p>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">Inject </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">inject-provide</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+</span><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">ProvideCar </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">./provide-car</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+</span><span style="color:#a3cbe3;">class </span><span style="color:#ffffffc4;">UseCar {
+	</span><span style="color:#a3cbe3;">constructor</span><span style="font-weight:bold;color:#dbbb3d;">(
+		</span><span style="color:#ffffffc4;">@</span><span style="color:#a2ba43;">Inject</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">ProvideCar</span><span style="color:#ffffffc4;">) </span><span style="color:#dbbb3d;">public </span><span style="color:#ffffff;">car</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">ProvideCar,
+		</span><span style="color:#dbbb3d;">public </span><span style="color:#ffffff;">ownerAge</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">number</span><span style="color:#ffffffc4;">,
+		</span><span style="color:#dbbb3d;">public </span><span style="color:#ffffff;">ownerName</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string </span><span style="color:#707180;">// 不需要Inject的放在后面
+	</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#ffffffc4;">{}
+
+	</span><span style="color:#a2ba43;">getCarName</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#ffffffc4;">{
+		</span><span style="color:#db7c6d;">return </span><span style="font-weight:bold;color:#a3cbe3;">this</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">car</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">getName</span><span style="color:#ffffffc4;">();
+	}
+}
+</span></code></pre><h2 id="fei-zhu-ru-de-chu-li">非注入的处理</h2>
+<p>自动注入时，不在注入服务中的参数按顺序写在后面</p>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">AutoInject </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">inject-provide</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+</span><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">UseCar </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">./use-car</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">result </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">AutoInject</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">UseCar</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">25</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">Alice</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">);
+</span><span style="font-weight:bold;color:#a3cbe3;">result</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">getCarName</span><span style="color:#ffffffc4;">(); </span><span style="color:#707180;">//BMW
+</span><span style="font-weight:bold;color:#a3cbe3;">result</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">ownerAge </span><span style="color:#db7c6d;">=== 25</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true
+</span></code></pre><h2 id="zhu-dong-zhu-ru-offer">主动注入 Offer</h2>
+<p>通过 <code>Offer</code>， 可以使用直接提供服务的方式，为其他类型提供注入功能</p>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">Offer </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">inject-provide</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+</span><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">newStore </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">./my-store</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">obj </span><span style="color:#db7c6d;">= </span><span style="color:#ffffffc4;">{
+	name</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">Bob</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">,
+	age</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="color:#db7c6d;">20</span><span style="color:#ffffffc4;">,
+};
+
+</span><span style="color:#a2ba43;">Offer</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">obj</span><span style="color:#ffffffc4;">, {
+	store</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="font-weight:bold;color:#a3cbe3;">newStore</span><span style="color:#ffffffc4;">,
+}); </span><span style="color:#707180;">// 直接注入obj对象的地址
+</span></code></pre>
+<p>默认情况下，Offer 会使用 new 方法来初始化一个函数类型 (ES5 类)，如果你希望注入一个纯粹的函数，那么请使用 pure 参数，来表明这是一个简单的函数</p>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">Offer </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">inject-provide</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+</span><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">newStore </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">./my-store</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+
+</span><span style="color:#a3cbe3;">const </span><span style="color:#a2ba43;">add </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">num</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">number</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="font-weight:bold;color:#a3cbe3;">num </span><span style="color:#db7c6d;">+ 1</span><span style="color:#ffffffc4;">;
+
+</span><span style="color:#a2ba43;">Offer</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">add</span><span style="color:#ffffffc4;">, {
+	store</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="font-weight:bold;color:#a3cbe3;">newStore</span><span style="color:#ffffffc4;">,
+	pure</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="color:#ffffff;">true</span><span style="color:#ffffffc4;">, </span><span style="color:#707180;">// 是一个函数
+</span><span style="color:#ffffffc4;">}); </span><span style="color:#707180;">// 直接注入obj对象的地址
+</span></code></pre><h2 id="storecontroller-chu-li-store">storeController 处理 store</h2>
+<p>storeController 是 store 的工具类，提供了一些对 store 的处理工具：</p>
+<ul>
+<li>
+<p>create 同 createStore</p>
+</li>
+<li>
+<p>exist 判断目标 store 是否存在</p>
+</li>
+<li>
+<p>is 判断目标 store 是合理的 Store 的对象</p>
+</li>
+<li>
+<p>count 获取所有 store 个数</p>
+</li>
+</ul>
+<h1 id="shi-jian-zhu-ru">事件注入</h1>
+<h2 id="shi-li">示例</h2>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">createEvent </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">inject-provide</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">mainEvent </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">createEvent</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">Test</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">);
+
+@</span><span style="font-weight:bold;color:#a3cbe3;">mainEvent</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">Subject</span><span style="color:#ffffffc4;">()
+</span><span style="color:#a3cbe3;">class </span><span style="color:#ffffffc4;">Test {
+	@</span><span style="font-weight:bold;color:#a3cbe3;">mainEvent</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">Provider</span><span style="color:#ffffffc4;">()
+	</span><span style="color:#a2ba43;">sayHello</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#ffffffc4;">{
+		</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">hello, world</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">);
+	}
+}
+
+</span><span style="font-weight:bold;color:#a3cbe3;">mainEvent</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">controller</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">emit</span><span style="color:#ffffffc4;">(); </span><span style="color:#707180;">//hello,world
+</span></code></pre><h2 id="createevent">createEvent</h2>
+<p><code>createEvent</code> 函数会返回一个 <code>EventInjector</code> 类的一个实例，包含一个事件类装饰器、事件方法装饰器、事件控制器、事件注入库、事件标签装饰器。</p>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#dbbb3d;">declare </span><span style="color:#a3cbe3;">class </span><span style="color:#ffffffc4;">EventInjector {
+	</span><span style="font-weight:bold;color:#a3cbe3;">store</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">Store;
+	</span><span style="font-weight:bold;color:#a3cbe3;">controller</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">EventController;
+	</span><span style="color:#a3cbe3;">constructor</span><span style="font-weight:bold;color:#dbbb3d;">()</span><span style="color:#ffffffc4;">;
+	</span><span style="color:#a2ba43;">Subject</span><span style="font-weight:bold;color:#dbbb3d;">()</span><span style="color:#db7c6d;">: </span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#db7c6d;">...</span><span style="color:#ffffff;">args</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">any</span><span style="color:#ffffffc4;">[]</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">target</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">any</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#e7e7e7;">void</span><span style="color:#ffffffc4;">;
+	</span><span style="color:#a2ba43;">Provide</span><span style="font-weight:bold;color:#dbbb3d;">()</span><span style="color:#db7c6d;">: </span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#a3cbe3;">=&gt; </span><span style="font-weight:bold;color:#dbbb3d;">(
+		</span><span style="color:#ffffff;">target</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">any</span><span style="color:#ffffffc4;">,
+		</span><span style="color:#ffffff;">propertyKey</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">,
+		</span><span style="color:#ffffff;">descriptor</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">PropertyDescriptor
+	</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#e7e7e7;">void</span><span style="color:#ffffffc4;">;
+	</span><span style="color:#a2ba43;">Tag</span><span style="font-weight:bold;color:#dbbb3d;">()</span><span style="color:#db7c6d;">: </span><span style="font-weight:bold;color:#dbbb3d;">(
+		</span><span style="color:#ffffff;">tag</span><span style="color:#db7c6d;">?: </span><span style="color:#e7e7e7;">string </span><span style="color:#db7c6d;">| </span><span style="color:#e7e7e7;">undefined
+	</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="font-weight:bold;color:#dbbb3d;">(
+		</span><span style="color:#ffffff;">target</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">any</span><span style="color:#ffffffc4;">,
+		</span><span style="color:#ffffff;">propertyKey</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">,
+		</span><span style="color:#ffffff;">descriptor</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">PropertyDescriptor
+	</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#e7e7e7;">void</span><span style="color:#ffffffc4;">;
+}
+</span></code></pre><h2 id="subject">Subject</h2>
+<p><code>Subject</code> 对一个类进行装饰，该类的方法可以成为事件的注入类</p>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">createEvent </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">inject-provide</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">mainEvent </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">createEvent</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">Test</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">);
+
+@</span><span style="font-weight:bold;color:#a3cbe3;">mainEvent</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">Subject</span><span style="color:#ffffffc4;">()
+</span><span style="color:#a3cbe3;">class </span><span style="color:#ffffffc4;">Test {}
+</span></code></pre><h2 id="provider">Provider</h2>
+<p><code>Provider</code> 对一个类的实例方法进行装饰，该类的方法会被注入到事件控制器中</p>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">createEvent </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">inject-provide</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">mainEvent </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">createEvent</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">Test</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">);
+
+@</span><span style="font-weight:bold;color:#a3cbe3;">mainEvent</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">Subject</span><span style="color:#ffffffc4;">()
+</span><span style="color:#a3cbe3;">class </span><span style="color:#ffffffc4;">Test {
+	@</span><span style="font-weight:bold;color:#a3cbe3;">mainEvent</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">Provider</span><span style="color:#ffffffc4;">()
+	</span><span style="color:#a2ba43;">sayHello</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#ffffffc4;">{
+		</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">hello, world</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">);
+	}
+}
+</span></code></pre><h2 id="tag">Tag</h2>
+<p><code>Tag</code> 对一个类的实例方法进行装饰，该类的方法会被加上一个标签，可以被控制器筛选</p>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">createEvent </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">inject-provide</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">mainEvent </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">createEvent</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">Test</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">);
+
+@</span><span style="font-weight:bold;color:#a3cbe3;">mainEvent</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">Subject</span><span style="color:#ffffffc4;">()
+</span><span style="color:#a3cbe3;">class </span><span style="color:#ffffffc4;">Test {
+	@</span><span style="font-weight:bold;color:#a3cbe3;">mainEvent</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">Tag</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">main</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">)
+	@</span><span style="font-weight:bold;color:#a3cbe3;">mainEvent</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">Provider</span><span style="color:#ffffffc4;">()
+	</span><span style="color:#a2ba43;">sayHello</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#ffffffc4;">{
+		</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">hello, world</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">);
+	}
+}
+</span></code></pre>
+<p>所有没有被 <code>Tag</code> 标记的所有方法在控制器库中的 <code>tag</code> 属性都为 <code>null</code>，所有不存在 <code>tag</code> 属性(为 <code>undefined</code>)的方法都不会被控制器识别。</p>
+<h2 id="controller">controller</h2>
+<p><code>controller</code> 是一个类的控制器</p>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">createEvent </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">inject-provide</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">mainEvent </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">createEvent</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">Test</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">);
+
+@</span><span style="font-weight:bold;color:#a3cbe3;">mainEvent</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">Subject</span><span style="color:#ffffffc4;">()
+</span><span style="color:#a3cbe3;">class </span><span style="color:#ffffffc4;">Test {
+	@</span><span style="font-weight:bold;color:#a3cbe3;">mainEvent</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">Tag</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">main</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">)
+	@</span><span style="font-weight:bold;color:#a3cbe3;">mainEvent</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">Provider</span><span style="color:#ffffffc4;">()
+	</span><span style="color:#a2ba43;">sayHello</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#ffffffc4;">{
+		</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">hello, world</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">);
+	}
+
+	@</span><span style="font-weight:bold;color:#a3cbe3;">mainEvent</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">Provider</span><span style="color:#ffffffc4;">()
+	</span><span style="color:#a2ba43;">sayThanks</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#ffffffc4;">{
+		</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">Thanks</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">);
+	}
+}
+
+</span><span style="font-weight:bold;color:#a3cbe3;">mainEvent</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">controller</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">emit</span><span style="color:#ffffffc4;">(); </span><span style="color:#707180;">//hello,world, Thanks
+</span><span style="font-weight:bold;color:#a3cbe3;">mainEvent</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">controller</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">tagSelector</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">tagName</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="font-weight:bold;color:#a3cbe3;">tagName</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">includes</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">m</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">)).</span><span style="color:#a2ba43;">emit</span><span style="color:#ffffffc4;">();
+</span><span style="color:#707180;">// only &quot;hello, world&quot;
+</span></code></pre>
+<p><code>controller</code>的一些方法：</p>
+<h3 id="emit">emit</h3>
+<p>激活所有标记的事件</p>
+<h3 id="tagselector">tagSelector</h3>
+<p>接受一个函数、字符串或者 <code>null</code>，筛选出所有符合条件的事件。</p>
+
+    </div>
+
+    
+    
+
+    <div class="post-footer">
+        
+            
+                <div class="post-tags">
+                    
+                        <a href="&#x2F;tags&#x2F;wen-dang&#x2F;">#文档</a>
+                    
+                        <a href="&#x2F;tags&#x2F;ecamscript&#x2F;">#ECAMScript</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                        <a class="previous" href="&#x2F;tui-jian-yi-xie-ruan-jian&#x2F;">‹ 推荐一些软件</a>
+                    
+                    
+                        <a class="next" href="&#x2F;wei-xin-gong-zhong-hao-jiao-cheng&#x2F;">微信公众号简明教程 ›</a>
+                    
+                    
+                    
+                </div>
+            
+
+        
+
+    </div>
+
+    
+    
+</article>
+
+
+                        
+                <div id="footer">
+                    <a href="/">Roger &copy; <span id="footer-year">2021</span></a>
+                </div>
+                </div>
+            </main>
+            
+            
+            
+             
+            
+        </div>
+
+    
+    <script type="text/javascript" src="/phomina.js" ></script>
+    <script type="text/javascript" src="/custom.js" ></script>
+    <script type="text/javascript" src="/fslightbox.js" ></script>
+    
+    </body>
+
+</html>

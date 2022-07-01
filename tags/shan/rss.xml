@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>BLOG - 禅</title>
+        <link>/</link>
+        <description></description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="/tags/shan/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Tue, 08 Jan 2019 07:31:25 +0000</lastBuildDate>
+        <item>
+            <title>明 祓 经</title>
+            <pubDate>Tue, 08 Jan 2019 07:31:25 +0000</pubDate>
+            <link>/ming-fu-jing/</link>
+            <guid>/ming-fu-jing/</guid>
+            <description>&lt;h1 id=&quot;ming-wu-pin-di-yi&quot;&gt;明物品 第一&lt;&#x2F;h1&gt;
+&lt;p&gt;夫天地者，由物而成，而不与人焉。&lt;&#x2F;p&gt;
+&lt;p&gt;物物相动，物物相灭，物物相易，物物相成，物物相和，物物相杀。夫非独物物也，物亦可自易也。由是万物生而化之，化而易之。&lt;&#x2F;p&gt;
+&lt;p&gt;夫人者，至于形也，与物一也。以是刀俎之下人木皆碎，弱水之中人沙俱沉。若彼无食，人畜同饥；从高而坠，人石共裂。故彼无识也，人物一也。&lt;&#x2F;p&gt;
+&lt;p&gt;所以者何？天地万物常以理存。此理在物，而非在人焉。况举世无常物，物常则无动，无动则天地不化，则物之存也无因也。&lt;&#x2F;p&gt;
+&lt;p&gt;以夫无常物，故无常存。是以泰山万年可倾，东海万世乃平。日月之行，终有已矣。
+故曰：世由物成，理于物存。&lt;&#x2F;p&gt;
+</description>
+        </item>
+    </channel>
+</rss>

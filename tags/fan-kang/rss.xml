@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>BLOG - 反抗</title>
+        <link>/</link>
+        <description></description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="/tags/fan-kang/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Sun, 26 Aug 2018 08:23:04 +0000</lastBuildDate>
+        <item>
+            <title>周五的广播室</title>
+            <pubDate>Sun, 26 Aug 2018 08:23:04 +0000</pubDate>
+            <link>/zhou-wu-de-yan-bo-shi/</link>
+            <guid>/zhou-wu-de-yan-bo-shi/</guid>
+            <description>&lt;p&gt;又是一个周五的上午。&lt;&#x2F;p&gt;
+&lt;p&gt;或许，可以说是周五的凌晨。天还没有亮，昏暗的窗外，乱风夹着碎雨飘散。窗内，拥挤的桌椅上堆叠着古怪的书。一群神情疲惫的人倚在桌边，头也不抬一下。&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;距听力开始还有三分钟！&lt;&#x2F;strong&gt;? 布满灰尘的广播喇叭里吐出一丝声音，随后被淹没在教室的死气里。&lt;&#x2F;p&gt;
+&lt;p&gt;有的人头抬起来了，看翻了一下本来枕在头下的书，又砸了下去。&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;这样的生活还有什么意义！&lt;&#x2F;strong&gt;? 他生坐在我后面，这样的牢骚话，他已经说了几十回了，我从未在意过。&lt;&#x2F;p&gt;
+</description>
+        </item>
+    </channel>
+</rss>

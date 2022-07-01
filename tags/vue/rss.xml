@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>BLOG - vue</title>
+        <link>/</link>
+        <description></description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="/tags/vue/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Sun, 01 Mar 2020 18:21:31 +0000</lastBuildDate>
+        <item>
+            <title>vue3 新特性</title>
+            <pubDate>Sun, 01 Mar 2020 18:21:31 +0000</pubDate>
+            <link>/vue3-xin-te-xing/</link>
+            <guid>/vue3-xin-te-xing/</guid>
+            <description>&lt;h1 id=&quot;po-jie-vue3-xin-te-xing&quot;&gt;破解 vue3 新特性&lt;&#x2F;h1&gt;
+&lt;p&gt;根据 vue 作者尤雨溪去年发布的 vue 3.0 开发路线，vue 3.0 很可能在 2019 年下半年与大家见面。&lt;&#x2F;p&gt;
+&lt;p&gt;与此同时，今年下半年初，Vue 团队先后对外发布了 &lt;code&gt;vue-function-api&lt;&#x2F;code&gt; 和 &lt;code&gt;vue-compisition-api&lt;&#x2F;code&gt; 的 RFC，供开发者提前体验 vue 3.0 的新特性，并且希望通过这些预览版的 API，来征求广大开发者的意见与反馈，从而为 vue 3.0 的后续开发和落地打下坚实与稳定的基础。&lt;&#x2F;p&gt;
+&lt;p&gt;本次公开课围绕最新发布的 &lt;code&gt;vue-compisition-api&lt;&#x2F;code&gt;，来讲解大家最关心的、同时也是 vue 3.0 最重要的一些新特性，例如 &lt;code&gt;setup()&lt;&#x2F;code&gt; 函数、&lt;code&gt;reactive()&lt;&#x2F;code&gt;、&lt;code&gt;ref()&lt;&#x2F;code&gt; 等这些 Vue Hooks。&lt;&#x2F;p&gt;
+&lt;p&gt;通过学习本次公开课，你可以先人一步掌握 vue 3.0 中的新特性，为将来 vue 3.0 的发布提前做好相应知识的储备，也为提升自己在前端行业中的竞争力添砖加瓦！&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>写一个 vue 的 hooks</title>
+            <pubDate>Mon, 20 Jan 2020 00:54:57 +0000</pubDate>
+            <link>/xie-yi-ge-vuede-hooks/</link>
+            <guid>/xie-yi-ge-vuede-hooks/</guid>
+            <description>&lt;h1 id=&quot;qian-yan&quot;&gt;前言&lt;&#x2F;h1&gt;
+&lt;p&gt;在 &lt;code&gt;vue&lt;&#x2F;code&gt; 采用了 &lt;code&gt;composition-api&lt;&#x2F;code&gt; 之后，利用函数式特性，我们可以很简单地完成几个 hooks（就和 react hooks 相似），帮助我们实现以往方式难以完成的功能。&lt;&#x2F;p&gt;
+</description>
+        </item>
+    </channel>
+</rss>

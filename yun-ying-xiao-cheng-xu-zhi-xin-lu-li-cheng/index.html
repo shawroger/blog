@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+ 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+ 
+      <title>BLOG - 运营小程序之心路历程</title>
+
+      <link rel="icon" sizes="any" href="/favico.ico">
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml">
+      
+      
+      <script src="https://cdn.bootcdn.net/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+          
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/mathtex-script-type.min.js" integrity="sha384-zWYbd0NBwgTsgIdFKVprSfTh1mbMPe5Hz1X3yY4Sd1h/K1cQoUe36OGwAGz/PcDy" crossorigin="anonymous"></script>
+              
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+                  <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        renderMathInElement(document.body, {
+                            delimiters: [
+                                {left: "$$", right: "$$", display: true },
+                                {left: "$", right: "$", display: false }, 
+                            ]
+                        });
+                    });
+
+                    window.$ZOLA_CONFIG = {
+                        base: "/",
+                        title: "BLOG",
+                        author: "Roger",
+                        navs:  ["Home","Categories","Tags","About",].map(function(e){return e.toLowerCase();}),
+                    }; 
+                </script>
+                  
+          
+      
+
+      
+          <link rel="stylesheet" href="/site.css">
+          
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+          
+      
+
+      
+      
+    </head>
+
+    <body> 
+        <div class="container"> 
+            <div id="mobile-navbar" class="mobile-navbar">
+                <div class="mobile-header-logo">
+                  <a href="/" class="logo">BLOG</a>
+                </div>
+                <div class="mobile-navbar-icon icon-out">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+            
+
+            <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+              <ul class="mobile-menu-list">
+                
+                    <li class="mobile-menu-item">
+                        <a href="/">
+                            Home
+                        </a> 
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="/categories">
+                            Categories
+                        </a> 
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="/tags">
+                            Tags
+                        </a> 
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="/about">
+                            About
+                        </a> 
+                    </li>
+                
+              </ul>
+            </nav>
+
+            <header id="header">
+                
+                <div class="logo"><a href="/">BLOG</a></div>
+                <nav class="menu">
+                    <ul>
+                        
+                            <li>
+                                <a href="/">
+                                    Home
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/categories">
+                                    Categories
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/tags">
+                                    Tags
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/about">
+                                    About
+                                </a>
+                            </li>
+                        
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+                <div class="content" id="mobile-panel">
+                    
+                    
+
+
+
+<article class="post article-content">
+    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="/yun-ying-xiao-cheng-xu-zhi-xin-lu-li-cheng/">运营小程序之心路历程</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2020.09.07&nbsp;&nbsp; 共 1764 字</span>
+            
+        </div>
+    </header>
+
+    <div class="post-content">
+      <h1 id="yuan-qi">缘起</h1>
+<p>在此之前，我并没有尝试过微信小程序的开发，虽然之前我对微信小程序有所谅解，但是我还是觉得它的局限性比较多，不能拥抱广泛的前端生态，所以一直没有此过多关心。</p>
+<p>直至去年，三国杀推出了一个新武将张昌蒲，我对她繁琐的计算感到困惑，游戏过程中也是经常手忙脚乱，频频出错。</p>
+<p>然而对于这种纯计算的数学问题，我首先想到的就是利用编程来对它进行暴力穷举，虽然这个逻辑比较复杂，但是还是可以成功写出来的，然后我就在浏览器里面跑了一下，结果还是可以认可的。</p>
+<span id="continue-reading"></span>
+<p>这段逻辑就是我的计算器的核心，代码现在还在我的<a href="https://github.com/shawroger/sgs-math">仓库</a>里面公开。然而光有一段计算逻辑并不能完全解决问题，首先运行这个计算器就比较麻烦，而且只能给我一个人使用，并没有普遍的意义。</p>
+<p>因此在今年的年初，我就尝试写出一个网页版的计算器，并在贴吧公开。当然我用了一些开源的组件库，使界面看起来更加的人性化一点。例如，我把之前的键盘输入改成了按键输入，这样看起来和真的计算器就更加类似了。</p>
+<p>不过使用网页端的问题也很明显，首先加载比较慢，而且需要一个服务器，但我的服务器是不可能一直都在的。</p>
+<blockquote>
+<p>现在来看，服务器在今年的七月底就已经停机了</p>
+</blockquote>
+<p>这个时候贴吧的吧友就向我建议使用微信小程序，我才认识到微信小程序它的意义所在，首先他不需要自己的服务器了，而且它更加的便捷，加载也会更快一点，或许这就是微信用来占据流量的办法吧，但是它的优点还是不可以否认的。</p>
+<h1 id="bian-xie">编写</h1>
+<p>在今年的二月，我就开始了编写我的第一个微信小程序，我之前有比较基础的前端功底，而且对 <code>vue</code> 框架运用的也是比较熟练的，所以我一开始的时候就选择了 <code>uniapp</code> 这个小程序框架，别的不说，只是因为这个框架使用 <code>vue</code> 上手，而我对这个框架内容比较熟悉罢了。</p>
+<p>最开始的时候，我只是把网页端的内容修改了一下，生成了一个小程序的页面，而且比较简陋，我就把它作为我的第一个版本。</p>
+<p>小程序和其他的前端开发还是很不一样的，比如没有 <code>npm</code> 的生态，而且一些原生的前端功能并不能直接实现，不过我做的小程序还是比较简单的，我也只是修改了一部分，就已经基本可以运行了。</p>
+<p>之后我又换了一个框架，也就是 <code>mpvue</code>，我给小程序加了一个关于的页面，这样显得没那么单薄，但是后来我才知道这个框架已经没有人维护了，我又把他换回到了之前的框架，一番折腾让我感觉非常的麻烦。</p>
+<p>此后我就固定使用这个框架，也没有换过了。</p>
+<h1 id="yun-ying">运营</h1>
+<p>此后，我就一直使用这个版本持续到今年的八月底，此期间就是小程序的运营工作，开始的时候小程序人数增长比较平缓，都是一个星期只增长几十人的，但是一直积累到八月底的时候，人数就已经突破了 1000 了。</p>
+<p>所以我感觉，前期的时候如果你不做宣传，小程序的增长还是比较麻烦的，而我是一个比较懒的人，所以对此顺其自然，折腾了大半年才人数勉强到了一千。</p>
+<p>特别的是，微信小程序的用户人数到达了 1000 人就可以进行流量主的工作了，也就是在小程序里面加一点广告，这样你就可以获得一些回扣，当然我对此肯定是非常满意的，有外快谁不愿意挣呢？</p>
+<p>于是在今年的 8 月 29 号的时候，我就给小程序的底部加了一个广告，我开始的收益也就是几块钱，我也很满意。</p>
+<p>当时我还不知道三国杀经典服也要更新张昌蒲，我对后来的用户人数暴涨并没有预期，对之后的暴涨我也是始料未及。</p>
+<h1 id="tu-po">突破</h1>
+<p>到了九月份，我的好友告诉我，三国杀的经典服务也要出张昌蒲了，而且经典服的张昌蒲的计算牌数可以达到十张，我之前的只能使用八张牌。</p>
+<p>我意识到，我需要立马更新我的小程序了，当时我正在吃午饭，吃完饭之后，我立刻就回去用我的电脑一直修改。</p>
+<p>到了下午两点的时候，基本完成了 3.0.0 版本的工作，这版本里面我把之前的一些繁琐的逻辑优化了一下，而且还可以回到八张牌的计算模式，我觉得这个版本变动还是比较大的。</p>
+<p>大概 9 月 4 号的时候，这个版本基本上就已经审核通过准备上线了，而且我才发现就在这一天，我的用户数一下子暴增到 2600，而且我的小程序的收益也一下子涨到了 30 元，可见小程序的运营还是和大环境有很明显的关系的。</p>
+<p><img src="https://pic.downk.cc/item/5f55b08d160a154a6746098c.jpg" alt="用户增长曲线" /></p>
+<p>到了 9 月 5 号的时候，小程序用户的人数更是突破到了 3000 人，我的收益也达到了惊人的 60 元，而且我发现在 B 站、贴吧里面也有人讨论到我的计算器，让我感觉到非的欣慰。这种工作不但有报酬，而且还有别人的赞许，让我体会到技术也是一种生产力。</p>
+<p><img src="https://pic.downk.cc/item/5f55b039160a154a6745ef2f.jpg" alt="流量主收入" /></p>
+<h1 id="zong-jie">总结</h1>
+<p>说了这么多，我还是感觉小程序的开发还是比较麻烦的，运营过程中还是得关注外部环境的变化，并进行及时的更新。</p>
+<p>像我这种计算器就是受三国杀版本更新的影响，要是哪一天三国杀张昌蒲的技能可以支持电脑分配的话，我的小程序的末路也就要到了，当然，我也是对此并不介意的，顺其自然就是了。</p>
+<center>
+    <img 
+        src="https://s2.ax1x.com/2020/02/15/1xXUnP.jpg" 
+        alt="张昌蒲计算器 · 微信小程序码" 
+        style="margin-bottom: 25px"
+    />
+</center>
+<p>也欢迎各位三国杀玩家多多使用这个计算器 😘</p>
+
+    </div>
+
+    
+    
+
+    <div class="post-footer">
+        
+            
+                <div class="post-tags">
+                    
+                        <a href="&#x2F;tags&#x2F;zong-jie&#x2F;">#总结</a>
+                    
+                        <a href="&#x2F;tags&#x2F;ji-lu&#x2F;">#纪录</a>
+                    
+                        <a href="&#x2F;tags&#x2F;wei-xin&#x2F;">#微信</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                        <a class="previous" href="&#x2F;yin-le-de-zou-xiang-cong-gu-dian-dao-xian-dai&#x2F;">‹ 音乐的走向 —— 从古典到现代</a>
+                    
+                    
+                    
+                    
+                </div>
+            
+
+        
+
+    </div>
+
+    
+    
+</article>
+
+
+                        
+                <div id="footer">
+                    <a href="/">Roger &copy; <span id="footer-year">2021</span></a>
+                </div>
+                </div>
+            </main>
+            
+            
+            
+             
+            
+        </div>
+
+    
+    <script type="text/javascript" src="/phomina.js" ></script>
+    <script type="text/javascript" src="/custom.js" ></script>
+    <script type="text/javascript" src="/fslightbox.js" ></script>
+    
+    </body>
+
+</html>

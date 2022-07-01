@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+ 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+ 
+      <title>BLOG - 写一个 vue 的 hooks</title>
+
+      <link rel="icon" sizes="any" href="/favico.ico">
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml">
+      
+      
+      <script src="https://cdn.bootcdn.net/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+          
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/mathtex-script-type.min.js" integrity="sha384-zWYbd0NBwgTsgIdFKVprSfTh1mbMPe5Hz1X3yY4Sd1h/K1cQoUe36OGwAGz/PcDy" crossorigin="anonymous"></script>
+              
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+                  <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        renderMathInElement(document.body, {
+                            delimiters: [
+                                {left: "$$", right: "$$", display: true },
+                                {left: "$", right: "$", display: false }, 
+                            ]
+                        });
+                    });
+
+                    window.$ZOLA_CONFIG = {
+                        base: "/",
+                        title: "BLOG",
+                        author: "Roger",
+                        navs:  ["Home","Categories","Tags","About",].map(function(e){return e.toLowerCase();}),
+                    }; 
+                </script>
+                  
+          
+      
+
+      
+          <link rel="stylesheet" href="/site.css">
+          
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+          
+      
+
+      
+      
+    </head>
+
+    <body> 
+        <div class="container"> 
+            <div id="mobile-navbar" class="mobile-navbar">
+                <div class="mobile-header-logo">
+                  <a href="/" class="logo">BLOG</a>
+                </div>
+                <div class="mobile-navbar-icon icon-out">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+            
+
+            <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+              <ul class="mobile-menu-list">
+                
+                    <li class="mobile-menu-item">
+                        <a href="/">
+                            Home
+                        </a> 
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="/categories">
+                            Categories
+                        </a> 
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="/tags">
+                            Tags
+                        </a> 
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="/about">
+                            About
+                        </a> 
+                    </li>
+                
+              </ul>
+            </nav>
+
+            <header id="header">
+                
+                <div class="logo"><a href="/">BLOG</a></div>
+                <nav class="menu">
+                    <ul>
+                        
+                            <li>
+                                <a href="/">
+                                    Home
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/categories">
+                                    Categories
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/tags">
+                                    Tags
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/about">
+                                    About
+                                </a>
+                            </li>
+                        
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+                <div class="content" id="mobile-panel">
+                    
+                    
+
+
+
+<article class="post article-content">
+    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="/xie-yi-ge-vuede-hooks/">写一个 vue 的 hooks</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2020.01.20&nbsp;&nbsp; 共 410 字</span>
+            
+        </div>
+    </header>
+
+    <div class="post-content">
+      <h1 id="qian-yan">前言</h1>
+<p>在 <code>vue</code> 采用了 <code>composition-api</code> 之后，利用函数式特性，我们可以很简单地完成几个 hooks（就和 react hooks 相似），帮助我们实现以往方式难以完成的功能。</p>
+<span id="continue-reading"></span>
+<h1 id="xian-zhan-shi-ji-ge-yuan-dai-ma">先展示几个源代码</h1>
+<h2 id="jian-ting-ping-mu-da-xiao-usewindow">监听屏幕大小 · useWindow</h2>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">Ref</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">ref</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">onMounted</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">onUnmounted </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">@vue/composition-api</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#db7c6d;">export </span><span style="color:#a3cbe3;">function </span><span style="color:#a2ba43;">useWindow</span><span style="font-weight:bold;color:#dbbb3d;">()</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">{</span><span style="color:#ffffffc4;">
+	</span><span style="font-weight:bold;color:#a3cbe3;">width</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">Ref&lt;</span><span style="color:#e7e7e7;">number</span><span style="color:#ffffffc4;">&gt;;</span><span style="color:#ffffffc4;">
+	</span><span style="font-weight:bold;color:#a3cbe3;">height</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">Ref&lt;</span><span style="color:#e7e7e7;">number</span><span style="color:#ffffffc4;">&gt;;</span><span style="color:#ffffffc4;">
+} {</span><span style="color:#ffffffc4;">
+	</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">width </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">ref</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">0</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+	</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">height </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">ref</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">0</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+	</span><span style="color:#a3cbe3;">const </span><span style="color:#a2ba43;">resizeAction </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#ffffffc4;">{</span><span style="color:#ffffffc4;">
+		</span><span style="color:#db7c6d;">return </span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#ffffffc4;">{</span><span style="color:#ffffffc4;">
+			</span><span style="font-weight:bold;color:#a3cbe3;">width</span><span style="color:#ffffffc4;">.value </span><span style="color:#db7c6d;">= </span><span style="color:#ffffffc4;">document.body.</span><span style="font-weight:bold;color:#a3cbe3;">clientWidth</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+			</span><span style="font-weight:bold;color:#a3cbe3;">height</span><span style="color:#ffffffc4;">.value </span><span style="color:#db7c6d;">= </span><span style="color:#ffffffc4;">document.body.</span><span style="font-weight:bold;color:#a3cbe3;">clientHeight</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+		})();</span><span style="color:#ffffffc4;">
+	};</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+	</span><span style="color:#a2ba43;">onMounted</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#ffffffc4;">{</span><span style="color:#ffffffc4;">
+		</span><span style="font-weight:bold;color:#a3cbe3;">width</span><span style="color:#ffffffc4;">.value </span><span style="color:#db7c6d;">= </span><span style="color:#ffffffc4;">document.body.</span><span style="font-weight:bold;color:#a3cbe3;">clientWidth</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+		</span><span style="font-weight:bold;color:#a3cbe3;">height</span><span style="color:#ffffffc4;">.value </span><span style="color:#db7c6d;">= </span><span style="color:#ffffffc4;">document.body.</span><span style="font-weight:bold;color:#a3cbe3;">clientHeight</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+		window.</span><span style="color:#db7c6d;">addEventListener</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">resize</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">resizeAction</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+	});</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+	</span><span style="color:#a2ba43;">onUnmounted</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#ffffffc4;">{</span><span style="color:#ffffffc4;">
+		window.</span><span style="color:#db7c6d;">removeEventListener</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">resize</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">resizeAction</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+	});</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+	</span><span style="color:#db7c6d;">return </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">width</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">height </span><span style="color:#ffffffc4;">};</span><span style="color:#ffffffc4;">
+}</span><span style="color:#ffffffc4;">
+</span></code></pre><h2 id="jian-ting-style-bian-hua-usestyles">监听 Style 变化 · useStyles</h2>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#a3cbe3;">interface </span><span style="color:#ffffffc4;">UseStyles {</span><span style="color:#ffffffc4;">
+	[</span><span style="color:#ffffff;">key</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">]</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+}</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">function </span><span style="color:#a2ba43;">useStylesAsCreated</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">styles</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="font-weight:bold;color:#dbbb3d;">)</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">Ref&lt;UseStyles&gt; {</span><span style="color:#ffffffc4;">
+	</span><span style="color:#a3cbe3;">let </span><span style="font-weight:bold;color:#a3cbe3;">stylesObject</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">UseStyles </span><span style="color:#db7c6d;">= </span><span style="color:#ffffffc4;">{};</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+	</span><span style="color:#a3cbe3;">const </span><span style="color:#a2ba43;">toHump </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">str</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt;</span><span style="color:#ffffffc4;">
+		</span><span style="font-weight:bold;color:#a3cbe3;">str</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">replace</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">/</span><span style="color:#ffffffc4;">-(</span><span style="font-weight:bold;color:#a2ba43;">\w</span><span style="color:#ffffffc4;">)</span><span style="font-weight:bold;color:#dbbb3d;">/</span><span style="color:#db7c6d;">g</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">_</span><span style="color:#ffffffc4;">, </span><span style="color:#ffffff;">val</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="font-weight:bold;color:#a3cbe3;">val</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">toUpperCase</span><span style="color:#ffffffc4;">());</span><span style="color:#ffffffc4;">
+	</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">stylesArr </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">styles</span><span style="color:#ffffffc4;">
+		.</span><span style="color:#db7c6d;">split</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">)</span><span style="color:#ffffffc4;">
+		.</span><span style="color:#a2ba43;">map</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">v</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="font-weight:bold;color:#a3cbe3;">v</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">replace</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">/</span><span style="font-weight:bold;color:#a2ba43;">[\r\n]</span><span style="font-weight:bold;color:#dbbb3d;">/</span><span style="color:#db7c6d;">g</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#dbbb3d;">&quot;&quot;</span><span style="color:#ffffffc4;">).</span><span style="color:#db7c6d;">replace</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">/</span><span style="font-weight:bold;color:#a2ba43;">\s</span><span style="color:#db7c6d;">+</span><span style="font-weight:bold;color:#dbbb3d;">/</span><span style="color:#db7c6d;">g</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#dbbb3d;">&quot;&quot;</span><span style="color:#ffffffc4;">))</span><span style="color:#ffffffc4;">
+		.</span><span style="color:#a2ba43;">filter</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">v</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="font-weight:bold;color:#a3cbe3;">v</span><span style="color:#ffffffc4;">.length </span><span style="color:#db7c6d;">&gt; 0</span><span style="color:#ffffffc4;">)</span><span style="color:#ffffffc4;">
+		.</span><span style="color:#a2ba43;">map</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">v</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#a2ba43;">toHump</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">v</span><span style="color:#ffffffc4;">));</span><span style="color:#ffffffc4;">
+	</span><span style="font-weight:bold;color:#a3cbe3;">stylesArr</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">forEach</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">v</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#ffffffc4;">{</span><span style="color:#ffffffc4;">
+		</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">styleFragment </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">v</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">split</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">:</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+		</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">key </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">styleFragment</span><span style="color:#ffffffc4;">[</span><span style="color:#db7c6d;">0</span><span style="color:#ffffffc4;">];</span><span style="color:#ffffffc4;">
+		</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">val </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">styleFragment</span><span style="color:#ffffffc4;">[</span><span style="color:#db7c6d;">1</span><span style="color:#ffffffc4;">];</span><span style="color:#ffffffc4;">
+		</span><span style="font-weight:bold;color:#a3cbe3;">stylesObject</span><span style="color:#ffffffc4;">[</span><span style="font-weight:bold;color:#a3cbe3;">key</span><span style="color:#ffffffc4;">] </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">val</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+	});</span><span style="color:#ffffffc4;">
+	</span><span style="color:#db7c6d;">return </span><span style="color:#a2ba43;">ref</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">stylesObject</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+}</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">function </span><span style="color:#a2ba43;">useStylesAsChanged</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">styles</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">Ref&lt;UseStyles&gt;, </span><span style="color:#ffffff;">newStyles</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="font-weight:bold;color:#dbbb3d;">)</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">void </span><span style="color:#ffffffc4;">{</span><span style="color:#ffffffc4;">
+	</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">newStylesArr </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">useStylesAsCreated</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">newStyles</span><span style="color:#ffffffc4;">).value;</span><span style="color:#ffffffc4;">
+	</span><span style="font-weight:bold;color:#a3cbe3;">styles</span><span style="color:#ffffffc4;">.value </span><span style="color:#db7c6d;">= </span><span style="color:#ffffffc4;">{ </span><span style="color:#db7c6d;">...</span><span style="font-weight:bold;color:#a3cbe3;">styles</span><span style="color:#ffffffc4;">.value, </span><span style="color:#db7c6d;">...</span><span style="font-weight:bold;color:#a3cbe3;">newStylesArr </span><span style="color:#ffffffc4;">};</span><span style="color:#ffffffc4;">
+}</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#db7c6d;">export </span><span style="color:#a3cbe3;">function </span><span style="color:#a2ba43;">useStyles</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">styles</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="font-weight:bold;color:#dbbb3d;">)</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">Ref&lt;UseStyles&gt;;</span><span style="color:#ffffffc4;">
+</span><span style="color:#db7c6d;">export </span><span style="color:#a3cbe3;">function </span><span style="color:#a2ba43;">useStyles</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">styles</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">Ref&lt;UseStyles&gt;, </span><span style="color:#ffffff;">newStyles</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="font-weight:bold;color:#dbbb3d;">)</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">void</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#db7c6d;">export </span><span style="color:#a3cbe3;">function </span><span style="color:#a2ba43;">useStyles</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">styles</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string </span><span style="color:#db7c6d;">| </span><span style="color:#ffffffc4;">Ref&lt;UseStyles&gt;, </span><span style="color:#ffffff;">newStyles</span><span style="color:#db7c6d;">?: </span><span style="color:#e7e7e7;">string</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#ffffffc4;">{</span><span style="color:#ffffffc4;">
+	</span><span style="color:#db7c6d;">if </span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">arguments</span><span style="color:#ffffffc4;">.length </span><span style="color:#db7c6d;">=== 1</span><span style="color:#ffffffc4;">) {</span><span style="color:#ffffffc4;">
+		</span><span style="color:#db7c6d;">return </span><span style="color:#a2ba43;">useStylesAsCreated</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">styles </span><span style="color:#db7c6d;">as </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+	} </span><span style="color:#db7c6d;">else </span><span style="color:#ffffffc4;">{</span><span style="color:#ffffffc4;">
+		</span><span style="color:#db7c6d;">return </span><span style="color:#a2ba43;">useStylesAsChanged</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">styles </span><span style="color:#db7c6d;">as </span><span style="color:#ffffffc4;">Ref&lt;UseStyles&gt;, </span><span style="font-weight:bold;color:#a3cbe3;">newStyles</span><span style="color:#db7c6d;">!</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+	}</span><span style="color:#ffffffc4;">
+}</span><span style="color:#ffffffc4;">
+</span></code></pre><h2 id="jian-ting-jian-pan-shi-jian-usekeyup">监听键盘事件 · useKeyup</h2>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#db7c6d;">export </span><span style="color:#a3cbe3;">function </span><span style="color:#a2ba43;">useKeyup</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">keyCode</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">number </span><span style="color:#db7c6d;">| </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">, </span><span style="color:#ffffff;">callback</span><span style="color:#db7c6d;">?: </span><span style="color:#e7e7e7;">any</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#ffffffc4;">{</span><span style="color:#ffffffc4;">
+	</span><span style="color:#a3cbe3;">const </span><span style="color:#a2ba43;">keyupAction </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">e</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">keyCode</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">number</span><span style="color:#ffffffc4;">; </span><span style="font-weight:bold;color:#a3cbe3;">key</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string </span><span style="color:#ffffffc4;">}</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#ffffffc4;">{</span><span style="color:#ffffffc4;">
+		</span><span style="color:#db7c6d;">if </span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">e</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">keyCode </span><span style="color:#db7c6d;">=== </span><span style="font-weight:bold;color:#a3cbe3;">keyCode </span><span style="color:#db7c6d;">|| </span><span style="font-weight:bold;color:#a3cbe3;">e</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">key </span><span style="color:#db7c6d;">=== </span><span style="font-weight:bold;color:#a3cbe3;">keyCode</span><span style="color:#ffffffc4;">) {</span><span style="color:#ffffffc4;">
+			</span><span style="color:#db7c6d;">if </span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">callback</span><span style="color:#ffffffc4;">) {</span><span style="color:#ffffffc4;">
+				</span><span style="color:#a2ba43;">callback</span><span style="color:#ffffffc4;">();</span><span style="color:#ffffffc4;">
+			}</span><span style="color:#ffffffc4;">
+		}</span><span style="color:#ffffffc4;">
+	};</span><span style="color:#ffffffc4;">
+	</span><span style="color:#a2ba43;">onMounted</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#ffffffc4;">{</span><span style="color:#ffffffc4;">
+		window.</span><span style="color:#db7c6d;">addEventListener</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">keyup</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">keyupAction</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+	});</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+	</span><span style="color:#a2ba43;">onUnmounted</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#ffffffc4;">{</span><span style="color:#ffffffc4;">
+		window.</span><span style="color:#db7c6d;">removeEventListener</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">keyup</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">keyupAction</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+	});</span><span style="color:#ffffffc4;">
+}</span><span style="color:#ffffffc4;">
+</span></code></pre><h2 id="jia-zai-yuan-cheng-script-usescript">加载远程 script · useScript</h2>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#db7c6d;">export </span><span style="color:#a3cbe3;">function </span><span style="color:#a2ba43;">useScript</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">params</span><span style="color:#db7c6d;">: </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">src</span><span style="color:#db7c6d;">?: </span><span style="color:#e7e7e7;">string</span><span style="color:#ffffffc4;">; </span><span style="font-weight:bold;color:#a3cbe3;">text</span><span style="color:#db7c6d;">?: </span><span style="color:#e7e7e7;">string </span><span style="color:#ffffffc4;">}</span><span style="font-weight:bold;color:#dbbb3d;">)</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">void </span><span style="color:#ffffffc4;">{</span><span style="color:#ffffffc4;">
+	</span><span style="color:#a3cbe3;">function </span><span style="color:#a2ba43;">loadScriptBySrc</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">link</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#ffffffc4;">{</span><span style="color:#ffffffc4;">
+		</span><span style="color:#a3cbe3;">let </span><span style="font-weight:bold;color:#a3cbe3;">script </span><span style="color:#db7c6d;">= </span><span style="color:#ffffffc4;">document.</span><span style="color:#db7c6d;">createElement</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">script</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+		</span><span style="font-weight:bold;color:#a3cbe3;">script</span><span style="color:#ffffffc4;">.type </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">text/javascript</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+		</span><span style="font-weight:bold;color:#a3cbe3;">script</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">src </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">link</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+		document.</span><span style="color:#db7c6d;">getElementsByTagName</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">head</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">)[</span><span style="color:#db7c6d;">0</span><span style="color:#ffffffc4;">].</span><span style="color:#db7c6d;">appendChild</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">script</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+	}</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+	</span><span style="color:#a3cbe3;">function </span><span style="color:#a2ba43;">loadScriptByText</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">text</span><span style="color:#db7c6d;">: </span><span style="color:#e7e7e7;">string</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#ffffffc4;">{</span><span style="color:#ffffffc4;">
+		</span><span style="color:#a3cbe3;">let </span><span style="font-weight:bold;color:#a3cbe3;">script </span><span style="color:#db7c6d;">= </span><span style="color:#ffffffc4;">document.</span><span style="color:#db7c6d;">createElement</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">script</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+		</span><span style="font-weight:bold;color:#a3cbe3;">script</span><span style="color:#ffffffc4;">.type </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">text/javascript</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+		</span><span style="font-weight:bold;color:#a3cbe3;">script</span><span style="color:#ffffffc4;">.text </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">text</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+		document.</span><span style="color:#db7c6d;">getElementsByTagName</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">head</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">)[</span><span style="color:#db7c6d;">0</span><span style="color:#ffffffc4;">].</span><span style="color:#db7c6d;">appendChild</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">script</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+	}</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+	</span><span style="color:#a2ba43;">onMounted</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#ffffffc4;">{</span><span style="color:#ffffffc4;">
+		</span><span style="color:#db7c6d;">if </span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">params</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">src</span><span style="color:#ffffffc4;">) {</span><span style="color:#ffffffc4;">
+			</span><span style="color:#a2ba43;">loadScriptBySrc</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">params</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">src</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+		}</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+		</span><span style="color:#db7c6d;">if </span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">params</span><span style="color:#ffffffc4;">.text) {</span><span style="color:#ffffffc4;">
+			</span><span style="color:#a2ba43;">loadScriptByText</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">params</span><span style="color:#ffffffc4;">.text);</span><span style="color:#ffffffc4;">
+		}</span><span style="color:#ffffffc4;">
+	});</span><span style="color:#ffffffc4;">
+}</span><span style="color:#ffffffc4;">
+</span></code></pre><h1 id="ji-ben-shi-yong-fang-fa">基本使用方法</h1>
+<ul>
+<li>以 useStyles 为例</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-html" data-lang="html"><span style="font-weight:bold;color:#dbbb3d;">&lt;</span><span style="color:#db7c6d;">template</span><span style="font-weight:bold;color:#dbbb3d;">&gt;</span><span style="color:#ffffffc4;">
+	</span><span style="font-weight:bold;color:#dbbb3d;">&lt;</span><span style="color:#ffffff;">div </span><span style="color:#e8a64b;">:style</span><span style="font-weight:bold;color:#db7c6d;">=</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">styles</span><span style="font-weight:bold;color:#dbbb3d;">&quot;&gt;</span><span style="color:#ffffffc4;">
+		</span><span style="font-weight:bold;color:#dbbb3d;">&lt;</span><span style="color:#db7c6d;">button </span><span style="color:#e8a64b;">@click</span><span style="font-weight:bold;color:#db7c6d;">=</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">change</span><span style="font-weight:bold;color:#dbbb3d;">&quot;&gt;</span><span style="color:#ffffffc4;">更改</span><span style="font-weight:bold;color:#dbbb3d;">&lt;/</span><span style="color:#db7c6d;">button</span><span style="font-weight:bold;color:#dbbb3d;">&gt;</span><span style="color:#ffffffc4;">
+	</span><span style="font-weight:bold;color:#dbbb3d;">&lt;/</span><span style="color:#ffffff;">div</span><span style="font-weight:bold;color:#dbbb3d;">&gt;</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#dbbb3d;">&lt;/</span><span style="color:#db7c6d;">template</span><span style="font-weight:bold;color:#dbbb3d;">&gt;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#dbbb3d;">&lt;</span><span style="color:#db7c6d;">script </span><span style="color:#e8a64b;">lang</span><span style="font-weight:bold;color:#db7c6d;">=</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">ts</span><span style="font-weight:bold;color:#dbbb3d;">&quot;&gt;</span><span style="color:#ffffffc4;">
+	</span><span style="font-style:italic;color:#db7c6d;">import </span><span style="color:#dbbb3d;">{ </span><span style="font-weight:bold;color:#a3cbe3;">useStyles </span><span style="color:#dbbb3d;">} </span><span style="font-style:italic;color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">@/utils/useStyles</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+	</span><span style="font-style:italic;color:#db7c6d;">import </span><span style="color:#dbbb3d;">{ </span><span style="font-weight:bold;color:#a3cbe3;">createComponent</span><span style="color:#dbbb3d;">, </span><span style="font-weight:bold;color:#a3cbe3;">ref </span><span style="color:#dbbb3d;">} </span><span style="font-style:italic;color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">@vue/composition-api</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+	</span><span style="font-style:italic;color:#db7c6d;">export default </span><span style="color:#a2ba43;">createComponent</span><span style="color:#ffffffc4;">({</span><span style="color:#ffffffc4;">
+		</span><span style="color:#a2ba43;">setup</span><span style="color:#ffffffc4;">() </span><span style="color:#dbbb3d;">{</span><span style="color:#dbbb3d;">
+			</span><span style="font-weight:bold;color:#dbbb3d;">const </span><span style="font-weight:bold;color:#a3cbe3;">styles </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">useStyles</span><span style="color:#dbbb3d;">(</span><span style="font-weight:bold;color:#dbbb3d;">`</span><span style="color:#ffffffc4;">
+    		background-color: red;</span><span style="color:#ffffffc4;">
+    		min-height: 100px;</span><span style="color:#ffffffc4;">
+    		width: 200px;</span><span style="color:#ffffffc4;">
+        </span><span style="font-weight:bold;color:#dbbb3d;">`</span><span style="color:#dbbb3d;">);</span><span style="color:#dbbb3d;">
+			</span><span style="font-weight:bold;color:#dbbb3d;">const </span><span style="font-weight:bold;color:#a3cbe3;">change </span><span style="color:#db7c6d;">= </span><span style="color:#dbbb3d;">() =&gt; {</span><span style="color:#dbbb3d;">
+				</span><span style="color:#a2ba43;">useStyles</span><span style="color:#dbbb3d;">(</span><span style="font-weight:bold;color:#a3cbe3;">styles</span><span style="color:#dbbb3d;">, </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">background-color: blue;</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#dbbb3d;">);</span><span style="color:#dbbb3d;">
+			};</span><span style="color:#dbbb3d;">
+			</span><span style="color:#db7c6d;">return </span><span style="color:#dbbb3d;">{</span><span style="color:#dbbb3d;">
+				</span><span style="font-weight:bold;color:#a3cbe3;">styles</span><span style="color:#dbbb3d;">,</span><span style="color:#dbbb3d;">
+				</span><span style="font-weight:bold;color:#a3cbe3;">change</span><span style="color:#dbbb3d;">,</span><span style="color:#dbbb3d;">
+			};</span><span style="color:#dbbb3d;">
+		}</span><span style="color:#ffffffc4;">,</span><span style="color:#ffffffc4;">
+	});</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#dbbb3d;">&lt;/</span><span style="color:#db7c6d;">script</span><span style="font-weight:bold;color:#dbbb3d;">&gt;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+    </div>
+
+    
+    
+
+    <div class="post-footer">
+        
+            
+                <div class="post-tags">
+                    
+                        <a href="&#x2F;tags&#x2F;vue&#x2F;">#vue</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                        <a class="previous" href="&#x2F;xin-zhu-zhong-gong-an&#x2F;">‹ 新 · 宁中公案</a>
+                    
+                    
+                        <a class="next" href="&#x2F;mathcomplexwen-dang&#x2F;">Math Complex 文档 ›</a>
+                    
+                    
+                    
+                </div>
+            
+
+        
+
+    </div>
+
+    
+    
+</article>
+
+
+                        
+                <div id="footer">
+                    <a href="/">Roger &copy; <span id="footer-year">2021</span></a>
+                </div>
+                </div>
+            </main>
+            
+            
+            
+             
+            
+        </div>
+
+    
+    <script type="text/javascript" src="/phomina.js" ></script>
+    <script type="text/javascript" src="/custom.js" ></script>
+    <script type="text/javascript" src="/fslightbox.js" ></script>
+    
+    </body>
+
+</html>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>BLOG - 批判</title>
+        <link>/</link>
+        <description></description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="/tags/pi-pan/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Thu, 14 Feb 2019 12:16:03 +0000</lastBuildDate>
+        <item>
+            <title>这算是越来越好了吧</title>
+            <pubDate>Thu, 14 Feb 2019 12:16:03 +0000</pubDate>
+            <link>/zhe-suan-shi-yue-lai-yue-hao-liao-ba/</link>
+            <guid>/zhe-suan-shi-yue-lai-yue-hao-liao-ba/</guid>
+            <description>&lt;p&gt;我看这个学校走歪路很久了，就算我们都知道一七届是少有的奇迹，也不可能指望这个奇迹在接下来频繁上演，但是可以知道的是，一七届不仅是难得少有的一届，却也是补课极少的一届。&lt;&#x2F;p&gt;
+&lt;p&gt;这一届补课之少 少到使这成为绝无仅有的一届，不信我们再看看，一八届理科实验班疯狂的补课竞赛，自从高一下学期，喊出了竞赛优先的口号，仿佛三年之内就能追上衡水，高产放卫星，所有时间都被榨干去学习，甚至是真实的上课时间。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>浅论恋爱初期心理</title>
+            <pubDate>Sun, 26 Aug 2018 08:47:34 +0000</pubDate>
+            <link>/qian-lun-lian-ai-chu-qi-xin-li/</link>
+            <guid>/qian-lun-lian-ai-chu-qi-xin-li/</guid>
+            <description>&lt;p&gt;对于人的存在，我们做出如下假设，人在没有约束的情况下会做出对自己最有利的决定，基于这样的基础，我们能得到什么?&lt;&#x2F;p&gt;
+&lt;p&gt;例如，在人最基础的需求（性冲动，自我价值的肯定等）与既有生存环境的规则成考现实产生矛盾对立时，人们会考量自己在满足需求和付出代价之间的平衡点。&lt;&#x2F;p&gt;
+&lt;p&gt;理想情况下的恋爱早期，二者间会产生一种互相吸引，彼此之间会存在一种暖味互相的暗示，这种暗示为之后的进步发展提供了可能性。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>另一条新闻</title>
+            <pubDate>Wed, 14 Jan 2015 08:47:34 +0000</pubDate>
+            <link>/ling-yi-tiao-xin-wen/</link>
+            <guid>/ling-yi-tiao-xin-wen/</guid>
+            <description>&lt;p&gt;云层之中，一架客机平稳地飞行。&lt;&#x2F;p&gt;
+&lt;p&gt;机舱内有很多乘客在飞机后部，有两位乘客正在交谈。&lt;&#x2F;p&gt;
+&lt;p&gt;甲：“我给你说，这块手表真值些钱呢！”&lt;&#x2F;p&gt;
+&lt;p&gt;乙：“算你识货，别看这块手，现在戴在我手上，之前还是别人的呢。”&lt;&#x2F;p&gt;
+&lt;p&gt;甲：“怎么，刚买的啊？”&lt;&#x2F;p&gt;
+&lt;p&gt;乙（小声地）：“哥，我给你讲实话，这不是我的。”&lt;&#x2F;p&gt;
+&lt;p&gt;甲：“你偷的？”&lt;&#x2F;p&gt;
+</description>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>BLOG - ECAMScript</title>
+        <link>/</link>
+        <description></description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="/tags/ecamscript/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Sat, 25 Apr 2020 19:42:12 +0000</lastBuildDate>
+        <item>
+            <title>Matable 文档</title>
+            <pubDate>Sat, 25 Apr 2020 19:42:12 +0000</pubDate>
+            <link>/matable/</link>
+            <guid>/matable/</guid>
+            <description>&lt;h1 id=&quot;matable&quot;&gt;Matable&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;code&gt;Matable&lt;&#x2F;code&gt;是一个高效便利的 &lt;code&gt;XLSX文件转网页&lt;&#x2F;code&gt; 的开源工具。&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;Matable&lt;&#x2F;code&gt;支持自定义配置，支持各种检索模式，使用简单方便。&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;Matable&lt;&#x2F;code&gt;是一个开源的项目，其使用了如下的开源项目&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;vuejs.org&#x2F;&quot;&gt;vue&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;axios&#x2F;axios&quot;&gt;axios&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;muse-ui.org&#x2F;&quot;&gt;muse-ui&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;pic.imgdb.cn&#x2F;item&#x2F;610e0dfc5132923bf8e69301.jpg&quot; alt=&quot;demo&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>inject-provide 文档</title>
+            <pubDate>Tue, 31 Mar 2020 13:11:26 +0000</pubDate>
+            <link>/inject-providewen-dang/</link>
+            <guid>/inject-providewen-dang/</guid>
+            <description>&lt;h1 id=&quot;inject-provide&quot;&gt;Inject-Provide&lt;&#x2F;h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gitee.com&#x2F;shawroger&#x2F;inject-provide&quot;&gt;项目地址&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;当前版本：&lt;code&gt;V0.3.5&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;code&gt;inject-provide&lt;&#x2F;code&gt; 是一个极简洁的 &lt;strong&gt;nodejs&lt;&#x2F;strong&gt; 注入框架，运行过程中需要装饰器的支持，建议使用 &lt;strong&gt;TypeScript&lt;&#x2F;strong&gt; 作为运行环境。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Math Complex 文档</title>
+            <pubDate>Sun, 16 Feb 2020 17:37:54 +0000</pubDate>
+            <link>/mathcomplexwen-dang/</link>
+            <guid>/mathcomplexwen-dang/</guid>
+            <description>&lt;h1 id=&quot;jian-jie&quot;&gt;简介&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gitee.com&#x2F;shawroger&#x2F;math-complex&quot;&gt;项目仓库&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;shawroger.gitee.io&#x2F;math-complex&quot;&gt;项目文档&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Math Complex 是一个采用 TypeScript 编写的 JavaScript 扩展数学库，它扩展了 Math 数学类的一些方法，让 JavaScript 支持复数计算。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ji-chu-gong-neng&quot;&gt;基础功能&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;扩展了复数类&lt;&#x2F;li&gt;
+&lt;li&gt;实现了复数类的四则、乘方开方运算&lt;&#x2F;li&gt;
+&lt;li&gt;扩充了辐角、指数转换计算&lt;&#x2F;li&gt;
+&lt;li&gt;通过 &lt;strong&gt;Reflect&lt;&#x2F;strong&gt; 静态类实现函数式&lt;&#x2F;li&gt;
+&lt;li&gt;函数式对原生 &lt;strong&gt;number&lt;&#x2F;strong&gt; 类型兼容&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+        </item>
+    </channel>
+</rss>

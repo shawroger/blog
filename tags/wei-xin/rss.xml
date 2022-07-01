@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>BLOG - 微信</title>
+        <link>/</link>
+        <description></description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="/tags/wei-xin/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Mon, 07 Sep 2020 11:32:57 +0000</lastBuildDate>
+        <item>
+            <title>运营小程序之心路历程</title>
+            <pubDate>Mon, 07 Sep 2020 11:32:57 +0000</pubDate>
+            <link>/yun-ying-xiao-cheng-xu-zhi-xin-lu-li-cheng/</link>
+            <guid>/yun-ying-xiao-cheng-xu-zhi-xin-lu-li-cheng/</guid>
+            <description>&lt;h1 id=&quot;yuan-qi&quot;&gt;缘起&lt;&#x2F;h1&gt;
+&lt;p&gt;在此之前，我并没有尝试过微信小程序的开发，虽然之前我对微信小程序有所谅解，但是我还是觉得它的局限性比较多，不能拥抱广泛的前端生态，所以一直没有此过多关心。&lt;&#x2F;p&gt;
+&lt;p&gt;直至去年，三国杀推出了一个新武将张昌蒲，我对她繁琐的计算感到困惑，游戏过程中也是经常手忙脚乱，频频出错。&lt;&#x2F;p&gt;
+&lt;p&gt;然而对于这种纯计算的数学问题，我首先想到的就是利用编程来对它进行暴力穷举，虽然这个逻辑比较复杂，但是还是可以成功写出来的，然后我就在浏览器里面跑了一下，结果还是可以认可的。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>微信公众号简明教程</title>
+            <pubDate>Tue, 31 Mar 2020 14:10:29 +0000</pubDate>
+            <link>/wei-xin-gong-zhong-hao-jiao-cheng/</link>
+            <guid>/wei-xin-gong-zhong-hao-jiao-cheng/</guid>
+            <description>&lt;h1 id=&quot;bei-jing&quot;&gt;背景&lt;&#x2F;h1&gt;
+&lt;p&gt;班级公众号其实在很早之前就创建了，那个时候还是因为在导生的建议下，才有了这个公众号，如今已经过去一年多了，如果不是最近辅导员又再次关注起班级公众号来，我恐怕都要忘记这件事了。&lt;&#x2F;p&gt;
+&lt;!--
+匆忙中，我发现很久就没有关注过的那个公众号已经是灰尘满布，可怜的班长因为没有良好的公众号，可能也要挨骂了，但是无论如何，今后的这个公众号，在辅导员的要求下，也必须得有文章可看。
+ --&gt;
+</description>
+        </item>
+    </channel>
+</rss>

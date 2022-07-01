@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+ 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+ 
+      <title>BLOG</title>
+
+      <link rel="icon" sizes="any" href="/favico.ico">
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml">
+      
+      
+      <script src="https://cdn.bootcdn.net/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+          
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/mathtex-script-type.min.js" integrity="sha384-zWYbd0NBwgTsgIdFKVprSfTh1mbMPe5Hz1X3yY4Sd1h/K1cQoUe36OGwAGz/PcDy" crossorigin="anonymous"></script>
+              
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+                  <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        renderMathInElement(document.body, {
+                            delimiters: [
+                                {left: "$$", right: "$$", display: true },
+                                {left: "$", right: "$", display: false }, 
+                            ]
+                        });
+                    });
+
+                    window.$ZOLA_CONFIG = {
+                        base: "/",
+                        title: "BLOG",
+                        author: "Roger",
+                        navs:  ["Home","Categories","Tags","About",].map(function(e){return e.toLowerCase();}),
+                    }; 
+                </script>
+                  
+          
+      
+
+      
+          <link rel="stylesheet" href="/site.css">
+          
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+          
+      
+
+      
+      
+    </head>
+
+    <body> 
+        <div class="container"> 
+            <div id="mobile-navbar" class="mobile-navbar">
+                <div class="mobile-header-logo">
+                  <a href="/" class="logo">BLOG</a>
+                </div>
+                <div class="mobile-navbar-icon icon-out">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+            
+
+            <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+              <ul class="mobile-menu-list">
+                
+                    <li class="mobile-menu-item">
+                        <a href="/">
+                            Home
+                        </a> 
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="/categories">
+                            Categories
+                        </a> 
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="/tags">
+                            Tags
+                        </a> 
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="/about">
+                            About
+                        </a> 
+                    </li>
+                
+              </ul>
+            </nav>
+
+            <header id="header">
+                
+                <div class="logo"><a href="/">BLOG</a></div>
+                <nav class="menu">
+                    <ul>
+                        
+                            <li>
+                                <a href="/">
+                                    Home
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/categories">
+                                    Categories
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/tags">
+                                    Tags
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/about">
+                                    About
+                                </a>
+                            </li>
+                        
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+                <div class="content" id="mobile-panel">
+                    
+                    
+    <div class="about">
+        <h1 id="guan-yu-wo">关于我</h1>
+<p>大家好，我是一位来自皖南的小文青（曾经吧）。</p>
+<p>我出生在一个山林毓秀的地方，从古至今文人骚客往来于此，扪心自问我也许也有古代文人的情怀吧。</p>
+<p>所以我自小时候便开始尝试围棋，对此颇有兴趣，黑白的世界里有天地宇宙变化的奥秘，常常沉迷其中，在静默的二元色中思考者变化的法则。</p>
+<p>或许本来我应该学文科的，都是由于政治这一门课比较难堪，于是一入理工深似海，从此文学是路人，在数字字母的世界里，我开始对佛学产生了兴趣，固然我不是宗教信徒，但我相信宗教仍可以给我力量。</p>
+<p>几年前我开始学习前端编程，也一直在写一些 <code>golang</code> 的工程，如今在尝试 <code>rust</code>，这是一门很有挑战性的现代语言。</p>
+<p>以后的日子还长，机遇很多，遇见的所有人都很好，过去塑造了现在的我，现在的我正在塑造另一个未来。</p>
+<p>想联系我？<a href="mailto:roger@shawroger.com">发个邮件吧</a></p>
+<table><thead><tr><th align="center">兴趣</th><th align="center">状态</th></tr></thead><tbody>
+<tr><td align="center"><a href="https://www.rust-lang.org/">Rust</a> 学习中</td><td align="center">去年起</td></tr>
+<tr><td align="center">围棋业余玩家</td><td align="center">十余年</td></tr>
+<tr><td align="center">前端技术 <code>coder</code></td><td align="center">快五年</td></tr>
+<tr><td align="center">慢悠悠四处骑行</td><td align="center">这两年</td></tr>
+</tbody></table>
+<h1 id="jian-dan-xiao-ba-xi">简单小把戏</h1>
+<ul>
+<li><a href="https://github.com/shawroger/zcp-calculator-wxapp">张昌蒲计算器 · 微信小程序</a> （已上线）</li>
+</ul>
+<center>
+    <img 
+        src="https://pic.imgdb.cn/item/62a0677709475431291ea567.jpg" 
+        alt="张昌蒲计算器 · 微信小程序码" 
+        width="200"
+        height="200"
+        style="margin: 20px 0;"
+    />
+</center>
+<blockquote>
+<p>欢迎各位使用 😘</p>
+</blockquote>
+
+    </div>
+
+                        
+                <div id="footer">
+                    <a href="/">Roger &copy; <span id="footer-year">2021</span></a>
+                </div>
+                </div>
+            </main>
+            
+            
+            
+             
+            
+        </div>
+
+    
+    <script type="text/javascript" src="/phomina.js" ></script>
+    <script type="text/javascript" src="/custom.js" ></script>
+    <script type="text/javascript" src="/fslightbox.js" ></script>
+    
+    </body>
+
+</html>

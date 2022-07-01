@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>BLOG - 小镇文集</title>
+        <link>/</link>
+        <description></description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="/tags/xiao-zhen-wen-ji/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Sun, 26 Aug 2018 08:05:57 +0000</lastBuildDate>
+        <item>
+            <title>小镇文集</title>
+            <pubDate>Sun, 26 Aug 2018 08:05:57 +0000</pubDate>
+            <link>/xiao-zhen-wen-ji/</link>
+            <guid>/xiao-zhen-wen-ji/</guid>
+            <description>&lt;h1 id=&quot;xia-che&quot;&gt;下车&lt;&#x2F;h1&gt;
+&lt;p&gt;汽笛声不住地响着，小镇又要恢复往日的喧嚣。&lt;&#x2F;p&gt;
+&lt;p&gt;曾几何时，小镇前一批的村民逃了出去，小镇成了一座空城。可是空城注定不会长久，废墟之上，新任的镇长又要驱赶另一批移民入驻小镇了。&lt;&#x2F;p&gt;
+&lt;p&gt;下车伊始，新官便约法三章，一切法令受由民众议定，不过终要由镇长批核。&lt;br &#x2F;&gt;
+所以开始到时候，似乎还要摆一个民主的幌子的。&lt;&#x2F;p&gt;
+&lt;p&gt;九月的天气依旧问热，镇上的村民刚入驻还没有几天，但依照历任镇长定下的规矩，村民全部要去服兵役的。镇长向村民们宣说了诸多好处，兵役又一次开征了。&lt;&#x2F;p&gt;
+</description>
+        </item>
+    </channel>
+</rss>

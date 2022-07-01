@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>BLOG - 总结</title>
+        <link>/</link>
+        <description></description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="/tags/zong-jie/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Mon, 07 Sep 2020 11:32:57 +0000</lastBuildDate>
+        <item>
+            <title>运营小程序之心路历程</title>
+            <pubDate>Mon, 07 Sep 2020 11:32:57 +0000</pubDate>
+            <link>/yun-ying-xiao-cheng-xu-zhi-xin-lu-li-cheng/</link>
+            <guid>/yun-ying-xiao-cheng-xu-zhi-xin-lu-li-cheng/</guid>
+            <description>&lt;h1 id=&quot;yuan-qi&quot;&gt;缘起&lt;&#x2F;h1&gt;
+&lt;p&gt;在此之前，我并没有尝试过微信小程序的开发，虽然之前我对微信小程序有所谅解，但是我还是觉得它的局限性比较多，不能拥抱广泛的前端生态，所以一直没有此过多关心。&lt;&#x2F;p&gt;
+&lt;p&gt;直至去年，三国杀推出了一个新武将张昌蒲，我对她繁琐的计算感到困惑，游戏过程中也是经常手忙脚乱，频频出错。&lt;&#x2F;p&gt;
+&lt;p&gt;然而对于这种纯计算的数学问题，我首先想到的就是利用编程来对它进行暴力穷举，虽然这个逻辑比较复杂，但是还是可以成功写出来的，然后我就在浏览器里面跑了一下，结果还是可以认可的。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>浙大之旅</title>
+            <pubDate>Mon, 25 May 2015 11:32:57 +0000</pubDate>
+            <link>/zhe-da-zhi-lu/</link>
+            <guid>/zhe-da-zhi-lu/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;原题：记夏令营的最后一站 —— 浙大之旅&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;借着六一儿童节的幌子，天不亮我便来到学校门前，翘首期盼汽车的到来。&lt;&#x2F;p&gt;
+&lt;p&gt;今天55名同学及几位老师，将乘坐两辆大客车前往浙江大学参观。&lt;&#x2F;p&gt;
+&lt;p&gt;同学兴奋不已，都在想象浙大的风光，我望着窗外，也想着浙大，心中十分激动。&lt;&#x2F;p&gt;
+&lt;p&gt;途中雾浓，远景朦胧，如披白沙；进了杭州城郊，雾渐散去，视野清晰了：&lt;&#x2F;p&gt;
+&lt;p&gt;路的两旁是耸立的高楼大厦，前方道路塞满了汽车，我们的汽车随着车流慢慢移动。&lt;&#x2F;p&gt;
+&lt;p&gt;车行没多久，一座造型优美而庞大的建筑物闯入了我的眼球，车通过了一道关卡便驶入了。&lt;&#x2F;p&gt;
+&lt;p&gt;这是哪里？我仔细地观察，发现四周树上都系上了两面旗帜，右边的旗帜红底，中央绘制了鹰，左边旗帜上书写着“118”这三个数字。&lt;&#x2F;p&gt;
+&lt;p&gt;我很费解，百般思索却不知其意。而一路欣赏着风景，碧树掩映下的自行车、匆匆的行人以及两旁高耸大厦都不知不觉地留在车后。&lt;&#x2F;p&gt;
+</description>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>BLOG - 教程</title>
+        <link>/</link>
+        <description></description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="/tags/jiao-cheng/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Tue, 31 Mar 2020 14:10:29 +0000</lastBuildDate>
+        <item>
+            <title>微信公众号简明教程</title>
+            <pubDate>Tue, 31 Mar 2020 14:10:29 +0000</pubDate>
+            <link>/wei-xin-gong-zhong-hao-jiao-cheng/</link>
+            <guid>/wei-xin-gong-zhong-hao-jiao-cheng/</guid>
+            <description>&lt;h1 id=&quot;bei-jing&quot;&gt;背景&lt;&#x2F;h1&gt;
+&lt;p&gt;班级公众号其实在很早之前就创建了，那个时候还是因为在导生的建议下，才有了这个公众号，如今已经过去一年多了，如果不是最近辅导员又再次关注起班级公众号来，我恐怕都要忘记这件事了。&lt;&#x2F;p&gt;
+&lt;!--
+匆忙中，我发现很久就没有关注过的那个公众号已经是灰尘满布，可怜的班长因为没有良好的公众号，可能也要挨骂了，但是无论如何，今后的这个公众号，在辅导员的要求下，也必须得有文章可看。
+ --&gt;
+</description>
+        </item>
+    </channel>
+</rss>

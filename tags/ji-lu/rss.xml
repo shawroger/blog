@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>BLOG - 纪录</title>
+        <link>/</link>
+        <description></description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="/tags/ji-lu/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Mon, 07 Sep 2020 11:32:57 +0000</lastBuildDate>
+        <item>
+            <title>运营小程序之心路历程</title>
+            <pubDate>Mon, 07 Sep 2020 11:32:57 +0000</pubDate>
+            <link>/yun-ying-xiao-cheng-xu-zhi-xin-lu-li-cheng/</link>
+            <guid>/yun-ying-xiao-cheng-xu-zhi-xin-lu-li-cheng/</guid>
+            <description>&lt;h1 id=&quot;yuan-qi&quot;&gt;缘起&lt;&#x2F;h1&gt;
+&lt;p&gt;在此之前，我并没有尝试过微信小程序的开发，虽然之前我对微信小程序有所谅解，但是我还是觉得它的局限性比较多，不能拥抱广泛的前端生态，所以一直没有此过多关心。&lt;&#x2F;p&gt;
+&lt;p&gt;直至去年，三国杀推出了一个新武将张昌蒲，我对她繁琐的计算感到困惑，游戏过程中也是经常手忙脚乱，频频出错。&lt;&#x2F;p&gt;
+&lt;p&gt;然而对于这种纯计算的数学问题，我首先想到的就是利用编程来对它进行暴力穷举，虽然这个逻辑比较复杂，但是还是可以成功写出来的，然后我就在浏览器里面跑了一下，结果还是可以认可的。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>新 · 宁中公案</title>
+            <pubDate>Sun, 15 Sep 2019 09:50:38 +0000</pubDate>
+            <link>/xin-zhu-zhong-gong-an/</link>
+            <guid>/xin-zhu-zhong-gong-an/</guid>
+            <description>&lt;h1 id=&quot;qi-yi&quot;&gt;其一&lt;&#x2F;h1&gt;
+&lt;p&gt;在今年高考临近之时，要求班上所有人都给她写信。&lt;&#x2F;p&gt;
+&lt;p&gt;大部分人苦于学习时间紧迫，疲于应付，随便写写草率敷衍。&lt;&#x2F;p&gt;
+&lt;p&gt;惟有潘政科，敢说真话，在信中真情实感地写到：&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;你就像一个装在盒子里的西瓜，看起来光鲜亮丽，其实里面已经烂透了&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;于是被班主任教训了两个小时。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>兼巽志正体实录</title>
+            <pubDate>Sat, 16 Feb 2019 09:04:56 +0000</pubDate>
+            <link>/jian-xun-zhi-zheng-ti-shi-lu/</link>
+            <guid>/jian-xun-zhi-zheng-ti-shi-lu/</guid>
+            <description>&lt;h1 id=&quot;xu&quot;&gt;序&lt;&#x2F;h1&gt;
+&lt;p&gt;世之喪道者也久矣，由是人心相危者也苦矣。&lt;&#x2F;p&gt;
+&lt;p&gt;然今世觀盡，若問載道者，謂誰以當？&lt;&#x2F;p&gt;
+&lt;p&gt;惟九日宇龍世俊可稱之，雖今見或無名乏功，然日後大材，孰可輕之邪？&lt;&#x2F;p&gt;
+&lt;p&gt;蛟龍之升，起於微泉&lt;&#x2F;p&gt;
+&lt;p&gt;朝日之明，出於星夜&lt;&#x2F;p&gt;
+&lt;p&gt;覆世之才，亦見於危樓枯燈之下。&lt;&#x2F;p&gt;
+&lt;p&gt;特作此志以紀之。&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;二〇一七年 十月十九日&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+</description>
+        </item>
+        <item>
+            <title>兼  巽  志</title>
+            <pubDate>Sat, 16 Feb 2019 09:04:56 +0000</pubDate>
+            <link>/jian-xun-zhi/</link>
+            <guid>/jian-xun-zhi/</guid>
+            <description>&lt;h1 id=&quot;xu&quot;&gt;序&lt;&#x2F;h1&gt;
+&lt;p&gt;世之丧道者也久矣，由是人心相危者也苦矣。&lt;&#x2F;p&gt;
+&lt;p&gt;然今世观尽，若问载道者，谓谁以当？&lt;&#x2F;p&gt;
+&lt;p&gt;惟九日宇龙世俊可称之，虽今见或无名乏功，然日后大材，孰可轻之邪？&lt;&#x2F;p&gt;
+&lt;p&gt;蛟龙之升，起于微泉&lt;&#x2F;p&gt;
+&lt;p&gt;朝日之明，出于星夜&lt;&#x2F;p&gt;
+&lt;p&gt;覆世之才，亦见于危楼枯灯之下。&lt;&#x2F;p&gt;
+&lt;p&gt;特作此志以纪之。&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;二〇一七年 十月十九日&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+</description>
+        </item>
+        <item>
+            <title>神们自己</title>
+            <pubDate>Sat, 16 Feb 2019 08:15:23 +0000</pubDate>
+            <link>/shen-men-zi-ji/</link>
+            <guid>/shen-men-zi-ji/</guid>
+            <description>&lt;p&gt;不禁又拿起了挂在胸前的照片。&lt;&#x2F;p&gt;
+&lt;p&gt;照片上的人，英俊潇洒，玉树临风，高挺的鼻梁上，架看精致的眼镜， 可惜遮住了一半的俊美五官。&lt;&#x2F;p&gt;
+&lt;p&gt;我感慨万分，赶忙把校牌又放了回去。&lt;&#x2F;p&gt;
+&lt;p&gt;仿佛听见有人风传，说有一个高二学弟好帅，这事竟然传到了我的耳里。&lt;&#x2F;p&gt;
+&lt;p&gt;“又在瞎说，唉，尽传我的谣言…”&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>既离书</title>
+            <pubDate>Wed, 09 Jan 2019 12:14:23 +0000</pubDate>
+            <link>/ji-chi-shu/</link>
+            <guid>/ji-chi-shu/</guid>
+            <description>&lt;p&gt;忆昔相见时，飞雪时节，覆霜冰，沐寒日，尔来期年有余矣。犹记丙申岁薯，满街火树银花，阖家灰有除。&lt;&#x2F;p&gt;
+&lt;p&gt;然愚独苦坐焦思，在叹前途之未卜,来年未可期。&lt;&#x2F;p&gt;
+&lt;p&gt;今日抚之,惟感期岁之广庸碌，三秋之蹉跎，此生之无为也。&lt;&#x2F;p&gt;
+&lt;p&gt;悲矣，怆然而欲泣，衰矣，黯然而独伤。&lt;&#x2F;p&gt;
+&lt;p&gt;吾不感此生之事，又能何哉？是以有负平生。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>拱墅十三天</title>
+            <pubDate>Wed, 10 Oct 2018 09:10:31 +0000</pubDate>
+            <link>/gong-shu-shi-san-tian/</link>
+            <guid>/gong-shu-shi-san-tian/</guid>
+            <description>&lt;p&gt;二〇一六年的数竞预赛在一个上午之后就结束了。&lt;&#x2F;p&gt;
+&lt;p&gt;“这卷子肯定是稳过。”&lt;&#x2F;p&gt;
+&lt;p&gt;数学课代表如是说，事后果然说得没错，整个高一也竟然入围了三个人。&lt;&#x2F;p&gt;
+&lt;p&gt;很顺利，四个人计划出发了。&lt;&#x2F;p&gt;
+&lt;p&gt;七月中旬的早上，天气一直比较热，四人先后到达了酒店。毕竟，第二天就要在酒店会议室参加培训了。&lt;&#x2F;p&gt;
+&lt;p&gt;才准备休息一下，四人中，一位长得白净的突然说:“下午学姐就要来了。”&lt;&#x2F;p&gt;
+&lt;p&gt;原来之前他拨通了电话，知道了她也要来培训，并且同着高一届的一些同学。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>清明信笺（二）</title>
+            <pubDate>Sun, 08 Apr 2018 12:14:23 +0000</pubDate>
+            <link>/qing-ming-xin-jian-er/</link>
+            <guid>/qing-ming-xin-jian-er/</guid>
+            <description>&lt;p&gt;很早就想和你写些什么。&lt;&#x2F;p&gt;
+&lt;p&gt;刚刚过去的清明小长假里，我好好地休息了一番，学习之余也有余闲思考一下我所面对的世界。&lt;&#x2F;p&gt;
+&lt;p&gt;我已经应父母之命，卸戴了聊天软件，决意搬离网络这个虚伪的世界。&lt;&#x2F;p&gt;
+&lt;p&gt;网络其实是一个很好的工具只是我们滥用了它。&lt;&#x2F;p&gt;
+&lt;p&gt;我想了一下我俩在现实生活中说过的所有话似乎还没有在网络上一次聊天的内容多。&lt;&#x2F;p&gt;
+&lt;p&gt;我俩还是在现实中交说说话吧。&lt;&#x2F;p&gt;
+&lt;p&gt;有些遗憾地想，我能在这于学校里的时间，也仅仅剩下六十天了。&lt;&#x2F;p&gt;
+&lt;p&gt;我们可以碰上一面的 时间又还有多少呢？&lt;&#x2F;p&gt;
+&lt;p&gt;不得不承认，有一种外在的力量推动着我们一直向前，远非我们个人的意志可以与之抗争。&lt;&#x2F;p&gt;
+&lt;p&gt;我们好好想一想，我们从小到大，经历的种种难道不都是不由我们掌控的吗？&lt;&#x2F;p&gt;
+&lt;p&gt;我们在同一个城市，同一个学校，或许很早以前就能注定。&lt;&#x2F;p&gt;
+&lt;p&gt;我在想，我在想:&lt;&#x2F;p&gt;
+&lt;p&gt;我们的未来世界又是如何呢？&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>清明信笺（一）</title>
+            <pubDate>Fri, 06 Apr 2018 12:14:23 +0000</pubDate>
+            <link>/qing-ming-xin-jian-yi/</link>
+            <guid>/qing-ming-xin-jian-yi/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;寒食一夜雨，日出见清明&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;清明小长假一转眼就飞逝一半了，下午我将又安坐在教室里书写时光。&lt;&#x2F;p&gt;
+&lt;p&gt;这样的日子不会再重复六十次了，我们仿佛一直手活在巨大的齿轮之下，每一步都烙上了时间的印记。&lt;&#x2F;p&gt;
+&lt;p&gt;匆匆地，我们每日起来拥胞新生的阳光，又在黯淡的月光下踏上归途。&lt;&#x2F;p&gt;
+&lt;p&gt;我们很少去问为何如此，既定的生活若不加改变，我们便不会拥有想要的未来。&lt;&#x2F;p&gt;
+&lt;p&gt;十二年寒窗，末年的疯狂接着个暑假的沉沦，四年的浑噩接着忙于立业、成家。&lt;&#x2F;p&gt;
+&lt;p&gt;然后疲于奔命养家糊口看看同时代的稍长者，无不在生活的怪圈里。&lt;&#x2F;p&gt;
+&lt;p&gt;悲观点讲，我俩也不会走出来。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>浙大之旅</title>
+            <pubDate>Mon, 25 May 2015 11:32:57 +0000</pubDate>
+            <link>/zhe-da-zhi-lu/</link>
+            <guid>/zhe-da-zhi-lu/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;原题：记夏令营的最后一站 —— 浙大之旅&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;借着六一儿童节的幌子，天不亮我便来到学校门前，翘首期盼汽车的到来。&lt;&#x2F;p&gt;
+&lt;p&gt;今天55名同学及几位老师，将乘坐两辆大客车前往浙江大学参观。&lt;&#x2F;p&gt;
+&lt;p&gt;同学兴奋不已，都在想象浙大的风光，我望着窗外，也想着浙大，心中十分激动。&lt;&#x2F;p&gt;
+&lt;p&gt;途中雾浓，远景朦胧，如披白沙；进了杭州城郊，雾渐散去，视野清晰了：&lt;&#x2F;p&gt;
+&lt;p&gt;路的两旁是耸立的高楼大厦，前方道路塞满了汽车，我们的汽车随着车流慢慢移动。&lt;&#x2F;p&gt;
+&lt;p&gt;车行没多久，一座造型优美而庞大的建筑物闯入了我的眼球，车通过了一道关卡便驶入了。&lt;&#x2F;p&gt;
+&lt;p&gt;这是哪里？我仔细地观察，发现四周树上都系上了两面旗帜，右边的旗帜红底，中央绘制了鹰，左边旗帜上书写着“118”这三个数字。&lt;&#x2F;p&gt;
+&lt;p&gt;我很费解，百般思索却不知其意。而一路欣赏着风景，碧树掩映下的自行车、匆匆的行人以及两旁高耸大厦都不知不觉地留在车后。&lt;&#x2F;p&gt;
+</description>
+        </item>
+    </channel>
+</rss>

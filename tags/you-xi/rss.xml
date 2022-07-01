@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>BLOG - 游戏</title>
+        <link>/</link>
+        <description></description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="/tags/you-xi/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Tue, 12 Feb 2019 10:16:02 +0000</lastBuildDate>
+        <item>
+            <title>明世隐大招被动解析</title>
+            <pubDate>Tue, 12 Feb 2019 10:16:02 +0000</pubDate>
+            <link>/ming-shi-yin-da-zhao-bei-dong-jie-xi/</link>
+            <guid>/ming-shi-yin-da-zhao-bei-dong-jie-xi/</guid>
+            <description>&lt;h1 id=&quot;fu-hao-shuo-ming&quot;&gt;符号说明&lt;&#x2F;h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文中我们设&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$C_0$：总血量&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;$C$：当前血量&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;$A_n$：第 n 秒时刻大招被动回复的血量&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;$S_n$：前 n 秒内由大招被动回复的血量&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+        </item>
+    </channel>
+</rss>

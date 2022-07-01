@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+ 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+ 
+      <title>BLOG</title>
+
+      <link rel="icon" sizes="any" href="/favico.ico">
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml">
+      
+      
+      <script src="https://cdn.bootcdn.net/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+          
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/mathtex-script-type.min.js" integrity="sha384-zWYbd0NBwgTsgIdFKVprSfTh1mbMPe5Hz1X3yY4Sd1h/K1cQoUe36OGwAGz/PcDy" crossorigin="anonymous"></script>
+              
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+                  <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        renderMathInElement(document.body, {
+                            delimiters: [
+                                {left: "$$", right: "$$", display: true },
+                                {left: "$", right: "$", display: false }, 
+                            ]
+                        });
+                    });
+
+                    window.$ZOLA_CONFIG = {
+                        base: "/",
+                        title: "BLOG",
+                        author: "Roger",
+                        navs:  ["Home","Categories","Tags","About",].map(function(e){return e.toLowerCase();}),
+                    }; 
+                </script>
+                  
+          
+      
+
+      
+          <link rel="stylesheet" href="/site.css">
+          
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+          
+      
+
+      
+      
+    </head>
+
+    <body> 
+        <div class="container"> 
+            <div id="mobile-navbar" class="mobile-navbar">
+                <div class="mobile-header-logo">
+                  <a href="/" class="logo">BLOG</a>
+                </div>
+                <div class="mobile-navbar-icon icon-out">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+            
+
+            <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+              <ul class="mobile-menu-list">
+                
+                    <li class="mobile-menu-item">
+                        <a href="/">
+                            Home
+                        </a> 
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="/categories">
+                            Categories
+                        </a> 
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="/tags">
+                            Tags
+                        </a> 
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="/about">
+                            About
+                        </a> 
+                    </li>
+                
+              </ul>
+            </nav>
+
+            <header id="header">
+                
+                <div class="logo"><a href="/">BLOG</a></div>
+                <nav class="menu">
+                    <ul>
+                        
+                            <li>
+                                <a href="/">
+                                    Home
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/categories">
+                                    Categories
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/tags">
+                                    Tags
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/about">
+                                    About
+                                </a>
+                            </li>
+                        
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+                <div class="content" id="mobile-panel">
+                    
+                     
+                        <div class="posts">
+                            
+                                <article class="post">
+                                    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="/yun-ying-xiao-cheng-xu-zhi-xin-lu-li-cheng/">运营小程序之心路历程</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2020.09.07&nbsp;&nbsp; 共 1764 字</span>
+            
+        </div>
+    </header>
+
+                                    <div class="post__summary">
+                                        <h1 id="yuan-qi">缘起</h1>
+<p>在此之前，我并没有尝试过微信小程序的开发，虽然之前我对微信小程序有所谅解，但是我还是觉得它的局限性比较多，不能拥抱广泛的前端生态，所以一直没有此过多关心。</p>
+<p>直至去年，三国杀推出了一个新武将张昌蒲，我对她繁琐的计算感到困惑，游戏过程中也是经常手忙脚乱，频频出错。</p>
+<p>然而对于这种纯计算的数学问题，我首先想到的就是利用编程来对它进行暴力穷举，虽然这个逻辑比较复杂，但是还是可以成功写出来的，然后我就在浏览器里面跑了一下，结果还是可以认可的。</p>
+
+                                    </div>
+                                    <div class="read-more">
+                                        <a href="/yun-ying-xiao-cheng-xu-zhi-xin-lu-li-cheng/">阅读全文<span></span></a>
+                                    </div>
+                                </article>
+                            
+                                <article class="post">
+                                    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="/yin-le-de-zou-xiang-cong-gu-dian-dao-xian-dai/">音乐的走向 —— 从古典到现代</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2020.06.07&nbsp;&nbsp; 共 1481 字</span>
+            
+        </div>
+    </header>
+
+                                    <div class="post__summary">
+                                        <p>在人类历史的长河中，音乐是人类文明的一颗璀璨的明珠，古今中外，各个伟大的艺术家，在音乐这个艺术的山峰操作出了各种各样美丽的宝石，而随着时间的推移，这些产出的宝石也随之发生了一些变化。而音乐也是历史的记录者和载体，通过对过去乃至现在的音乐发展的研究，也可以清晰地推出未来音乐的走向。</p>
+<p>在音乐的发展初期，音乐的格调都是很简单的，甚至残存着原始社会流传下来的粗犷的风格。我国最早的一部诗集《诗经》，其中就包含了一些民间的小调或是庙堂之上的颂歌，我们根据其现有的流传至今的文字记录，也可以看出那个时候的音乐格调简单，节奏也不复杂。</p>
+
+                                    </div>
+                                    <div class="read-more">
+                                        <a href="/yin-le-de-zou-xiang-cong-gu-dian-dao-xian-dai/">阅读全文<span></span></a>
+                                    </div>
+                                </article>
+                            
+                                <article class="post">
+                                    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="/matable/">Matable 文档</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2020.04.25&nbsp;&nbsp; 共 931 字</span>
+            
+        </div>
+    </header>
+
+                                    <div class="post__summary">
+                                        <h1 id="matable">Matable</h1>
+<p><code>Matable</code>是一个高效便利的 <code>XLSX文件转网页</code> 的开源工具。</p>
+<p><code>Matable</code>支持自定义配置，支持各种检索模式，使用简单方便。</p>
+<p><code>Matable</code>是一个开源的项目，其使用了如下的开源项目</p>
+<ul>
+<li>
+<p><a href="https://vuejs.org/">vue</a></p>
+</li>
+<li>
+<p><a href="https://github.com/axios/axios">axios</a></p>
+</li>
+<li>
+<p><a href="https://muse-ui.org/">muse-ui</a></p>
+</li>
+</ul>
+<p><img src="https://pic.imgdb.cn/item/610e0dfc5132923bf8e69301.jpg" alt="demo" /></p>
+
+                                    </div>
+                                    <div class="read-more">
+                                        <a href="/matable/">阅读全文<span></span></a>
+                                    </div>
+                                </article>
+                            
+                                <article class="post">
+                                    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="/jie-jue-githubwu-fa-jia-zai-de-wen-ti/">解决 Github 无法加载的问题</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2020.04.20&nbsp;&nbsp; 共 222 字</span>
+            
+        </div>
+    </header>
+
+                                    <div class="post__summary">
+                                        <h1 id="bei-jing">背景</h1>
+<p>很明显，Github 上面的东西太多，以至于几乎都打不开。</p>
+<p>对此我们只需要修改本机的 hosts 文件就可以解决这个问题，能不科学上网就不科学上网了。</p>
+
+                                    </div>
+                                    <div class="read-more">
+                                        <a href="/jie-jue-githubwu-fa-jia-zai-de-wen-ti/">阅读全文<span></span></a>
+                                    </div>
+                                </article>
+                            
+                                <article class="post">
+                                    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="/wei-xin-gong-zhong-hao-jiao-cheng/">微信公众号简明教程</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2020.03.31&nbsp;&nbsp; 共 1445 字</span>
+            
+        </div>
+    </header>
+
+                                    <div class="post__summary">
+                                        <h1 id="bei-jing">背景</h1>
+<p>班级公众号其实在很早之前就创建了，那个时候还是因为在导生的建议下，才有了这个公众号，如今已经过去一年多了，如果不是最近辅导员又再次关注起班级公众号来，我恐怕都要忘记这件事了。</p>
+<!--
+匆忙中，我发现很久就没有关注过的那个公众号已经是灰尘满布，可怜的班长因为没有良好的公众号，可能也要挨骂了，但是无论如何，今后的这个公众号，在辅导员的要求下，也必须得有文章可看。
+ -->
+
+                                    </div>
+                                    <div class="read-more">
+                                        <a href="/wei-xin-gong-zhong-hao-jiao-cheng/">阅读全文<span></span></a>
+                                    </div>
+                                </article>
+                            
+                                <article class="post">
+                                    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="/inject-providewen-dang/">inject-provide 文档</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2020.03.31&nbsp;&nbsp; 共 1253 字</span>
+            
+        </div>
+    </header>
+
+                                    <div class="post__summary">
+                                        <h1 id="inject-provide">Inject-Provide</h1>
+<blockquote>
+<p><a href="https://gitee.com/shawroger/inject-provide">项目地址</a></p>
+</blockquote>
+<blockquote>
+<p>当前版本：<code>V0.3.5</code></p>
+</blockquote>
+<p><code>inject-provide</code> 是一个极简洁的 <strong>nodejs</strong> 注入框架，运行过程中需要装饰器的支持，建议使用 <strong>TypeScript</strong> 作为运行环境。</p>
+
+                                    </div>
+                                    <div class="read-more">
+                                        <a href="/inject-providewen-dang/">阅读全文<span></span></a>
+                                    </div>
+                                </article>
+                            
+                        </div>
+                        <nav class="pagination">
+                            
+                            
+                            
+                                <a class="next" href="/page/2/">NEXT</a>
+                            
+                        </nav>
+                        <h3 class="page-info">1 of 7</h3>
+                        
+                        
+                <div id="footer">
+                    <a href="/">Roger &copy; <span id="footer-year">2021</span></a>
+                </div>
+                </div>
+            </main>
+            
+            
+            
+             
+            
+        </div>
+
+    
+    <script type="text/javascript" src="/phomina.js" ></script>
+    <script type="text/javascript" src="/custom.js" ></script>
+    <script type="text/javascript" src="/fslightbox.js" ></script>
+    
+    </body>
+
+</html>

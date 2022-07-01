@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+ 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+ 
+      <title>BLOG - 解决 Github 无法加载的问题</title>
+
+      <link rel="icon" sizes="any" href="/favico.ico">
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml">
+      
+      
+      <script src="https://cdn.bootcdn.net/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+          
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/mathtex-script-type.min.js" integrity="sha384-zWYbd0NBwgTsgIdFKVprSfTh1mbMPe5Hz1X3yY4Sd1h/K1cQoUe36OGwAGz/PcDy" crossorigin="anonymous"></script>
+              
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+                  <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        renderMathInElement(document.body, {
+                            delimiters: [
+                                {left: "$$", right: "$$", display: true },
+                                {left: "$", right: "$", display: false }, 
+                            ]
+                        });
+                    });
+
+                    window.$ZOLA_CONFIG = {
+                        base: "/",
+                        title: "BLOG",
+                        author: "Roger",
+                        navs:  ["Home","Categories","Tags","About",].map(function(e){return e.toLowerCase();}),
+                    }; 
+                </script>
+                  
+          
+      
+
+      
+          <link rel="stylesheet" href="/site.css">
+          
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+          
+      
+
+      
+      
+    </head>
+
+    <body> 
+        <div class="container"> 
+            <div id="mobile-navbar" class="mobile-navbar">
+                <div class="mobile-header-logo">
+                  <a href="/" class="logo">BLOG</a>
+                </div>
+                <div class="mobile-navbar-icon icon-out">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+            
+
+            <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+              <ul class="mobile-menu-list">
+                
+                    <li class="mobile-menu-item">
+                        <a href="/">
+                            Home
+                        </a> 
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="/categories">
+                            Categories
+                        </a> 
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="/tags">
+                            Tags
+                        </a> 
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="/about">
+                            About
+                        </a> 
+                    </li>
+                
+              </ul>
+            </nav>
+
+            <header id="header">
+                
+                <div class="logo"><a href="/">BLOG</a></div>
+                <nav class="menu">
+                    <ul>
+                        
+                            <li>
+                                <a href="/">
+                                    Home
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/categories">
+                                    Categories
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/tags">
+                                    Tags
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/about">
+                                    About
+                                </a>
+                            </li>
+                        
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+                <div class="content" id="mobile-panel">
+                    
+                    
+
+
+
+<article class="post article-content">
+    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="/jie-jue-githubwu-fa-jia-zai-de-wen-ti/">解决 Github 无法加载的问题</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2020.04.20&nbsp;&nbsp; 共 222 字</span>
+            
+        </div>
+    </header>
+
+    <div class="post-content">
+      <h1 id="bei-jing">背景</h1>
+<p>很明显，Github 上面的东西太多，以至于几乎都打不开。</p>
+<p>对此我们只需要修改本机的 hosts 文件就可以解决这个问题，能不科学上网就不科学上网了。</p>
+<span id="continue-reading"></span>
+<h1 id="jie-jue-fang-an">解决方案</h1>
+<h2 id="zhao-dao-wen-jian">找到文件</h2>
+<p>windows 系统中，hosts 文件位于 <code>C:\windows\system32\drivers\etc\</code> 目录中，在管理员模式下打开即可。</p>
+<h2 id="jia-ru-jie-xi">加入解析</h2>
+<pre style="background-color:#31333d;">
+<code class="language-bash" data-lang="bash"><span style="color:#707180;"># GitHub Start</span><span style="color:#707180;">
+</span><span style="font-weight:bold;color:#a3cbe3;">140.82.112.4</span><span style="color:#ffffffc4;"> github.com</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">140.82.113.3</span><span style="color:#ffffffc4;"> gist.github.com</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">185.199.108.153</span><span style="color:#ffffffc4;"> assets-cdn.github.com</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">199.232.68.133</span><span style="color:#ffffffc4;"> raw.githubusercontent.com</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">199.232.68.133</span><span style="color:#ffffffc4;"> gist.githubusercontent.com</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">199.232.68.133</span><span style="color:#ffffffc4;"> cloud.githubusercontent.com</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">151.101.192.133</span><span style="color:#ffffffc4;"> camo.githubusercontent.com</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">199.232.68.133</span><span style="color:#ffffffc4;"> avatars0.githubusercontent.com</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">199.232.68.133</span><span style="color:#ffffffc4;"> avatars1.githubusercontent.com</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">199.232.68.133</span><span style="color:#ffffffc4;"> avatars2.githubusercontent.com</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">199.232.68.133</span><span style="color:#ffffffc4;"> avatars3.githubusercontent.com</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">199.232.68.133</span><span style="color:#ffffffc4;"> avatars4.githubusercontent.com</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">199.232.68.133</span><span style="color:#ffffffc4;"> avatars5.githubusercontent.com</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">199.232.68.133</span><span style="color:#ffffffc4;"> avatars6.githubusercontent.com</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">199.232.68.133</span><span style="color:#ffffffc4;"> avatars7.githubusercontent.com</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">199.232.68.133</span><span style="color:#ffffffc4;"> avatars8.githubusercontent.com</span><span style="color:#ffffffc4;">
+</span><span style="color:#707180;"># GitHub End</span><span style="color:#707180;">
+</span></code></pre><h2 id="shua-xin-dns">刷新 DNS</h2>
+<p>将前文内容追加到 hosts 文件后，然后刷新 DNS 缓存</p>
+<pre style="background-color:#31333d;">
+<code class="language-bash" data-lang="bash"><span style="font-weight:bold;color:#a3cbe3;">ipconfig</span><span style="color:#ffffffc4;"> /flushdns</span><span style="color:#ffffffc4;">
+</span></code></pre><h2 id="shi-yong-cmd-jiao-ben">使用 CMD 脚本</h2>
+<p>为了快速更新 hosts，可以新建一个 cmd 脚本，内容如下：</p>
+<pre style="background-color:#31333d;">
+<code class="language-cmd" data-lang="cmd"><span style="color:#db7c6d;">cd</span><span style="color:#ffffffc4;"> C:\Windows\System32\drivers\etc</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#db7c6d;">notepad</span><span style="color:#ffffffc4;"> hosts</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#db7c6d;">ipconfig</span><span style="color:#ffffffc4;"> /flushdns</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<p>使用管理员权限运行该脚本即可。</p>
+
+    </div>
+
+    
+    
+
+    <div class="post-footer">
+        
+            
+                <div class="post-tags">
+                    
+                        <a href="&#x2F;tags&#x2F;github&#x2F;">#Github</a>
+                    
+                        <a href="&#x2F;tags&#x2F;jie-jue-fang-an&#x2F;">#解决方案</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                        <a class="previous" href="&#x2F;wei-xin-gong-zhong-hao-jiao-cheng&#x2F;">‹ 微信公众号简明教程</a>
+                    
+                    
+                        <a class="next" href="&#x2F;matable&#x2F;">Matable 文档 ›</a>
+                    
+                    
+                    
+                </div>
+            
+
+        
+
+    </div>
+
+    
+    
+</article>
+
+
+                        
+                <div id="footer">
+                    <a href="/">Roger &copy; <span id="footer-year">2021</span></a>
+                </div>
+                </div>
+            </main>
+            
+            
+            
+             
+            
+        </div>
+
+    
+    <script type="text/javascript" src="/phomina.js" ></script>
+    <script type="text/javascript" src="/custom.js" ></script>
+    <script type="text/javascript" src="/fslightbox.js" ></script>
+    
+    </body>
+
+</html>

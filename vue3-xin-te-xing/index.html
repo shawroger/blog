@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+ 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+ 
+      <title>BLOG - vue3 新特性</title>
+
+      <link rel="icon" sizes="any" href="/favico.ico">
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml">
+      
+      
+      <script src="https://cdn.bootcdn.net/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+          
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/mathtex-script-type.min.js" integrity="sha384-zWYbd0NBwgTsgIdFKVprSfTh1mbMPe5Hz1X3yY4Sd1h/K1cQoUe36OGwAGz/PcDy" crossorigin="anonymous"></script>
+              
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+                  <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        renderMathInElement(document.body, {
+                            delimiters: [
+                                {left: "$$", right: "$$", display: true },
+                                {left: "$", right: "$", display: false }, 
+                            ]
+                        });
+                    });
+
+                    window.$ZOLA_CONFIG = {
+                        base: "/",
+                        title: "BLOG",
+                        author: "Roger",
+                        navs:  ["Home","Categories","Tags","About",].map(function(e){return e.toLowerCase();}),
+                    }; 
+                </script>
+                  
+          
+      
+
+      
+          <link rel="stylesheet" href="/site.css">
+          
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+          
+      
+
+      
+      
+    </head>
+
+    <body> 
+        <div class="container"> 
+            <div id="mobile-navbar" class="mobile-navbar">
+                <div class="mobile-header-logo">
+                  <a href="/" class="logo">BLOG</a>
+                </div>
+                <div class="mobile-navbar-icon icon-out">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+            
+
+            <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+              <ul class="mobile-menu-list">
+                
+                    <li class="mobile-menu-item">
+                        <a href="/">
+                            Home
+                        </a> 
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="/categories">
+                            Categories
+                        </a> 
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="/tags">
+                            Tags
+                        </a> 
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="/about">
+                            About
+                        </a> 
+                    </li>
+                
+              </ul>
+            </nav>
+
+            <header id="header">
+                
+                <div class="logo"><a href="/">BLOG</a></div>
+                <nav class="menu">
+                    <ul>
+                        
+                            <li>
+                                <a href="/">
+                                    Home
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/categories">
+                                    Categories
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/tags">
+                                    Tags
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/about">
+                                    About
+                                </a>
+                            </li>
+                        
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+                <div class="content" id="mobile-panel">
+                    
+                    
+
+
+
+<article class="post article-content">
+    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="/vue3-xin-te-xing/">vue3 新特性</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2020.03.01&nbsp;&nbsp; 共 3572 字</span>
+            
+        </div>
+    </header>
+
+    <div class="post-content">
+      <h1 id="po-jie-vue3-xin-te-xing">破解 vue3 新特性</h1>
+<p>根据 vue 作者尤雨溪去年发布的 vue 3.0 开发路线，vue 3.0 很可能在 2019 年下半年与大家见面。</p>
+<p>与此同时，今年下半年初，Vue 团队先后对外发布了 <code>vue-function-api</code> 和 <code>vue-compisition-api</code> 的 RFC，供开发者提前体验 vue 3.0 的新特性，并且希望通过这些预览版的 API，来征求广大开发者的意见与反馈，从而为 vue 3.0 的后续开发和落地打下坚实与稳定的基础。</p>
+<p>本次公开课围绕最新发布的 <code>vue-compisition-api</code>，来讲解大家最关心的、同时也是 vue 3.0 最重要的一些新特性，例如 <code>setup()</code> 函数、<code>reactive()</code>、<code>ref()</code> 等这些 Vue Hooks。</p>
+<p>通过学习本次公开课，你可以先人一步掌握 vue 3.0 中的新特性，为将来 vue 3.0 的发布提前做好相应知识的储备，也为提升自己在前端行业中的竞争力添砖加瓦！</p>
+<span id="continue-reading"></span>
+<blockquote>
+<p><a href="https://www.bilibili.com/video/av69262619/">公开课视频</a></p>
+</blockquote>
+<blockquote>
+<p><a href="https://gitee.com/vsdeveloper/vue3-compositionAPI-study">公开课源码</a></p>
+</blockquote>
+<h2 id="ji-chu-yao-qiu">基础要求</h2>
+<ol>
+<li>
+<p>了解常见的 ES6 新特性</p>
+<ul>
+<li>
+<p>ES6 的导入导出语法</p>
+</li>
+<li>
+<p>解构赋值</p>
+</li>
+<li>
+<p>箭头函数</p>
+</li>
+<li>
+<p>etc...</p>
+</li>
+</ul>
+</li>
+<li>
+<p>了解 vue 2.x 的基本使用</p>
+<ul>
+<li>
+<p>组件</p>
+</li>
+<li>
+<p>常用的指令</p>
+</li>
+<li>
+<p>生命周期函数</p>
+</li>
+<li>
+<p>computed、watch、ref 等</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="xiang-guan-zi-yuan">相关资源</h2>
+<ul>
+<li>
+<p><a href="https://github.com/vuejs/composition-api">Github - vuejs/composition-api</a></p>
+</li>
+<li>
+<p><a href="https://zhuanlan.zhihu.com/p/68477600">知乎 - Vue Function-based API RFC</a></p>
+</li>
+<li>
+<p><a href="https://www.oschina.net/news/100515/plans-for-the-next-iteration-of-vue-js">开源中国 - 尤雨溪公布 Vue 3.0 开发路线：将从头开始重写 3.0</a></p>
+</li>
+</ul>
+<h2 id="chu-shi-hua-xiang-mu">初始化项目</h2>
+<ol>
+<li>安装 vue-cli3</li>
+</ol>
+<pre style="background-color:#31333d;">
+<code class="language-bash" data-lang="bash"><span style="color:#ffffffc4;">  </span><span style="font-weight:bold;color:#a3cbe3;">npm</span><span style="color:#ffffffc4;"> install</span><span style="color:#ffffff;"> -g</span><span style="color:#ffffffc4;"> @vue/cli
+</span></code></pre>
+<ol start="2">
+<li>创建项目</li>
+</ol>
+<pre style="background-color:#31333d;">
+<code class="language-bash" data-lang="bash"><span style="color:#ffffffc4;">  </span><span style="font-weight:bold;color:#a3cbe3;">vue</span><span style="color:#ffffffc4;"> create my-project
+</span></code></pre>
+<ol start="3">
+<li>在项目中安装 <code>composition-api</code> 体验 vue3 新特性</li>
+</ol>
+<pre style="background-color:#31333d;">
+<code class="language-bash" data-lang="bash"><span style="color:#ffffffc4;">  </span><span style="font-weight:bold;color:#a3cbe3;">npm</span><span style="color:#ffffffc4;"> install @vue/composition-api</span><span style="color:#ffffff;"> --save
+</span></code></pre>
+<ol start="4">
+<li>在使用任何 <code>@vue/composition-api</code> 提供的能力前，必须先通过 <code>Vue.use()</code> 进行安装</li>
+</ol>
+<pre style="background-color:#31333d;">
+<code class="language-js" data-lang="js"><span style="color:#db7c6d;">import </span><span style="font-weight:bold;color:#a3cbe3;">Vue </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">vue</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+</span><span style="color:#db7c6d;">import </span><span style="font-weight:bold;color:#a3cbe3;">VueCompositionApi </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">@vue/composition-api</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+
+</span><span style="font-weight:bold;color:#a3cbe3;">Vue</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">use</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">VueCompositionApi</span><span style="color:#ffffffc4;">);
+</span></code></pre>
+<p>安装插件后，您就可以使用新的 <a href="https://vue-composition-api-rfc.netlify.com/">Composition API</a> 来开发组件了。</p>
+<h2 id="setup">setup</h2>
+<p><code>setup()</code> 函数是 vue3 中，专门为组件提供的新属性。它为我们使用 vue3 的 <code>Composition API</code> 新特性提供了统一的入口。</p>
+<h3 id="zhi-xing-shi-ji">执行时机</h3>
+<p><strong>setup</strong> 函数会在 <strong>beforeCreate</strong> 之后、<strong>created</strong> 之前执行</p>
+<h3 id="jie-shou-props-shu-ju">接收 props 数据</h3>
+<ol>
+<li>
+<p>在 <code>props</code> 中定义当前组件允许外界传递过来的参数名称：</p>
+<pre style="background-color:#31333d;">
+<code class="language-js" data-lang="js"><span style="color:#ffffffc4;">props: {
+</span><span style="color:#ffffffc4;">	p1: </span><span style="color:#e7e7e7;">String</span><span style="color:#ffffffc4;">;
+</span><span style="color:#ffffffc4;">}
+</span></code></pre></li>
+<li>
+<p>通过 <code>setup</code> 函数的<strong>第一个形参</strong>，接收 <code>props</code> 数据：</p>
+<pre style="background-color:#31333d;">
+<code class="language-js" data-lang="js"><span style="color:#a2ba43;">setup</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">props</span><span style="color:#ffffffc4;">) {
+</span><span style="color:#ffffffc4;">    </span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">props</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">p1</span><span style="color:#ffffffc4;">)
+</span><span style="color:#ffffffc4;">}
+</span></code></pre></li>
+</ol>
+<h3 id="context">context</h3>
+<p><code>setup</code> 函数的第二个形参是一个<strong>上下文对象</strong>，这个上下文对象中包含了一些有用的属性，这些属性在 <code>vue 2.x</code> 中需要通过 <code>this</code> 才能访问到，在 <code>vue 3.x</code> 中，它们的访问方式如下：</p>
+<pre style="background-color:#31333d;">
+<code class="language-js" data-lang="js"><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">MyComponent </span><span style="color:#db7c6d;">= </span><span style="color:#ffffffc4;">{
+	</span><span style="color:#a2ba43;">setup</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">props</span><span style="color:#ffffffc4;">, </span><span style="color:#ffffff;">context</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#ffffffc4;">{
+		</span><span style="font-weight:bold;color:#a3cbe3;">context</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">attrs</span><span style="color:#ffffffc4;">;
+		</span><span style="font-weight:bold;color:#a3cbe3;">context</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">slots</span><span style="color:#ffffffc4;">;
+		</span><span style="font-weight:bold;color:#a3cbe3;">context</span><span style="color:#ffffffc4;">.parent;
+		</span><span style="font-weight:bold;color:#a3cbe3;">context</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">root</span><span style="color:#ffffffc4;">;
+		</span><span style="font-weight:bold;color:#a3cbe3;">context</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">emit</span><span style="color:#ffffffc4;">;
+		</span><span style="font-weight:bold;color:#a3cbe3;">context</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">refs</span><span style="color:#ffffffc4;">;
+	},
+};
+</span></code></pre>
+<blockquote>
+<p>注意：在 <code>setup()</code> 函数中无法访问到 <code>this</code></p>
+</blockquote>
+<h2 id="reactive">reactive</h2>
+<p><code>reactive()</code> 函数接收一个普通对象，返回一个响应式的数据对象。</p>
+<h3 id="ji-ben-yu-fa">基本语法</h3>
+<p>等价于 <code>vue 2.x</code> 中的 <code>Vue.observable()</code> 函数，<code>vue 3.x</code> 中提供了 <code>reactive()</code> 函数，用来创建响应式的数据对象，基本代码示例如下：</p>
+<pre style="background-color:#31333d;">
+<code class="language-js" data-lang="js"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">reactive </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">@vue/composition-api</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+
+</span><span style="color:#707180;">// 创建响应式数据对象，得到的 state 类似于 vue 2.x 中 data() 返回的响应式对象
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">state </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">reactive</span><span style="color:#ffffffc4;">({ count</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="color:#db7c6d;">0 </span><span style="color:#ffffffc4;">});
+</span></code></pre><h3 id="ding-yi-xiang-ying-shi-shu-ju-gong-template-shi-yong">定义响应式数据供 template 使用</h3>
+<ol>
+<li>
+<p>按需导入 <code>reactive</code> 函数：</p>
+<pre style="background-color:#31333d;">
+<code class="language-js" data-lang="js"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">reactive </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">@vue/composition-api</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+</span></code></pre></li>
+<li>
+<p>在 <code>setup()</code> 函数中调用 <code>reactive()</code> 函数，创建响应式数据对象：</p>
+<pre style="background-color:#31333d;">
+<code class="language-js" data-lang="js"><span style="color:#a2ba43;">setup</span><span style="color:#ffffffc4;">() {
+</span><span style="color:#ffffffc4;">     </span><span style="color:#707180;">// 创建响应式数据对象
+</span><span style="color:#ffffffc4;">	</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">state </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">reactive</span><span style="color:#ffffffc4;">({count</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="color:#db7c6d;">0</span><span style="color:#ffffffc4;">})
+
+</span><span style="color:#ffffffc4;">     </span><span style="color:#707180;">// setup 函数中将响应式数据对象 return 出去，供 template 使用
+</span><span style="color:#ffffffc4;">	</span><span style="color:#db7c6d;">return </span><span style="font-weight:bold;color:#a3cbe3;">state
+</span><span style="color:#ffffffc4;">}
+</span></code></pre></li>
+<li>
+<p>在 <code>template</code> 中访问响应式数据：</p>
+<pre style="background-color:#31333d;">
+<code class="language-html" data-lang="html"><span style="font-weight:bold;color:#dbbb3d;">&lt;</span><span style="color:#ffffff;">p</span><span style="font-weight:bold;color:#dbbb3d;">&gt;</span><span style="color:#ffffffc4;">当前的 count 值为：{{count}}</span><span style="font-weight:bold;color:#dbbb3d;">&lt;/</span><span style="color:#ffffff;">p</span><span style="font-weight:bold;color:#dbbb3d;">&gt;
+</span></code></pre></li>
+</ol>
+<h2 id="ref">ref</h2>
+<h3 id="ji-ben-yu-fa-1">基本语法</h3>
+<p><code>ref()</code> 函数用来根据给定的值创建一个<strong>响应式</strong>的<strong>数据对象</strong>，<code>ref()</code> 函数调用的返回值是一个对象，这个对象上只包含一个 <code>.value</code> 属性：</p>
+<pre style="background-color:#31333d;">
+<code class="language-js" data-lang="js"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">ref </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">@vue/composition-api</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+
+</span><span style="color:#707180;">// 创建响应式数据对象 count，初始值为 0
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">count </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">ref</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">0</span><span style="color:#ffffffc4;">);
+
+</span><span style="color:#707180;">// 如果要访问 ref() 创建出来的响应式数据对象的值，必须通过 .value 属性才可以
+</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">count</span><span style="color:#ffffffc4;">.value); </span><span style="color:#707180;">// 输出 0
+// 让 count 的值 +1
+</span><span style="font-weight:bold;color:#a3cbe3;">count</span><span style="color:#ffffffc4;">.value</span><span style="color:#db7c6d;">++</span><span style="color:#ffffffc4;">;
+</span><span style="color:#707180;">// 再次打印 count 的值
+</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">count</span><span style="color:#ffffffc4;">.value); </span><span style="color:#707180;">// 输出 1
+</span></code></pre><h3 id="zai-template-zhong-fang-wen-ref-chuang-jian-de-xiang-ying-shi-shu-ju">在 template 中访问 ref 创建的响应式数据</h3>
+<ol>
+<li>
+<p>在 <code>setup()</code> 中创建响应式数据：</p>
+<pre style="background-color:#31333d;">
+<code class="language-js" data-lang="js"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">ref </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&#39;</span><span style="color:#ffffffc4;">@vue/composition-api</span><span style="font-weight:bold;color:#dbbb3d;">&#39;
+
+</span><span style="color:#a2ba43;">setup</span><span style="color:#ffffffc4;">() {
+</span><span style="color:#ffffffc4;">	</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">count </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">ref</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">0</span><span style="color:#ffffffc4;">)
+
+</span><span style="color:#ffffffc4;">     </span><span style="color:#db7c6d;">return </span><span style="color:#ffffffc4;">{
+</span><span style="color:#ffffffc4;">         </span><span style="font-weight:bold;color:#a3cbe3;">count</span><span style="color:#ffffffc4;">,
+</span><span style="color:#ffffffc4;">         name</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="color:#a2ba43;">ref</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&#39;</span><span style="color:#ffffffc4;">zs</span><span style="font-weight:bold;color:#dbbb3d;">&#39;</span><span style="color:#ffffffc4;">)
+</span><span style="color:#ffffffc4;">     }
+</span><span style="color:#ffffffc4;">}
+</span></code></pre></li>
+<li>
+<p>在 <code>template</code> 中访问响应式数据：</p>
+<pre style="background-color:#31333d;">
+<code class="language-html" data-lang="html"><span style="font-weight:bold;color:#dbbb3d;">&lt;</span><span style="color:#db7c6d;">template</span><span style="font-weight:bold;color:#dbbb3d;">&gt;
+</span><span style="color:#ffffffc4;">	</span><span style="font-weight:bold;color:#dbbb3d;">&lt;</span><span style="color:#ffffff;">p</span><span style="font-weight:bold;color:#dbbb3d;">&gt;</span><span style="color:#ffffffc4;">{{count}} --- {{name}}</span><span style="font-weight:bold;color:#dbbb3d;">&lt;/</span><span style="color:#ffffff;">p</span><span style="font-weight:bold;color:#dbbb3d;">&gt;
+</span><span style="font-weight:bold;color:#dbbb3d;">&lt;/</span><span style="color:#db7c6d;">template</span><span style="font-weight:bold;color:#dbbb3d;">&gt;
+</span></code></pre></li>
+</ol>
+<h3 id="zai-reactive-dui-xiang-zhong-fang-wen-ref-chuang-jian-de-xiang-ying-shi-shu-ju">在 reactive 对象中访问 ref 创建的响应式数据</h3>
+<p>当把 <code>ref()</code> 创建出来的响应式数据对象，挂载到 <code>reactive()</code> 上时，会自动把响应式数据对象<strong>展开为原始的值</strong>，不需通过 <code>.value</code> 就可以直接被访问，例如：</p>
+<pre style="background-color:#31333d;">
+<code class="language-js" data-lang="js"><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">count </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">ref</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">0</span><span style="color:#ffffffc4;">);
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">state </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">reactive</span><span style="color:#ffffffc4;">({
+	</span><span style="font-weight:bold;color:#a3cbe3;">count</span><span style="color:#ffffffc4;">,
+});
+
+</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">state</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">count</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// 输出 0
+</span><span style="font-weight:bold;color:#a3cbe3;">state</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">count</span><span style="color:#db7c6d;">++</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// 此处不需要通过 .value 就能直接访问原始值
+</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">count</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// 输出 1
+</span></code></pre>
+<blockquote>
+<p><strong>注意：新的 ref 会覆盖旧的 ref</strong>，示例代码如下：</p>
+</blockquote>
+<pre style="background-color:#31333d;">
+<code class="language-js" data-lang="js"><span style="color:#707180;">// 创建 ref 并挂载到 reactive 中
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">c1 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">ref</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">0</span><span style="color:#ffffffc4;">);
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">state </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">reactive</span><span style="color:#ffffffc4;">({
+	</span><span style="font-weight:bold;color:#a3cbe3;">c1</span><span style="color:#ffffffc4;">,
+});
+
+</span><span style="color:#707180;">// 再次创建 ref，命名为 c2
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">c2 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">ref</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">9</span><span style="color:#ffffffc4;">);
+</span><span style="color:#707180;">// 将 旧 ref c1 替换为 新 ref c2
+</span><span style="font-weight:bold;color:#a3cbe3;">state</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">c1 </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">c2</span><span style="color:#ffffffc4;">;
+</span><span style="font-weight:bold;color:#a3cbe3;">state</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">c1</span><span style="color:#db7c6d;">++</span><span style="color:#ffffffc4;">;
+
+</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">state</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">c1</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// 输出 10
+</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">c2</span><span style="color:#ffffffc4;">.value); </span><span style="color:#707180;">// 输出 10
+</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">c1</span><span style="color:#ffffffc4;">.value); </span><span style="color:#707180;">// 输出 0
+</span></code></pre><h2 id="isref">isRef</h2>
+<p><code>isRef()</code> 用来判断某个值是否为 <code>ref()</code> 创建出来的对象；应用场景：当需要展开某个可能为 <code>ref()</code> 创建出来的值的时候，例如：</p>
+<pre style="background-color:#31333d;">
+<code class="language-js" data-lang="js"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">isRef </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">@vue/composition-api</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">unwrapped </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">isRef</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">foo</span><span style="color:#ffffffc4;">) </span><span style="color:#db7c6d;">? </span><span style="font-weight:bold;color:#a3cbe3;">foo</span><span style="color:#ffffffc4;">.value </span><span style="color:#db7c6d;">: </span><span style="font-weight:bold;color:#a3cbe3;">foo</span><span style="color:#ffffffc4;">;
+</span></code></pre><h2 id="torefs">toRefs</h2>
+<p><code>toRefs()</code> 函数可以将 <code>reactive()</code> 创建出来的响应式对象，转换为普通的对象，只不过，这个对象上的每个属性节点，都是 <code>ref()</code> 类型的响应式数据，最常见的应用场景如下：</p>
+<pre style="background-color:#31333d;">
+<code class="language-js" data-lang="js"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">toRefs </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&#39;</span><span style="color:#ffffffc4;">@vue/composition-api</span><span style="font-weight:bold;color:#dbbb3d;">&#39;
+
+</span><span style="color:#a2ba43;">setup</span><span style="color:#ffffffc4;">() {
+    </span><span style="color:#707180;">// 定义响应式数据对象
+	</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">state </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">reactive</span><span style="color:#ffffffc4;">({
+      count</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="color:#db7c6d;">0
+    </span><span style="color:#ffffffc4;">})
+
+    </span><span style="color:#707180;">// 定义页面上可用的事件处理函数
+    </span><span style="color:#a3cbe3;">const </span><span style="color:#a2ba43;">increment </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#ffffffc4;">{
+      </span><span style="font-weight:bold;color:#a3cbe3;">state</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">count</span><span style="color:#db7c6d;">++
+    </span><span style="color:#ffffffc4;">}
+
+    </span><span style="color:#707180;">// 在 setup 中返回一个对象供页面使用
+    // 这个对象中可以包含响应式的数据，也可以包含事件处理函数
+    </span><span style="color:#db7c6d;">return </span><span style="color:#ffffffc4;">{
+      </span><span style="color:#707180;">// 将 state 上的每个属性，都转化为 ref 形式的响应式数据
+      </span><span style="color:#db7c6d;">...</span><span style="color:#a2ba43;">toRefs</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">state</span><span style="color:#ffffffc4;">),
+      </span><span style="color:#707180;">// 自增的事件处理函数
+      </span><span style="font-weight:bold;color:#a3cbe3;">increment
+    </span><span style="color:#ffffffc4;">}
+}
+</span></code></pre>
+<p>页面上可以直接访问 <code>setup()</code> 中 return 出来的响应式数据：</p>
+<pre style="background-color:#31333d;">
+<code class="language-html" data-lang="html"><span style="font-weight:bold;color:#dbbb3d;">&lt;</span><span style="color:#db7c6d;">template</span><span style="font-weight:bold;color:#dbbb3d;">&gt;
+	&lt;</span><span style="color:#ffffff;">div</span><span style="font-weight:bold;color:#dbbb3d;">&gt;
+		&lt;</span><span style="color:#ffffff;">p</span><span style="font-weight:bold;color:#dbbb3d;">&gt;</span><span style="color:#ffffffc4;">当前的count值为：{{count}}</span><span style="font-weight:bold;color:#dbbb3d;">&lt;/</span><span style="color:#ffffff;">p</span><span style="font-weight:bold;color:#dbbb3d;">&gt;
+		&lt;</span><span style="color:#db7c6d;">button </span><span style="color:#e8a64b;">@click</span><span style="font-weight:bold;color:#db7c6d;">=</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">increment</span><span style="font-weight:bold;color:#dbbb3d;">&quot;&gt;</span><span style="color:#ffffffc4;">+1</span><span style="font-weight:bold;color:#dbbb3d;">&lt;/</span><span style="color:#db7c6d;">button</span><span style="font-weight:bold;color:#dbbb3d;">&gt;
+	&lt;/</span><span style="color:#ffffff;">div</span><span style="font-weight:bold;color:#dbbb3d;">&gt;
+&lt;/</span><span style="color:#db7c6d;">template</span><span style="font-weight:bold;color:#dbbb3d;">&gt;
+</span></code></pre><h2 id="computed">computed</h2>
+<p><code>computed()</code> 用来创建计算属性，<code>computed()</code> 函数的返回值是一个 <code>ref</code> 的实例。使用 <code>computed</code> 之前需要按需导入：</p>
+<pre style="background-color:#31333d;">
+<code class="language-js" data-lang="js"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">computed </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">@vue/composition-api</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+</span></code></pre><h3 id="8-1-chuang-jian-zhi-du-de-ji-suan-shu-xing">8.1 创建只读的计算属性</h3>
+<p>在调用 <code>computed()</code> 函数期间，传入一个 <code>function</code> 函数，可以得到一个只读的计算属性，示例代码如下：</p>
+<pre style="background-color:#31333d;">
+<code class="language-js" data-lang="js"><span style="color:#707180;">// 创建一个 ref 响应式数据
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">count </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">ref</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">1</span><span style="color:#ffffffc4;">);
+
+</span><span style="color:#707180;">// 根据 count 的值，创建一个响应式的计算属性 plusOne
+// 它会根据依赖的 ref 自动计算并返回一个新的 ref
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">plusOne </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">computed</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#a3cbe3;">=&gt; </span><span style="font-weight:bold;color:#a3cbe3;">count</span><span style="color:#ffffffc4;">.value </span><span style="color:#db7c6d;">+ 1</span><span style="color:#ffffffc4;">);
+
+</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">plusOne</span><span style="color:#ffffffc4;">.value); </span><span style="color:#707180;">// 输出 2
+</span><span style="font-weight:bold;color:#a3cbe3;">plusOne</span><span style="color:#ffffffc4;">.value</span><span style="color:#db7c6d;">++</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// error
+</span></code></pre><h3 id="chuang-jian-ke-du-ke-xie-de-ji-suan-shu-xing">创建可读可写的计算属性</h3>
+<p>在调用 <code>computed()</code> 函数期间，传入一个包含 <code>get</code> 和 <code>set</code> 函数的对象，可以得到一个可读可写的计算属性，示例代码如下：</p>
+<pre style="background-color:#31333d;">
+<code class="language-js" data-lang="js"><span style="color:#707180;">// 创建一个 ref 响应式数据
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">count </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">ref</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">1</span><span style="color:#ffffffc4;">);
+
+</span><span style="color:#707180;">// 创建一个 computed 计算属性
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">plusOne </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">computed</span><span style="color:#ffffffc4;">({
+	</span><span style="color:#707180;">// 取值函数
+	</span><span style="color:#a2ba43;">get</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#a3cbe3;">=&gt; </span><span style="font-weight:bold;color:#a3cbe3;">count</span><span style="color:#ffffffc4;">.value </span><span style="color:#db7c6d;">+ 1</span><span style="color:#ffffffc4;">,
+	</span><span style="color:#707180;">// 赋值函数
+	</span><span style="color:#a2ba43;">set</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">val</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#ffffffc4;">{
+		</span><span style="font-weight:bold;color:#a3cbe3;">count</span><span style="color:#ffffffc4;">.value </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">val </span><span style="color:#db7c6d;">- 1</span><span style="color:#ffffffc4;">;
+	},
+});
+
+</span><span style="color:#707180;">// 为计算属性赋值的操作，会触发 set 函数
+</span><span style="font-weight:bold;color:#a3cbe3;">plusOne</span><span style="color:#ffffffc4;">.value </span><span style="color:#db7c6d;">= 9</span><span style="color:#ffffffc4;">;
+</span><span style="color:#707180;">// 触发 set 函数后，count 的值会被更新
+</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">count</span><span style="color:#ffffffc4;">.value); </span><span style="color:#707180;">// 输出 8
+</span></code></pre><h2 id="watch">watch</h2>
+<p><code>watch()</code> 函数用来监视某些数据项的变化，从而触发某些特定的操作，使用之前需要按需导入：</p>
+<pre style="background-color:#31333d;">
+<code class="language-js" data-lang="js"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">watch </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">@vue/composition-api</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+</span></code></pre><h3 id="ji-ben-yong-fa">基本用法</h3>
+<pre style="background-color:#31333d;">
+<code class="language-js" data-lang="js"><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">count </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">ref</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">0</span><span style="color:#ffffffc4;">);
+
+</span><span style="color:#707180;">// 定义 watch，只要 count 值变化，就会触发 watch 回调
+// watch 会在创建时会自动调用一次
+</span><span style="color:#a2ba43;">watch</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">count</span><span style="color:#ffffffc4;">.value));
+</span><span style="color:#707180;">// 输出 0
+
+</span><span style="color:#db7c6d;">setTimeout</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#ffffffc4;">{
+	</span><span style="font-weight:bold;color:#a3cbe3;">count</span><span style="color:#ffffffc4;">.value</span><span style="color:#db7c6d;">++</span><span style="color:#ffffffc4;">;
+	</span><span style="color:#707180;">// 输出 1
+</span><span style="color:#ffffffc4;">}, </span><span style="color:#db7c6d;">1000</span><span style="color:#ffffffc4;">);
+</span></code></pre><h3 id="jian-shi-zhi-ding-de-shu-ju-yuan">监视指定的数据源</h3>
+<p>监视 <code>reactive</code> 类型的数据源：</p>
+<pre style="background-color:#31333d;">
+<code class="language-js" data-lang="js"><span style="color:#707180;">// 定义数据源
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">state </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">reactive</span><span style="color:#ffffffc4;">({ count</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="color:#db7c6d;">0 </span><span style="color:#ffffffc4;">});
+</span><span style="color:#707180;">// 监视 state.count 这个数据节点的变化
+</span><span style="color:#a2ba43;">watch</span><span style="color:#ffffffc4;">(
+	</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#a3cbe3;">=&gt; </span><span style="font-weight:bold;color:#a3cbe3;">state</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">count</span><span style="color:#ffffffc4;">,
+	</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">count</span><span style="color:#ffffffc4;">, </span><span style="color:#ffffff;">prevCount</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#ffffffc4;">{
+		</span><span style="color:#707180;">/* ... */
+	</span><span style="color:#ffffffc4;">}
+);
+</span></code></pre>
+<p>监视 <code>ref</code> 类型的数据源：</p>
+<pre style="background-color:#31333d;">
+<code class="language-js" data-lang="js"><span style="color:#707180;">// 定义数据源
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">count </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">ref</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">0</span><span style="color:#ffffffc4;">);
+</span><span style="color:#707180;">// 指定要监视的数据源
+</span><span style="color:#a2ba43;">watch</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">count</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">count</span><span style="color:#ffffffc4;">, </span><span style="color:#ffffff;">prevCount</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#ffffffc4;">{
+	</span><span style="color:#707180;">/* ... */
+</span><span style="color:#ffffffc4;">});
+</span></code></pre><h3 id="jian-shi-duo-ge-shu-ju-yuan">监视多个数据源</h3>
+<p>监视 <code>reactive</code> 类型的数据源：</p>
+<pre style="background-color:#31333d;">
+<code class="language-js" data-lang="js"><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">state </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">reactive</span><span style="color:#ffffffc4;">({ count</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="color:#db7c6d;">0</span><span style="color:#ffffffc4;">, name</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">zs</span><span style="font-weight:bold;color:#dbbb3d;">&quot; </span><span style="color:#ffffffc4;">});
+
+</span><span style="color:#a2ba43;">watch</span><span style="color:#ffffffc4;">(
+	[</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#a3cbe3;">=&gt; </span><span style="font-weight:bold;color:#a3cbe3;">state</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">count</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#a3cbe3;">=&gt; </span><span style="font-weight:bold;color:#a3cbe3;">state</span><span style="color:#ffffffc4;">.name], </span><span style="color:#707180;">// Object.values(toRefs(state)),
+	</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffffc4;">[</span><span style="color:#ffffff;">count</span><span style="color:#ffffffc4;">, </span><span style="color:#ffffff;">name</span><span style="color:#ffffffc4;">], [</span><span style="color:#ffffff;">prevCount</span><span style="color:#ffffffc4;">, </span><span style="color:#ffffff;">prevName</span><span style="color:#ffffffc4;">]</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#ffffffc4;">{
+		</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">count</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// 新的 count 值
+		</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">name</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// 新的 name 值
+		</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">------------</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">);
+		</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">prevCount</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// 旧的 count 值
+		</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">prevName</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// 新的 name 值
+	</span><span style="color:#ffffffc4;">},
+	{
+		lazy</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="color:#ffffff;">true</span><span style="color:#ffffffc4;">, </span><span style="color:#707180;">// 在 watch 被创建的时候，不执行回调函数中的代码
+	</span><span style="color:#ffffffc4;">}
+);
+
+</span><span style="color:#db7c6d;">setTimeout</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#ffffffc4;">{
+	</span><span style="font-weight:bold;color:#a3cbe3;">state</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">count</span><span style="color:#db7c6d;">++</span><span style="color:#ffffffc4;">;
+	</span><span style="font-weight:bold;color:#a3cbe3;">state</span><span style="color:#ffffffc4;">.name </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">ls</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+}, </span><span style="color:#db7c6d;">1000</span><span style="color:#ffffffc4;">);
+</span></code></pre>
+<p>监视 <code>ref</code> 类型的数据源：</p>
+<pre style="background-color:#31333d;">
+<code class="language-js" data-lang="js"><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">count </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">ref</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">0</span><span style="color:#ffffffc4;">);
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">name </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">ref</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">zs</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">);
+
+</span><span style="color:#a2ba43;">watch</span><span style="color:#ffffffc4;">(
+	[</span><span style="font-weight:bold;color:#a3cbe3;">count</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">name</span><span style="color:#ffffffc4;">], </span><span style="color:#707180;">// 需要被监视的多个 ref 数据源
+	</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffffc4;">[</span><span style="color:#ffffff;">count</span><span style="color:#ffffffc4;">, </span><span style="color:#ffffff;">name</span><span style="color:#ffffffc4;">], [</span><span style="color:#ffffff;">prevCount</span><span style="color:#ffffffc4;">, </span><span style="color:#ffffff;">prevName</span><span style="color:#ffffffc4;">]</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#ffffffc4;">{
+		</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">count</span><span style="color:#ffffffc4;">);
+		</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">name</span><span style="color:#ffffffc4;">);
+		</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">-------------</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">);
+		</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">prevCount</span><span style="color:#ffffffc4;">);
+		</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">prevName</span><span style="color:#ffffffc4;">);
+	},
+	{
+		lazy</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="color:#ffffff;">true</span><span style="color:#ffffffc4;">,
+	}
+);
+
+</span><span style="color:#db7c6d;">setTimeout</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#ffffffc4;">{
+	</span><span style="font-weight:bold;color:#a3cbe3;">count</span><span style="color:#ffffffc4;">.value</span><span style="color:#db7c6d;">++</span><span style="color:#ffffffc4;">;
+	</span><span style="font-weight:bold;color:#a3cbe3;">name</span><span style="color:#ffffffc4;">.value </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">xiaomaolv</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+}, </span><span style="color:#db7c6d;">1000</span><span style="color:#ffffffc4;">);
+</span></code></pre><h3 id="qing-chu-jian-shi">清除监视</h3>
+<p>在 <code>setup()</code> 函数内创建的 <code>watch</code> 监视，会在当前组件被销毁的时候自动停止。如果想要明确地停止某个监视，可以调用 <code>watch()</code> 函数的返回值即可，语法如下：</p>
+<pre style="background-color:#31333d;">
+<code class="language-js" data-lang="js"><span style="color:#707180;">// 创建监视，并得到 停止函数
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">stop </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">watch</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#ffffffc4;">{
+	</span><span style="color:#707180;">/* ... */
+</span><span style="color:#ffffffc4;">});
+
+</span><span style="color:#707180;">// 调用停止函数，清除对应的监视
+</span><span style="color:#a2ba43;">stop</span><span style="color:#ffffffc4;">();
+</span></code></pre><h3 id="zai-watch-zhong-qing-chu-wu-xiao-de-yi-bu-ren-wu">在 watch 中清除无效的异步任务</h3>
+<p>有时候，当被 <code>watch</code> 监视的值发生变化时，或 <code>watch</code> 本身被 <code>stop</code> 之后，我们期望能够清除那些无效的异步任务，此时，<code>watch</code> 回调函数中提供了一个 <code>cleanup registrator function</code> 来执行清除的工作。这个清除函数会在如下情况下被调用：</p>
+<ul>
+<li>watch 被重复执行了</li>
+<li>watch 被强制 <code>stop</code> 了</li>
+</ul>
+<p><strong>Template 中的代码示例如下</strong>：</p>
+<pre style="background-color:#31333d;">
+<code class="language-html" data-lang="html"><span style="color:#ffffffc4;">/* template 中的代码 */ </span><span style="font-weight:bold;color:#dbbb3d;">&lt;</span><span style="color:#db7c6d;">input </span><span style="color:#e8a64b;">type</span><span style="font-weight:bold;color:#db7c6d;">=</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">text</span><span style="font-weight:bold;color:#dbbb3d;">&quot; </span><span style="color:#e8a64b;">v-model</span><span style="font-weight:bold;color:#db7c6d;">=</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">keywords</span><span style="font-weight:bold;color:#dbbb3d;">&quot; /&gt;
+</span></code></pre>
+<p><strong>Script 中的代码示例如下</strong>：</p>
+<pre style="background-color:#31333d;">
+<code class="language-js" data-lang="js"><span style="color:#707180;">// 定义响应式数据 keywords
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">keywords </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">ref</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;&quot;</span><span style="color:#ffffffc4;">);
+
+</span><span style="color:#707180;">// 异步任务：打印用户输入的关键词
+</span><span style="color:#a3cbe3;">const </span><span style="color:#a2ba43;">asyncPrint </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">val</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#ffffffc4;">{
+	</span><span style="color:#707180;">// 延时 1 秒后打印
+	</span><span style="color:#db7c6d;">return setTimeout</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#ffffffc4;">{
+		</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">val</span><span style="color:#ffffffc4;">);
+	}, </span><span style="color:#db7c6d;">1000</span><span style="color:#ffffffc4;">);
+};
+
+</span><span style="color:#707180;">// 定义 watch 监听
+</span><span style="color:#a2ba43;">watch</span><span style="color:#ffffffc4;">(
+	</span><span style="font-weight:bold;color:#a3cbe3;">keywords</span><span style="color:#ffffffc4;">,
+	</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">keywords</span><span style="color:#ffffffc4;">, </span><span style="color:#ffffff;">prevKeywords</span><span style="color:#ffffffc4;">, </span><span style="color:#ffffff;">onCleanup</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#ffffffc4;">{
+		</span><span style="color:#707180;">// 执行异步任务，并得到关闭异步任务的 timerId
+		</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">timerId </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">asyncPrint</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">keywords</span><span style="color:#ffffffc4;">);
+
+		</span><span style="color:#707180;">// 如果 watch 监听被重复执行了，则会先清除上次未完成的异步任务
+		</span><span style="color:#a2ba43;">onCleanup</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#db7c6d;">clearTimeout</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">timerId</span><span style="color:#ffffffc4;">));
+	},
+	</span><span style="color:#707180;">// watch 刚被创建的时候不执行
+	</span><span style="color:#ffffffc4;">{ lazy</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="color:#ffffff;">true </span><span style="color:#ffffffc4;">}
+);
+
+</span><span style="color:#707180;">// 把 template 中需要的数据 return 出去
+</span><span style="color:#db7c6d;">return </span><span style="color:#ffffffc4;">{
+	</span><span style="font-weight:bold;color:#a3cbe3;">keywords</span><span style="color:#ffffffc4;">,
+};
+</span></code></pre><h2 id="lifecycle-hooks">LifeCycle Hooks</h2>
+<p>新版的生命周期函数，可以按需导入到组件中，且只能在 <code>setup()</code> 函数中使用，代码示例如下：</p>
+<pre style="background-color:#31333d;">
+<code class="language-js" data-lang="js"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">onMounted</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">onUpdated</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">onUnmounted </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">@vue/composition-api</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">MyComponent </span><span style="color:#db7c6d;">= </span><span style="color:#ffffffc4;">{
+	</span><span style="color:#a2ba43;">setup</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#ffffffc4;">{
+		</span><span style="color:#a2ba43;">onMounted</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#ffffffc4;">{
+			</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">mounted!</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">);
+		});
+		</span><span style="color:#a2ba43;">onUpdated</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#ffffffc4;">{
+			</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">updated!</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">);
+		});
+		</span><span style="color:#a2ba43;">onUnmounted</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#ffffffc4;">{
+			</span><span style="color:#e7e7e7;">console</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">log</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">unmounted!</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">);
+		});
+	},
+};
+</span></code></pre>
+<p>下面的列表，是 vue 2.x 的生命周期函数与新版 Composition API 之间的映射关系：</p>
+<ul>
+<li><del><code>beforeCreate</code></del> -&gt; use <code>setup()</code></li>
+<li><del><code>created</code></del> -&gt; use <code>setup()</code></li>
+<li><code>beforeMount</code> -&gt; <code>onBeforeMount</code></li>
+<li><code>mounted</code> -&gt; <code>onMounted</code></li>
+<li><code>beforeUpdate</code> -&gt; <code>onBeforeUpdate</code></li>
+<li><code>updated</code> -&gt; <code>onUpdated</code></li>
+<li><code>beforeDestroy</code> -&gt; <code>onBeforeUnmount</code></li>
+<li><code>destroyed</code> -&gt; <code>onUnmounted</code></li>
+<li><code>errorCaptured</code> -&gt; <code>onErrorCaptured</code></li>
+</ul>
+<h2 id="provide-inject">provide &amp; inject</h2>
+<p><code>provide()</code> 和 <code>inject()</code> 可以实现嵌套组件之间的数据传递。这两个函数只能在 <code>setup()</code> 函数中使用。父级组件中使用 <code>provide()</code> 函数向下传递数据；子级组件中使用 <code>inject()</code> 获取上层传递过来的数据。</p>
+<h3 id="gong-xiang-pu-tong-shu-ju">共享普通数据</h3>
+<p><code>App.vue</code> 根组件：</p>
+<pre style="background-color:#31333d;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#ffffffc4;">&lt;template&gt;
+  &lt;div id=&quot;app&quot;&gt;
+    &lt;h1&gt;App 根组件&lt;/h1&gt;
+    &lt;hr /&gt;
+    &lt;LevelOne /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import LevelOne from &#39;./components/LevelOne&#39;
+// 1. 按需导入 provide
+import { provide } from &#39;@vue/composition-api&#39;
+
+export default {
+  name: &#39;app&#39;,
+  setup() {
+    // 2. App 根组件作为父级组件，通过 provide 函数向子级组件共享数据（不限层级）
+    //    provide(&#39;要共享的数据名称&#39;, 被共享的数据)
+    provide(&#39;globalColor&#39;, &#39;red&#39;)
+  },
+  components: {
+    LevelOne
+  }
+}
+&lt;/script&gt;
+</span></code></pre>
+<p><code>LevelOne.vue</code> 组件：</p>
+<pre style="background-color:#31333d;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#ffffffc4;">&lt;template&gt;
+  &lt;div&gt;
+    &lt;!-- 4. 通过属性绑定，为标签设置字体颜色 --&gt;
+    &lt;h3 :style=&quot;{color: themeColor}&quot;&gt;Level One&lt;/h3&gt;
+    &lt;hr /&gt;
+    &lt;LevelTwo /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import LevelTwo from &#39;./LevelTwo&#39;
+// 1. 按需导入 inject
+import { inject } from &#39;@vue/composition-api&#39;
+
+export default {
+  setup() {
+    // 2. 调用 inject 函数时，通过指定的数据名称，获取到父级共享的数据
+    const themeColor = inject(&#39;globalColor&#39;)
+
+    // 3. 把接收到的共享数据 return 给 Template 使用
+    return {
+      themeColor
+    }
+  },
+  components: {
+    LevelTwo
+  }
+}
+&lt;/script&gt;
+</span></code></pre>
+<p><code>LevelTwo.vue</code> 组件：</p>
+<pre style="background-color:#31333d;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#ffffffc4;">&lt;template&gt;
+  &lt;div&gt;
+    &lt;!-- 4. 通过属性绑定，为标签设置字体颜色 --&gt;
+    &lt;h5 :style=&quot;{color: themeColor}&quot;&gt;Level Two&lt;/h5&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+// 1. 按需导入 inject
+import { inject } from &#39;@vue/composition-api&#39;
+
+export default {
+  setup() {
+    // 2. 调用 inject 函数时，通过指定的数据名称，获取到父级共享的数据
+    const themeColor = inject(&#39;globalColor&#39;)
+
+    // 3. 把接收到的共享数据 return 给 Template 使用
+    return {
+      themeColor
+    }
+  }
+}
+&lt;/script&gt;
+</span></code></pre><h3 id="gong-xiang-ref-xiang-ying-shi-shu-ju">共享 ref 响应式数据</h3>
+<p>如下代码实现了点按钮切换主题颜色的功能，主要修改了 <code>App.vue</code> 组件中的代码，<code>LevelOne.vue</code> 和 <code>LevelTwo.vue</code> 中的代码不受任何改变：</p>
+<pre style="background-color:#31333d;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#ffffffc4;">&lt;template&gt;
+  &lt;div id=&quot;app&quot;&gt;
+    &lt;h1&gt;App 根组件&lt;/h1&gt;
+
+	&lt;!-- 点击 App.vue 中的按钮，切换子组件中文字的颜色 --&gt;
+    &lt;button @click=&quot;themeColor=&#39;red&#39;&quot;&gt;红色&lt;/button&gt;
+    &lt;button @click=&quot;themeColor=&#39;blue&#39;&quot;&gt;蓝色&lt;/button&gt;
+    &lt;button @click=&quot;themeColor=&#39;orange&#39;&quot;&gt;橘黄色&lt;/button&gt;
+
+    &lt;hr /&gt;
+    &lt;LevelOne /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import LevelOne from &#39;./components/LevelOne&#39;
+import { provide, ref } from &#39;@vue/composition-api&#39;
+
+export default {
+  name: &#39;app&#39;,
+  setup() {
+    // 定义 ref 响应式数据
+    const themeColor = ref(&#39;red&#39;)
+
+    // 把 ref 数据通过 provide 提供的子组件使用
+    provide(&#39;globalColor&#39;, themeColor)
+
+    // setup 中 return 数据供当前组件的 Template 使用
+    return {
+      themeColor
+    }
+  },
+  components: {
+    LevelOne
+  }
+}
+&lt;/script&gt;
+</span></code></pre><h2 id="template-refs">template refs</h2>
+<p>通过 <code>ref()</code> 还可以引用页面上的元素或组件。</p>
+<h3 id="yuan-su-de-yin-yong">元素的引用</h3>
+<p>示例代码如下：</p>
+<pre style="background-color:#31333d;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#ffffffc4;">&lt;template&gt;
+  &lt;div&gt;
+    &lt;h3 ref=&quot;h3Ref&quot;&gt;TemplateRefOne&lt;/h3&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import { ref, onMounted } from &#39;@vue/composition-api&#39;
+
+export default {
+  setup() {
+    // 创建一个 DOM 引用
+    const h3Ref = ref(null)
+
+    // 在 DOM 首次加载完毕之后，才能获取到元素的引用
+    onMounted(() =&gt; {
+      // 为 dom 元素设置字体颜色
+      // h3Ref.value 是原生DOM对象
+      h3Ref.value.style.color = &#39;red&#39;
+    })
+
+    // 把创建的引用 return 出去
+    return {
+      h3Ref
+    }
+  }
+}
+&lt;/script&gt;
+</span></code></pre><h3 id="zu-jian-de-yin-yong">组件的引用</h3>
+<p><code>TemplateRefOne.vue</code> 中的示例代码如下：</p>
+<pre style="background-color:#31333d;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#ffffffc4;">&lt;template&gt;
+  &lt;div&gt;
+    &lt;h3&gt;TemplateRefOne&lt;/h3&gt;
+
+    &lt;!-- 4. 点击按钮展示子组件的 count 值 --&gt;
+    &lt;button @click=&quot;showNumber&quot;&gt;获取TemplateRefTwo中的count值&lt;/button&gt;
+
+    &lt;hr /&gt;
+    &lt;!-- 3. 为组件添加 ref 引用 --&gt;
+    &lt;TemplateRefTwo ref=&quot;comRef&quot; /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import { ref } from &#39;@vue/composition-api&#39;
+import TemplateRefTwo from &#39;./TemplateRefTwo&#39;
+
+export default {
+  setup() {
+    // 1. 创建一个组件的 ref 引用
+    const comRef = ref(null)
+
+    // 5. 展示子组件中 count 的值
+    const showNumber = () =&gt; {
+      console.log(comRef.value.count)
+    }
+
+    // 2. 把创建的引用 return 出去
+    return {
+      comRef,
+      showNumber
+    }
+  },
+  components: {
+    TemplateRefTwo
+  }
+}
+&lt;/script&gt;
+</span></code></pre>
+<p><code>TemplateRefTwo.vue</code> 中的示例代码：</p>
+<pre style="background-color:#31333d;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#ffffffc4;">&lt;template&gt;
+  &lt;div&gt;
+    &lt;h5&gt;TemplateRefTwo --- {{count}}&lt;/h5&gt;
+    &lt;!-- 3. 点击按钮，让 count 值自增 +1 --&gt;
+    &lt;button @click=&quot;count+=1&quot;&gt;+1&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import { ref } from &#39;@vue/composition-api&#39;
+
+export default {
+  setup() {
+    // 1. 定义响应式的数据
+    const count = ref(0)
+
+    // 2. 把响应式数据 return 给 Template 使用
+    return {
+      count
+    }
+  }
+}
+&lt;/script&gt;
+</span></code></pre><h2 id="createcomponent">createComponent</h2>
+<blockquote>
+<p>这个函数不是必须的，除非你想要完美结合 TypeScript 提供的类型推断来进行项目的开发。</p>
+</blockquote>
+<p>这个函数仅仅提供了类型推断，方便在结合 TypeScript 书写代码时，能为 <code>setup()</code> 中的 <code>props</code> 提供完整的类型推断。</p>
+<pre style="background-color:#31333d;">
+<code class="language-js" data-lang="js"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">createComponent </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">vue</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;
+
+</span><span style="color:#db7c6d;">export default </span><span style="color:#a2ba43;">createComponent</span><span style="color:#ffffffc4;">({
+	props</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="color:#ffffffc4;">{
+		foo</span><span style="font-weight:bold;color:#db7c6d;">: </span><span style="color:#e7e7e7;">String</span><span style="color:#ffffffc4;">,
+	},
+	</span><span style="color:#a2ba43;">setup</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">props</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#ffffffc4;">{
+		</span><span style="font-weight:bold;color:#a3cbe3;">props</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">foo</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// &lt;- type: string
+	</span><span style="color:#ffffffc4;">},
+});
+</span></code></pre>
+<blockquote>
+<p>转自 <a href="http://www.liulongbin.top:8085/#/">破解 vue3.x 新特性 - 洞见未来</a></p>
+</blockquote>
+
+    </div>
+
+    
+    
+
+    <div class="post-footer">
+        
+            
+                <div class="post-tags">
+                    
+                        <a href="&#x2F;tags&#x2F;zhuan-zai&#x2F;">#转载</a>
+                    
+                        <a href="&#x2F;tags&#x2F;wen-dang&#x2F;">#文档</a>
+                    
+                        <a href="&#x2F;tags&#x2F;vue&#x2F;">#vue</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                        <a class="previous" href="&#x2F;mathcomplexwen-dang&#x2F;">‹ Math Complex 文档</a>
+                    
+                    
+                        <a class="next" href="&#x2F;tui-jian-yi-xie-ruan-jian&#x2F;">推荐一些软件 ›</a>
+                    
+                    
+                    
+                </div>
+            
+
+        
+
+    </div>
+
+    
+    
+</article>
+
+
+                        
+                <div id="footer">
+                    <a href="/">Roger &copy; <span id="footer-year">2021</span></a>
+                </div>
+                </div>
+            </main>
+            
+            
+            
+             
+            
+        </div>
+
+    
+    <script type="text/javascript" src="/phomina.js" ></script>
+    <script type="text/javascript" src="/custom.js" ></script>
+    <script type="text/javascript" src="/fslightbox.js" ></script>
+    
+    </body>
+
+</html>

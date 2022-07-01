@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>BLOG - 宁中公案</title>
+        <link>/</link>
+        <description></description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="/tags/zhu-zhong-gong-an/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Sun, 15 Sep 2019 09:50:38 +0000</lastBuildDate>
+        <item>
+            <title>新 · 宁中公案</title>
+            <pubDate>Sun, 15 Sep 2019 09:50:38 +0000</pubDate>
+            <link>/xin-zhu-zhong-gong-an/</link>
+            <guid>/xin-zhu-zhong-gong-an/</guid>
+            <description>&lt;h1 id=&quot;qi-yi&quot;&gt;其一&lt;&#x2F;h1&gt;
+&lt;p&gt;在今年高考临近之时，要求班上所有人都给她写信。&lt;&#x2F;p&gt;
+&lt;p&gt;大部分人苦于学习时间紧迫，疲于应付，随便写写草率敷衍。&lt;&#x2F;p&gt;
+&lt;p&gt;惟有潘政科，敢说真话，在信中真情实感地写到：&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;你就像一个装在盒子里的西瓜，看起来光鲜亮丽，其实里面已经烂透了&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;于是被班主任教训了两个小时。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>宁中公案</title>
+            <pubDate>Thu, 14 Feb 2019 15:30:34 +0000</pubDate>
+            <link>/zhu-zhong-gong-an/</link>
+            <guid>/zhu-zhong-gong-an/</guid>
+            <description>&lt;h1 id=&quot;xu&quot;&gt;序&lt;&#x2F;h1&gt;
+&lt;p&gt;民国一〇六年，吾登于南山之上，四野尽收眼内，草木动而不息。&lt;&#x2F;p&gt;
+&lt;p&gt;草木无常，人亦如也。时人之谈笑雅言，若不录之，则必失之。&lt;&#x2F;p&gt;
+&lt;p&gt;今于南山之巅，名士云集之地，特辑以公案，形以盛况。&lt;&#x2F;p&gt;
+&lt;p&gt;鄙人不才，闲记其文，特为序也。&lt;&#x2F;p&gt;
+&lt;p&gt;至于此文，先以为传，后以为事，传以录人，事以纳情。&lt;&#x2F;p&gt;
+&lt;p&gt;先以传传名士之风，后以事事雅行之状。&lt;&#x2F;p&gt;
+&lt;p&gt;所以者何？当以正世风、抒己志耳。&lt;&#x2F;p&gt;
+&lt;p&gt;—— 特谢舍予之录本，鄙人文笔不佳，望勿见笑。&lt;&#x2F;p&gt;
+</description>
+        </item>
+    </channel>
+</rss>

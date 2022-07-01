@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+ 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+ 
+      <title>BLOG - Math Complex 文档</title>
+
+      <link rel="icon" sizes="any" href="/favico.ico">
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml">
+      
+      
+      <script src="https://cdn.bootcdn.net/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+          
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/mathtex-script-type.min.js" integrity="sha384-zWYbd0NBwgTsgIdFKVprSfTh1mbMPe5Hz1X3yY4Sd1h/K1cQoUe36OGwAGz/PcDy" crossorigin="anonymous"></script>
+              
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+                  <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        renderMathInElement(document.body, {
+                            delimiters: [
+                                {left: "$$", right: "$$", display: true },
+                                {left: "$", right: "$", display: false }, 
+                            ]
+                        });
+                    });
+
+                    window.$ZOLA_CONFIG = {
+                        base: "/",
+                        title: "BLOG",
+                        author: "Roger",
+                        navs:  ["Home","Categories","Tags","About",].map(function(e){return e.toLowerCase();}),
+                    }; 
+                </script>
+                  
+          
+      
+
+      
+          <link rel="stylesheet" href="/site.css">
+          
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+          
+      
+
+      
+      
+    </head>
+
+    <body> 
+        <div class="container"> 
+            <div id="mobile-navbar" class="mobile-navbar">
+                <div class="mobile-header-logo">
+                  <a href="/" class="logo">BLOG</a>
+                </div>
+                <div class="mobile-navbar-icon icon-out">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+            
+
+            <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+              <ul class="mobile-menu-list">
+                
+                    <li class="mobile-menu-item">
+                        <a href="/">
+                            Home
+                        </a> 
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="/categories">
+                            Categories
+                        </a> 
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="/tags">
+                            Tags
+                        </a> 
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="/about">
+                            About
+                        </a> 
+                    </li>
+                
+              </ul>
+            </nav>
+
+            <header id="header">
+                
+                <div class="logo"><a href="/">BLOG</a></div>
+                <nav class="menu">
+                    <ul>
+                        
+                            <li>
+                                <a href="/">
+                                    Home
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/categories">
+                                    Categories
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/tags">
+                                    Tags
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/about">
+                                    About
+                                </a>
+                            </li>
+                        
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+                <div class="content" id="mobile-panel">
+                    
+                    
+
+
+
+<article class="post article-content">
+    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="/mathcomplexwen-dang/">Math Complex 文档</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2020.02.16&nbsp;&nbsp; 共 3167 字</span>
+            
+        </div>
+    </header>
+
+    <div class="post-content">
+      <h1 id="jian-jie">简介</h1>
+<p><a href="https://gitee.com/shawroger/math-complex">项目仓库</a></p>
+<p><a href="http://shawroger.gitee.io/math-complex">项目文档</a></p>
+<p>Math Complex 是一个采用 TypeScript 编写的 JavaScript 扩展数学库，它扩展了 Math 数学类的一些方法，让 JavaScript 支持复数计算。</p>
+<h2 id="ji-chu-gong-neng">基础功能</h2>
+<ul>
+<li>扩展了复数类</li>
+<li>实现了复数类的四则、乘方开方运算</li>
+<li>扩充了辐角、指数转换计算</li>
+<li>通过 <strong>Reflect</strong> 静态类实现函数式</li>
+<li>函数式对原生 <strong>number</strong> 类型兼容</li>
+</ul>
+<span id="continue-reading"></span>
+<h2 id="te-xing">特性</h2>
+<ul>
+<li>所有操作都是返回新的 Complex Number 对象</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">define </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">3</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">4</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// z1 = 3 + 4i</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z2 </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">contrary</span><span style="color:#ffffffc4;">(); </span><span style="color:#707180;">// z2 = -z1 = 3 - 4i</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">imaginary </span><span style="color:#db7c6d;">=== 4</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true, z1本身从未改变</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>支持链式操作（严格从左至右执行）</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">define </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">3</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">4</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z2 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">5</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">12</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z3 </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">add</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">z2</span><span style="color:#ffffffc4;">).</span><span style="color:#a2ba43;">mult</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// z3  = (z1 + z2)*z1</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>支持 Reflect 函数式操作</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">define</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">3</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">4</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z2 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">5</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">12</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span><span style="color:#707180;">// z3 = z1 + z2 + z1 + z2 +z1</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z3 </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">add</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">z2</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">z2</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span></code></pre><h1 id="api">API</h1>
+<h2 id="quan-ju-dui-xiang">全局对象</h2>
+<h3 id="mo-ren-dao-chu-complex">默认导出 Complex</h3>
+<p>Complex 是 <code>math-complex</code> 的默认导出模块，你可以这样使用它</p>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="font-weight:bold;color:#a3cbe3;">Complex </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">realize</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">imagine</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">add</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">mult</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">abs</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">contrary </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">Complex</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">Reflect</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<p>Complex 本身就已经包含了<code>math-complex</code>的所有导出对象，不过一些是采用了别名。</p>
+<p>以下将列出在 <strong>Complex</strong> 中的所有对象</p>
+<h4 id="complex-abs">Complex.abs</h4>
+<p>参见 <a href="/API/complex-reflect.html#abs">abs</a>。</p>
+<h4 id="complex-abssquare">Complex.absSquare</h4>
+<p>参见 <a href="/API/#ComplexReflect.absSquare">absSquare</a>。</p>
+<h4 id="complex-contrary">Complex.contrary</h4>
+<p>参见 <a href="/API/complex-reflect.html#contrary">contrary</a>。</p>
+<h4 id="complex-define">Complex.define</h4>
+<p>参见 <a href="./#define">define</a>。</p>
+<h4 id="complex-fromangle">Complex.fromAngle</h4>
+<p>参见 <a href="./#fromangle-2">fromAngle</a>。</p>
+<h4 id="complex-imagine">Complex.imagine</h4>
+<p>参见 <a href="/API/complex-reflect.html#imagine">imagine</a>。</p>
+<h4 id="complex-iscomplex">Complex.isComplex</h4>
+<p>参见 <a href="/API/complex-reflect.html#isComplex">isComplex</a>。</p>
+<h4 id="complex-mult">Complex.mult</h4>
+<p>参见 <a href="/API/complex-reflect.html#mult">mult</a>。</p>
+<h4 id="complex-number">Complex.Number</h4>
+<p><strong>ComplexNumber</strong> 类的别名引用，参见 <a href="./">ComplexNumber</a>。</p>
+<h4 id="complex-pow">Complex.pow</h4>
+<p>参见 <a href="/API/complex-reflect.html#pow">pow</a>。</p>
+<h4 id="complex-random">Complex.random</h4>
+<p>参见 <a href="/API/complex-reflect.html#random">random</a>。</p>
+<h4 id="complex-realize">Complex.realize</h4>
+<p>参见 <a href="/API/complex-reflect.html#realize">realize</a>。</p>
+<h4 id="complex-reflect">Complex.Reflect</h4>
+<p><strong>ComplexReflect</strong> 类的别名引用，参见 <a href="/API/complex-reflect.html">ComplexReflect</a>。</p>
+<h4 id="complex-tocomplex">Complex.toComplex</h4>
+<p>参见 <a href="/API/complex-reflect.html#toComplex">toComplex</a>。</p>
+<h3 id="abs">abs</h3>
+<p>即定义在 <strong>ComplexReflect</strong> 类中的静态方法的别名，参见 <a href="/API/complex-reflect.html#abs">abs</a>。</p>
+<h3 id="abssquare">absSquare</h3>
+<p>即定义在 <strong>ComplexReflect</strong> 类中的静态方法的别名，参见 <a href="/API/complex-reflect.html#abs">abs</a>。</p>
+<h3 id="add">add</h3>
+<p>即定义在 <strong>ComplexReflect</strong> 类中的静态方法的别名，参见 <a href="/API/complex-reflect.html#add">ComplexReflect.add</a>。</p>
+<h3 id="complexnumber">ComplexNumber</h3>
+<p>即 <strong>ComplexNumber</strong> 类，参见 <a href="./">ComplexReflect.add</a></p>
+<h2 id="complexreflect">ComplexReflect</h2>
+<p>即 <strong>ComplexReflect</strong> 类，参见 <a href="/API/complex-reflect.html">ComplexReflect.add</a></p>
+<h3 id="contrary">contrary</h3>
+<p>即定义在 <strong>ComplexReflect</strong> 类中的静态方法，参见<a href="/API/complex-reflect.html#contrary">contrary</a>。</p>
+<h3 id="define">define</h3>
+<p>参见 <a href="./#define">define</a>。</p>
+<h3 id="fromangle">fromAngle</h3>
+<p>即定义在 <strong>ComplexReflect</strong> 类中的静态方法的别名，参见 <a href="./#fromangle-2">fromAngle</a></p>
+<h3 id="imagine">imagine</h3>
+<p>即定义在 <strong>ComplexReflect</strong> 类中的静态方法的别名，参见 <a href="/API/complex-reflect.html#imagine">imagine</a>。</p>
+<h3 id="iscomplex">isComplex</h3>
+<p>即定义在 <strong>ComplexReflect</strong> 类中的静态方法，参见 <a href="/API/complex-reflect.html#isComplex">isComplex</a>。</p>
+<h3 id="mult">mult</h3>
+<p>即定义在 <strong>ComplexReflect</strong> 类中的静态方法的别名，参见 <a href="/API/complex-reflect.html#mult">mult</a>。</p>
+<h3 id="pow">pow</h3>
+<p>即定义在 <strong>ComplexReflect</strong> 类中的静态方法的别名，参见 <a href="/API/complex-reflect.html#pow">pow</a>。</p>
+<h3 id="random">random</h3>
+<p>即定义在 <strong>ComplexReflect</strong> 类中的静态方法的别名，参见 <a href="/API/complex-reflect.html#random">random</a>。</p>
+<h3 id="realize">realize</h3>
+<p>即定义在 <strong>ComplexReflect</strong> 类中的静态方法的别名，参见 <a href="/API/complex-reflect.html#realize">realize</a>。</p>
+<h3 id="tocomplex">toComplex</h3>
+<p>即定义在 <strong>ComplexReflect</strong> 类中的静态方法的别名，参见 <a href="/API/complex-reflect.html#toComplex">toComplex</a>。</p>
+<h3 id="tryrealize">tryRealize</h3>
+<p>即定义在 <strong>ComplexReflect</strong> 类中的静态方法的别名，参见 <a href="/API/complex-reflect.html#tryRealize">tryRealize</a>。</p>
+<h2 id="complexnumber-lei">ComplexNumber 类</h2>
+<p><strong>ComplexNumber</strong> 是本库的核心类，所有其他类都由此衍生，且通过 <strong>new</strong> 即可声明一个复数对象。</p>
+<ul>
+<li><strong>constructor</strong> 类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#a2ba43;">constructor</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">real</span><span style="color:#db7c6d;">?: </span><span style="font-weight:bold;color:#a3cbe3;">number</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">imaginary</span><span style="color:#db7c6d;">?: </span><span style="font-weight:bold;color:#a3cbe3;">number</span><span style="color:#ffffffc4;">)</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>示例</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= new </span><span style="color:#ffffffc4;">ComplexNumber(</span><span style="color:#db7c6d;">3</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">4</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// z1 = 3 + 4i</span><span style="color:#ffffffc4;">
+</span></code></pre><h3 id="dui-xiang-shu-xing">对象属性</h3>
+<h4 id="imaginary">imaginary</h4>
+<p><strong>imaginary</strong> 是一个 <strong>number</strong> 对象，即为该对象的虚部。</p>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= new </span><span style="color:#ffffffc4;">ComplexNumber(</span><span style="color:#db7c6d;">3</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">4</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// z1 = 3 + 4i</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">imaginary </span><span style="color:#db7c6d;">=== 4</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span></code></pre><h4 id="real">real</h4>
+<p><strong>real</strong> 是一个 <strong>number</strong> 对象，即为该对象的实部。</p>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= new </span><span style="color:#ffffffc4;">ComplexNumber(</span><span style="color:#db7c6d;">3</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">4</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// z1 = 3 + 4i</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">real </span><span style="color:#db7c6d;">=== 3</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span></code></pre><h4 id="radius">radius</h4>
+<p><strong>radius</strong> 是一个 <strong>number</strong> 对象，即为该对象的模长。</p>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= new </span><span style="color:#ffffffc4;">ComplexNumber(</span><span style="color:#db7c6d;">3</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">4</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// z1 = 3 + 4i</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">radius </span><span style="color:#db7c6d;">=== 5</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span></code></pre><h4 id="mainangle">mainAngle</h4>
+<p><strong>mainAngle</strong> 是一个 <strong>number</strong> 对象，即为该对象的幅角主值。</p>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= new </span><span style="color:#ffffffc4;">ComplexNumber(</span><span style="color:#db7c6d;">1</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">1</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// z1 = 1 + i</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">mainAngle </span><span style="color:#db7c6d;">=== Math</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">PI / 4</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span></code></pre><h3 id="jing-tai-fang-fa">静态方法</h3>
+<h4 id="define-1">define</h4>
+<p><strong>define</strong> 是一个 <strong>ComplexNumber</strong> 对象的构造器，返回一个 ComplexNumber 对象。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="font-weight:bold;color:#a3cbe3;">static </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">real</span><span style="color:#db7c6d;">?: </span><span style="font-weight:bold;color:#a3cbe3;">number</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">imaginary</span><span style="color:#db7c6d;">?: </span><span style="font-weight:bold;color:#a3cbe3;">number</span><span style="color:#ffffffc4;">): </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>示例</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">define </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">3</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">4</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// z1 = 3 + 4i</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<p>本质上 <strong>define</strong> 就是调用了<strong>ComplexNumber</strong> 类的 <strong>new</strong> 方法：</p>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">define </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#db7c6d;">...</span><span style="color:#ffffff;">args</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#a3cbe3;">=&gt; </span><span style="color:#db7c6d;">new </span><span style="color:#ffffffc4;">ComplexNumber(</span><span style="color:#db7c6d;">...</span><span style="font-weight:bold;color:#a3cbe3;">args</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span></code></pre><h4 id="fromangle-1">fromAngle</h4>
+<p><strong>fromAngle</strong> 是另一个 <strong>ComplexNumber</strong> 对象的构造器，返回一个 ComplexNumber 对象，与 <strong>define</strong> 不同，<strong>fromAngle</strong> 接收的参数是复数的模长和幅角主值。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="font-weight:bold;color:#a3cbe3;">static </span><span style="color:#a2ba43;">fromAngle</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">radius</span><span style="color:#db7c6d;">?: </span><span style="font-weight:bold;color:#a3cbe3;">number</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">mainAngle</span><span style="color:#db7c6d;">?: </span><span style="font-weight:bold;color:#a3cbe3;">number</span><span style="color:#ffffffc4;">): </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>示例</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">fromAngle </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">fromAngle</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">Math</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">sqrt</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">2</span><span style="color:#ffffffc4;">), </span><span style="color:#db7c6d;">Math</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">PI / 4</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span><span style="color:#707180;">// z1 = sqrt(2) * (cos(π/4) + sin(π/4)) = 1 + i</span><span style="color:#ffffffc4;">
+</span></code></pre><h3 id="dui-xiang-fang-fa">对象方法</h3>
+<h4 id="abs-1">abs</h4>
+<p><strong>abs</strong> 返回一个 <strong>ComplexNumber</strong> 对象的模长。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#a2ba43;">abs</span><span style="color:#ffffffc4;">(): </span><span style="font-weight:bold;color:#a3cbe3;">number</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>示例</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">define </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#707180;">// 此处 define 即为 ComplexNumber.define 在全局的导出对象</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">3</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">4</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// z1 = 3 + 4i</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">abs</span><span style="color:#ffffffc4;">() </span><span style="color:#db7c6d;">=== 5</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span></code></pre><h4 id="abssquare-1">absSquare</h4>
+<p><strong>absSquare</strong> 返回一个 <strong>ComplexNumber</strong> 对象模长的平方。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#a2ba43;">absSquare</span><span style="color:#ffffffc4;">(): </span><span style="font-weight:bold;color:#a3cbe3;">number</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>示例</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">define </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">3</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">4</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// z1 = 3 + 4i</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">absSquare</span><span style="color:#ffffffc4;">() </span><span style="color:#db7c6d;">=== 25</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span></code></pre><h4 id="add-1">add</h4>
+<p><strong>add</strong> 定义了 <strong>ComplexNumber</strong> 的加法运算，且支持原生<strong>number</strong> 对象。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#a2ba43;">add</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">addend</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#a3cbe3;">number </span><span style="color:#db7c6d;">| </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">): </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>示例</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">define </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">3</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">4</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// z1 = 3 + 4i</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z2 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">5</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">12</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// z1 = 5 + 12i</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z3 </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">add</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">2</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// z3 = z1 + 2 = 5 + 4i</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z4 </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">add</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">z2</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// z4 = z1 + z2 = 8 + 16i</span><span style="color:#ffffffc4;">
+</span></code></pre><h4 id="angle">angle</h4>
+<p><strong>angle</strong> 返回 <strong>ComplexNumber</strong> 的辐角主值。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#a2ba43;">angle</span><span style="color:#ffffffc4;">(): </span><span style="font-weight:bold;color:#a3cbe3;">number</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>示例</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">define </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">1</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">1</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">angle</span><span style="color:#ffffffc4;">() </span><span style="color:#db7c6d;">=== Math</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">PI / 4</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span></code></pre><h4 id="contrary-1">contrary</h4>
+<p><strong>contrary</strong> 返回一个 <strong>ComplexNumber</strong> 对象的相反数。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#a2ba43;">contrary</span><span style="color:#ffffffc4;">(): </span><span style="font-weight:bold;color:#a3cbe3;">number</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>示例</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">define </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">3</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">4</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// z1 = 3 + 4i</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">contrary</span><span style="color:#ffffffc4;">().</span><span style="font-weight:bold;color:#a3cbe3;">real </span><span style="color:#db7c6d;">=== -3</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">contrary</span><span style="color:#ffffffc4;">().</span><span style="font-weight:bold;color:#a3cbe3;">imaginary </span><span style="color:#db7c6d;">=== -4</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span></code></pre><h4 id="conj">conj</h4>
+<p><strong>conj</strong> 返回一个 <strong>ComplexNumber</strong> 对象的共轭复数。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#a2ba43;">conj</span><span style="color:#ffffffc4;">(): </span><span style="font-weight:bold;color:#a3cbe3;">number</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>示例</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">define </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">3</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">4</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// z1 = 3 + 4i</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">conj</span><span style="color:#ffffffc4;">().</span><span style="font-weight:bold;color:#a3cbe3;">real </span><span style="color:#db7c6d;">=== 3</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">conj</span><span style="color:#ffffffc4;">().</span><span style="font-weight:bold;color:#a3cbe3;">imaginary </span><span style="color:#db7c6d;">=== -4</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span></code></pre><h4 id="divide">divide</h4>
+<p><strong>divide</strong> 定义了 <strong>ComplexNumber</strong> 的除法运算，且支持原生<strong>number</strong> 对象。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#a2ba43;">divide</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">divisor</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#a3cbe3;">number </span><span style="color:#db7c6d;">| </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">): </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>示例</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">define</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">tryRealize </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">6</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">8</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// z1 = 6 + 8i</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z2 </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">divide</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">2</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// z2 = z1 / 2 = 3 + 4i</span><span style="color:#ffffffc4;">
+</span><span style="color:#a2ba43;">tryRealize</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">divide</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">z2</span><span style="color:#ffffffc4;">)) </span><span style="color:#db7c6d;">=== 2</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true, z1 / z2 = 2</span><span style="color:#ffffffc4;">
+</span></code></pre><h4 id="isangle">isAngle</h4>
+<p><strong>isAngle</strong> 用来检查一个弧度角是否是 <strong>ComplexNumber</strong> 的一个辐角（即与辐角主值相差 2π 的整数倍）。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#a2ba43;">isAngle</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">angle</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#a3cbe3;">number</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">accuracy</span><span style="color:#db7c6d;">?: </span><span style="font-weight:bold;color:#a3cbe3;">number</span><span style="color:#ffffffc4;">): </span><span style="font-weight:bold;color:#a3cbe3;">boolean</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>示例</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">define </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">1</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">1</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">angle </span><span style="color:#db7c6d;">= </span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">9 * Math</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">PI</span><span style="color:#ffffffc4;">) </span><span style="color:#db7c6d;">/ 4</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">isAngle</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">angle</span><span style="color:#ffffffc4;">) </span><span style="color:#db7c6d;">=== </span><span style="color:#ffffff;">true</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>设置精度 accuracy</li>
+</ul>
+<p>有时由于浮点计算问题，对 π 的检查存在偏差，我们可以适当设置精度 <strong>accuracy</strong> 参数的值，默认为 0.0001，<strong>accuracy</strong> 的定义是 (角度差/2π) 的小数部分。</p>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">define </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">isAngle</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">angle</span><span style="color:#ffffffc4;">) </span><span style="color:#db7c6d;">=== </span><span style="color:#ffffff;">false</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// false，应为true，精度过小</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">isAngle</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">angle</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">0.01</span><span style="color:#ffffffc4;">) </span><span style="color:#db7c6d;">=== </span><span style="color:#ffffff;">true</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// 精度合理</span><span style="color:#ffffffc4;">
+</span></code></pre><h4 id="mult-1">mult</h4>
+<p><strong>mult</strong> 定义了 <strong>ComplexNumber</strong> 的乘法运算，且支持原生<strong>number</strong> 对象。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#a2ba43;">mult</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">multiplier</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#a3cbe3;">number </span><span style="color:#db7c6d;">| </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">): </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>示例</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">define </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">3</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">4</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// z1 = 3 + 4i</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z2 </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">mult</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">2</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// z2 = z1 * 2 = 6 + 8i</span><span style="color:#ffffffc4;">
+</span></code></pre><h4 id="pow-1">pow</h4>
+<p><strong>pow</strong> 定义了 <strong>ComplexNumber</strong> 的乘方运算。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#a2ba43;">pow</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">power</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#a3cbe3;">number</span><span style="color:#ffffffc4;">): </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber </span><span style="color:#db7c6d;">| 1</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<p>幂必须是整数，如果幂为分数参见 <a href="./#sqrt">sqrt 方法</a>，且乘方运算在幂不同时候执行不同的运算方法。</p>
+<ul>
+<li>
+<p>幂为 0 时，返回值为 1</p>
+</li>
+<li>
+<p>幂为正整数时，返回值为复数自乘 n 次的结果</p>
+</li>
+<li>
+<p>幂为负整数时，返回值为复数自乘 n 次的结果的倒数 （参见 <a href="./#recip">recip 方法</a>）</p>
+</li>
+</ul>
+<h4 id="recip">recip</h4>
+<p><strong>recip</strong> 返回一个 <strong>ComplexNumber</strong> 的倒数结果。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#a2ba43;">recip</span><span style="color:#ffffffc4;">(): </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>示例</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">define </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">3</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">4</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// z1 = 3 + 4i</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z2 </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">recip</span><span style="color:#ffffffc4;">(); </span><span style="color:#707180;">// z2 = 1 / z1 = 0.6- 0.8i</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>实际上，<strong>recip()</strong> 方法就是返回 <strong>1 + 0i</strong> 的<a href="./#divide">除法运算</a>结果。</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#a3cbe3;">class </span><span style="color:#ffffffc4;">ComplexNumber {</span><span style="color:#ffffffc4;">
+	</span><span style="color:#707180;">// ...</span><span style="color:#ffffffc4;">
+	</span><span style="color:#a2ba43;">recip</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#ffffffc4;">{</span><span style="color:#ffffffc4;">
+		</span><span style="color:#db7c6d;">return new </span><span style="color:#ffffffc4;">ComplexNumber(</span><span style="color:#db7c6d;">1</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">0</span><span style="color:#ffffffc4;">).</span><span style="color:#a2ba43;">divide</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">this</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+	}</span><span style="color:#ffffffc4;">
+}</span><span style="color:#ffffffc4;">
+</span></code></pre><h4 id="sub">sub</h4>
+<p><strong>substract</strong> 的别名，参见 <a href="./#subtract">subtract</a>。</p>
+<h4 id="subtract">subtract</h4>
+<p><strong>subtract</strong> 定义了 <strong>ComplexNumber</strong> 对象的减法运算。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#a2ba43;">subtract</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">subtrahend</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#a3cbe3;">number </span><span style="color:#db7c6d;">| </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">): </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>示例</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">define </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">3</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">4</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// z1 = 3 + 4i</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z2 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">5</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">12</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// z1 = 5 + 12i</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z3 </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">subtract</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">2</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// z3 = z1 - 2 = 1 + 4i</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z4 </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">subtract</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">z2</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// z4 = z1 - z2 = -2 + -7i</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>实际上，<strong>subtract()</strong> 方法就是参数的相反数的<a href="./#add">加法运算</a>结果。</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#a3cbe3;">class </span><span style="color:#ffffffc4;">ComplexNumber {</span><span style="color:#ffffffc4;">
+	</span><span style="color:#707180;">// ...</span><span style="color:#ffffffc4;">
+	</span><span style="color:#a2ba43;">subtract</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">params</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#ffffffc4;">{</span><span style="color:#ffffffc4;">
+		</span><span style="color:#db7c6d;">return </span><span style="font-weight:bold;color:#a3cbe3;">this</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">add</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">params</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">contrary</span><span style="color:#ffffffc4;">());</span><span style="color:#ffffffc4;">
+	}</span><span style="color:#ffffffc4;">
+}</span><span style="color:#ffffffc4;">
+</span></code></pre><h4 id="sqrt">sqrt</h4>
+<p><strong>sqrt</strong> 定义了 <strong>ComplexNumber</strong> 对象的开方运算。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="color:#a2ba43;">sqrt</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">power</span><span style="color:#db7c6d;">?: </span><span style="font-weight:bold;color:#a3cbe3;">number</span><span style="color:#ffffffc4;">): </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>
+<p><strong>power</strong> 必须为正整数，默认空参数是开平方，即 <strong>power</strong> 为 2。</p>
+</li>
+<li>
+<p>开方运算是利用棣莫佛定理，将复数转换成模长和辐角的形式计算，参见 <a href="./#fromangle">fromAngle</a> 静态方法。</p>
+</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#a3cbe3;">class </span><span style="color:#ffffffc4;">ComplexNumber {</span><span style="color:#ffffffc4;">
+	</span><span style="color:#707180;">// ...</span><span style="color:#ffffffc4;">
+	</span><span style="color:#a2ba43;">sqrt</span><span style="font-weight:bold;color:#dbbb3d;">(</span><span style="color:#ffffff;">power</span><span style="font-weight:bold;color:#dbbb3d;">) </span><span style="color:#ffffffc4;">{</span><span style="color:#ffffffc4;">
+		</span><span style="color:#db7c6d;">return </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">fromAngle</span><span style="color:#ffffffc4;">(</span><span style="color:#ffffffc4;">
+			</span><span style="color:#db7c6d;">Math</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">pow</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">this</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">radius</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">1 / </span><span style="font-weight:bold;color:#a3cbe3;">power</span><span style="color:#ffffffc4;">),</span><span style="color:#ffffffc4;">
+			</span><span style="font-weight:bold;color:#a3cbe3;">this</span><span style="color:#ffffffc4;">.</span><span style="font-weight:bold;color:#a3cbe3;">mainAngle </span><span style="color:#db7c6d;">/ </span><span style="font-weight:bold;color:#a3cbe3;">power</span><span style="color:#ffffffc4;">
+		);</span><span style="color:#ffffffc4;">
+	}</span><span style="color:#ffffffc4;">
+}</span><span style="color:#ffffffc4;">
+</span></code></pre><h3 id="guan-yu-lian-shi-cao-zuo">关于链式操作</h3>
+<p>所有返回 <strong>ComplexNumber</strong> 对象的方法都支持链式运算。</p>
+<p>其中包含：<a href="./#add">add</a>, <a href="./#contrary">contrary</a>, <a href="./#conj">conj</a>, <a href="./#divide">divide</a>, <a href="./#mult">mult</a>, <a href="./#recip">recip</a>, <a href="/#subtract">subtract</a>, <a href="./#sqrt">sqrt</a></p>
+<h2 id="complexreflect-jing-tai-lei">ComplexReflect 静态类</h2>
+<p><strong>ComplexReflect</strong> 是本库的函数方法类，使用本类的静态方法可以更直接地操作 <strong>ComplexNumber</strong> 或原生 <strong>number</strong> 对象数据，并且 <strong>ComplexReflect</strong> 类中的所有方法都是静态方法，并且对原生 <strong>number</strong> 对象也有良好兼容性。</p>
+<h3 id="abs-2">abs</h3>
+<p><strong>abs</strong> 返回一个 <strong>ComplexNumber</strong> 或原生 <strong>number</strong> 对象的模长。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="font-weight:bold;color:#a3cbe3;">static </span><span style="color:#a2ba43;">abs</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">num</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#a3cbe3;">number </span><span style="color:#db7c6d;">| </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">): </span><span style="font-weight:bold;color:#a3cbe3;">number </span><span style="color:#db7c6d;">| </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>示例</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">define</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">x </span><span style="color:#db7c6d;">= 2</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// 原生number对象</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">3</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">4</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// ComplexNumber对象</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">abs</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">x</span><span style="color:#ffffffc4;">) </span><span style="color:#db7c6d;">=== 2</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">abs</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">z</span><span style="color:#ffffffc4;">) </span><span style="color:#db7c6d;">=== 5</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span></code></pre><h3 id="abssquare-2">absSquare</h3>
+<p><strong>absSquare</strong> 返回一个 <strong>ComplexNumber</strong> 或原生 <strong>number</strong> 对象模长的平方。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="font-weight:bold;color:#a3cbe3;">static </span><span style="color:#a2ba43;">absSquare</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">num</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#a3cbe3;">number </span><span style="color:#db7c6d;">| </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">): </span><span style="font-weight:bold;color:#a3cbe3;">number </span><span style="color:#db7c6d;">| </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>示例</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">define</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">x </span><span style="color:#db7c6d;">= 2</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// 原生number对象</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">3</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">4</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// ComplexNumber对象</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">absSquare</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">x</span><span style="color:#ffffffc4;">) </span><span style="color:#db7c6d;">=== 4</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">absSquare</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">z</span><span style="color:#ffffffc4;">) </span><span style="color:#db7c6d;">=== 25</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span></code></pre><h3 id="add-2">add</h3>
+<p><strong>add</strong> 定义了 <strong>ComplexNumber</strong> 或原生 <strong>number</strong> 对象的加法运算，并且支持多个参数（至少 2 个）。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="font-weight:bold;color:#a3cbe3;">static </span><span style="color:#a2ba43;">add</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">num</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#a3cbe3;">number </span><span style="color:#db7c6d;">| </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">...</span><span style="font-weight:bold;color:#a3cbe3;">args</span><span style="color:#ffffffc4;">: </span><span style="color:#e7e7e7;">Array</span><span style="color:#db7c6d;">&lt;</span><span style="font-weight:bold;color:#a3cbe3;">number </span><span style="color:#db7c6d;">| </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#db7c6d;">&gt;</span><span style="color:#ffffffc4;">): </span><span style="font-weight:bold;color:#a3cbe3;">number </span><span style="color:#db7c6d;">| </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>示例</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">define</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">3</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">4</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z2 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">5</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">12</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z3 </span><span style="color:#db7c6d;">= 5</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z4 </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">add</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">z2</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">z3</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span><span style="color:#707180;">// z4 = z1 + z2 + z3</span><span style="color:#ffffffc4;">
+</span></code></pre><h3 id="angle-1">angle</h3>
+<p><strong>angle</strong> 返回 <strong>ComplexNumber</strong> 或原生 <strong>number</strong> 对象的辐角主值（原生 <strong>number</strong> 对象即为 0）。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="font-weight:bold;color:#a3cbe3;">static </span><span style="color:#a2ba43;">angle</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">num</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#a3cbe3;">number </span><span style="color:#db7c6d;">| </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">): </span><span style="font-weight:bold;color:#a3cbe3;">number </span><span style="color:#db7c6d;">| </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>示例</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">define</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">1</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">1</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">angle</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">) </span><span style="color:#db7c6d;">=== Math</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">PI / 4</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">angle</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">1234</span><span style="color:#ffffffc4;">) </span><span style="color:#db7c6d;">=== 0</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span></code></pre><h3 id="contrary-2">contrary</h3>
+<p><strong>contrary</strong> 返回一个 <strong>ComplexNumber</strong> 或原生 <strong>number</strong> 对象的相反数。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="font-weight:bold;color:#a3cbe3;">static </span><span style="color:#a2ba43;">contrary</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">num</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#a3cbe3;">number </span><span style="color:#db7c6d;">| </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">): </span><span style="font-weight:bold;color:#a3cbe3;">number </span><span style="color:#db7c6d;">| </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>示例</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">define</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">3</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">4</span><span style="color:#ffffffc4;">); </span><span style="color:#707180;">// z1 = 3 + 4i</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">contrary</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">).</span><span style="font-weight:bold;color:#a3cbe3;">real </span><span style="color:#db7c6d;">=== -3</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">contrary</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">).</span><span style="font-weight:bold;color:#a3cbe3;">imaginary </span><span style="color:#db7c6d;">=== -4</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">contrary</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">5</span><span style="color:#ffffffc4;">) </span><span style="color:#db7c6d;">=== -5</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span></code></pre><h3 id="fromangle-2">fromAngle</h3>
+<p><strong>fromAngle</strong> 是另一个 <strong>ComplexNumber</strong> 对象的构造器，<strong>fromAngle</strong> 接收的参数是复数的模长和幅角主值。</p>
+<p>参见 <a href="/API/complex-number.html#fromangle">fromAngle</a>。</p>
+<h3 id="imagine-1">imagine</h3>
+<p><strong>imagine</strong> 返回一个 <strong>ComplexNumber</strong> 的虚部， 或参数为原生 <strong>number</strong> 对象，则返回 0。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="font-weight:bold;color:#a3cbe3;">static </span><span style="color:#a2ba43;">imagine</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">num</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#a3cbe3;">number </span><span style="color:#db7c6d;">| </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">): </span><span style="font-weight:bold;color:#a3cbe3;">number</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>示例</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">define</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">3</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">4</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">imagine</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">).</span><span style="font-weight:bold;color:#a3cbe3;">real </span><span style="color:#db7c6d;">=== 4</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">imagine</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">5</span><span style="color:#ffffffc4;">) </span><span style="color:#db7c6d;">=== 0</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span></code></pre><h3 id="iscomplex-1">isComplex</h3>
+<p><strong>isComplex</strong> 用来判断一个对象是不是 <strong>ComplexNumber</strong> 构造的对象。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="font-weight:bold;color:#a3cbe3;">static </span><span style="color:#a2ba43;">isComplex</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">num</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#a3cbe3;">any</span><span style="color:#ffffffc4;">): </span><span style="font-weight:bold;color:#a3cbe3;">boolean</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>示例</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">define</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">3</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">4</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">imagine</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">).</span><span style="font-weight:bold;color:#a3cbe3;">real </span><span style="color:#db7c6d;">=== 4</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">imagine</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">5</span><span style="color:#ffffffc4;">) </span><span style="color:#db7c6d;">=== 0</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span></code></pre><h3 id="mult-2">mult</h3>
+<p><strong>add</strong> 定义了 <strong>ComplexNumber</strong> 或原生 <strong>number</strong> 对象的乘法法运算，并且支持多个参数（至少 2 个）。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="font-weight:bold;color:#a3cbe3;">static </span><span style="color:#a2ba43;">mult</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">num</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#a3cbe3;">number </span><span style="color:#db7c6d;">| </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">...</span><span style="font-weight:bold;color:#a3cbe3;">args</span><span style="color:#ffffffc4;">: </span><span style="color:#e7e7e7;">Array</span><span style="color:#db7c6d;">&lt;</span><span style="font-weight:bold;color:#a3cbe3;">number </span><span style="color:#db7c6d;">| </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#db7c6d;">&gt;</span><span style="color:#ffffffc4;">): </span><span style="font-weight:bold;color:#a3cbe3;">number </span><span style="color:#db7c6d;">| </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>示例</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">define</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">3</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">4</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z2 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">5</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">12</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z3 </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">mult</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">5</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">z2</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span><span style="color:#707180;">// z3 = z1 * 5 *z2</span><span style="color:#ffffffc4;">
+</span></code></pre><h3 id="pow-2">pow</h3>
+<p><strong>pow</strong> 定义了 <strong>ComplexNumber</strong> 的乘方运算。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="font-weight:bold;color:#a3cbe3;">static </span><span style="color:#a2ba43;">pow</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">num</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#a3cbe3;">number </span><span style="color:#db7c6d;">| </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">power</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#a3cbe3;">number</span><span style="color:#ffffffc4;">): </span><span style="font-weight:bold;color:#a3cbe3;">number </span><span style="color:#db7c6d;">| </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>
+<p>幂可为 0、正整数、负整数和分数</p>
+</li>
+<li>
+<p>幂为 0 时，返回值为 1</p>
+</li>
+<li>
+<p>幂为正整数时，返回值为复数自乘 n 次的结果 （参见 <a href="/API/complex-number.html#pow">pow 方法</a>）</p>
+</li>
+<li>
+<p>幂为负整数时，返回值为复数自乘 n 次的结果的倒数 （参见 <a href="/API/complex-number.html#recip">recip 方法</a>）</p>
+</li>
+<li>
+<p>幂为分数时，返回值为复数开 1 / n 次方的结果 （参见 <a href="/API/complex-number.html#sqrt">sqrt 方法</a>）</p>
+</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">define</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">3</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">4</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z2 </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">pow</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">2</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z3 </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">pow</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">-3</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z4 </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">pow</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">0.5</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span></code></pre><h3 id="random-1">random</h3>
+<p><strong>random</strong> 返回一个随机的 <strong>ComplexNumber</strong> 的对象。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="font-weight:bold;color:#a3cbe3;">static </span><span style="color:#a2ba43;">random</span><span style="color:#ffffffc4;">(): </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>示例</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">random</span><span style="color:#ffffffc4;">();</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>实际上，<strong>random()</strong> 方法就是返回实部虚部都为 <strong>Math.random()</strong> 的对象。</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#a3cbe3;">class </span><span style="color:#ffffffc4;">ComplexReflect {</span><span style="color:#ffffffc4;">
+	</span><span style="color:#707180;">// ...</span><span style="color:#ffffffc4;">
+	</span><span style="color:#a2ba43;">random</span><span style="font-weight:bold;color:#dbbb3d;">() </span><span style="color:#ffffffc4;">{</span><span style="color:#ffffffc4;">
+		</span><span style="color:#db7c6d;">return new </span><span style="color:#ffffffc4;">ComplexNumber(</span><span style="color:#db7c6d;">Math</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">random</span><span style="color:#ffffffc4;">(), </span><span style="color:#db7c6d;">Math</span><span style="color:#ffffffc4;">.</span><span style="color:#db7c6d;">random</span><span style="color:#ffffffc4;">());</span><span style="color:#ffffffc4;">
+	}</span><span style="color:#ffffffc4;">
+}</span><span style="color:#ffffffc4;">
+</span></code></pre><h3 id="realize-1">realize</h3>
+<p><strong>realize</strong> 返回一个 <strong>ComplexNumber</strong> 的虚部，或参数为原生 <strong>number</strong> 对象，则返回自身。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="font-weight:bold;color:#a3cbe3;">static </span><span style="color:#a2ba43;">realize</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">num</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#a3cbe3;">number </span><span style="color:#db7c6d;">| </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">): </span><span style="font-weight:bold;color:#a3cbe3;">number </span><span style="color:#db7c6d;">| </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>示例</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">define</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z1 </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">3</span><span style="color:#ffffffc4;">, </span><span style="color:#db7c6d;">4</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z2 </span><span style="color:#db7c6d;">= 5</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">realize</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">z1</span><span style="color:#ffffffc4;">) </span><span style="color:#db7c6d;">=== 3</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">realize</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">z2</span><span style="color:#ffffffc4;">) </span><span style="color:#db7c6d;">=== 5</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span></code></pre><h3 id="tocomplex-1">toComplex</h3>
+<p><strong>toComplex</strong> 可以将原生 <strong>number</strong> 对象转化为虚部为 0 的 <strong>ComplexNumber</strong> 对象，如果参数本身已经是 <strong>ComplexNumber</strong> 对象，则直接返回自身。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="font-weight:bold;color:#a3cbe3;">static </span><span style="color:#a2ba43;">toComplex</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">num</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#a3cbe3;">number </span><span style="color:#db7c6d;">| </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">): </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>示例</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">x </span><span style="color:#db7c6d;">= 5</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">toComplex</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">x</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">realize</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">z</span><span style="color:#ffffffc4;">) </span><span style="color:#db7c6d;">=== 5</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">imagine</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">z2</span><span style="color:#ffffffc4;">) </span><span style="color:#db7c6d;">=== 0</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span></code></pre><h3 id="tryrealize-1">tryRealize</h3>
+<p>与 <strong>toComplex</strong> 相反，<strong>tryRealize</strong> 可以将虚部为 0 的 <strong>ComplexNumber</strong> 对象转化为原生 <strong>number</strong> 对象，如果<strong>ComplexNumber</strong> 对象参数的虚部不为 0 ，则直接返回自身。</p>
+<ul>
+<li>类型定义</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-ts" data-lang="ts"><span style="font-weight:bold;color:#a3cbe3;">static </span><span style="color:#a2ba43;">tryRealize</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">complex</span><span style="color:#ffffffc4;">: </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">): </span><span style="font-weight:bold;color:#a3cbe3;">number </span><span style="color:#db7c6d;">| </span><span style="font-weight:bold;color:#a3cbe3;">ComplexNumber</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span></code></pre>
+<ul>
+<li>示例</li>
+</ul>
+<pre style="background-color:#31333d;">
+<code class="language-javascript" data-lang="javascript"><span style="color:#db7c6d;">import </span><span style="color:#ffffffc4;">{ </span><span style="font-weight:bold;color:#a3cbe3;">define</span><span style="color:#ffffffc4;">, </span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect </span><span style="color:#ffffffc4;">} </span><span style="color:#db7c6d;">from </span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">math-complex</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span style="color:#ffffffc4;">;</span><span style="color:#ffffffc4;">
+</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">z </span><span style="color:#db7c6d;">= </span><span style="color:#a2ba43;">define</span><span style="color:#ffffffc4;">(</span><span style="color:#db7c6d;">5</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span><span style="color:#a3cbe3;">const </span><span style="font-weight:bold;color:#a3cbe3;">x </span><span style="color:#db7c6d;">= </span><span style="font-weight:bold;color:#a3cbe3;">ComplexReflect</span><span style="color:#ffffffc4;">.</span><span style="color:#a2ba43;">tryRealize</span><span style="color:#ffffffc4;">(</span><span style="font-weight:bold;color:#a3cbe3;">z</span><span style="color:#ffffffc4;">);</span><span style="color:#ffffffc4;">
+</span><span style="font-weight:bold;color:#a3cbe3;">x </span><span style="color:#db7c6d;">=== 5</span><span style="color:#ffffffc4;">; </span><span style="color:#707180;">// true</span><span style="color:#ffffffc4;">
+</span></code></pre>
+    </div>
+
+    
+    
+
+    <div class="post-footer">
+        
+            
+                <div class="post-tags">
+                    
+                        <a href="&#x2F;tags&#x2F;ecamscript&#x2F;">#ECAMScript</a>
+                    
+                        <a href="&#x2F;tags&#x2F;shu-xue&#x2F;">#数学</a>
+                    
+                        <a href="&#x2F;tags&#x2F;wen-dang&#x2F;">#文档</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                        <a class="previous" href="&#x2F;xie-yi-ge-vuede-hooks&#x2F;">‹ 写一个 vue 的 hooks</a>
+                    
+                    
+                        <a class="next" href="&#x2F;vue3-xin-te-xing&#x2F;">vue3 新特性 ›</a>
+                    
+                    
+                    
+                </div>
+            
+
+        
+
+    </div>
+
+    
+    
+</article>
+
+
+                        
+                <div id="footer">
+                    <a href="/">Roger &copy; <span id="footer-year">2021</span></a>
+                </div>
+                </div>
+            </main>
+            
+            
+            
+             
+            
+        </div>
+
+    
+    <script type="text/javascript" src="/phomina.js" ></script>
+    <script type="text/javascript" src="/custom.js" ></script>
+    <script type="text/javascript" src="/fslightbox.js" ></script>
+    
+    </body>
+
+</html>

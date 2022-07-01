@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>BLOG - 数学</title>
+        <link>/</link>
+        <description></description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="/categories/shu-xue/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Tue, 19 Feb 2019 14:17:33 +0000</lastBuildDate>
+        <item>
+            <title>点集杂谈</title>
+            <pubDate>Tue, 19 Feb 2019 14:17:33 +0000</pubDate>
+            <link>/dian-ji-za-tan/</link>
+            <guid>/dian-ji-za-tan/</guid>
+            <description>&lt;h1 id=&quot;ding-yi&quot;&gt;定义&lt;&#x2F;h1&gt;
+&lt;ol&gt;
+&lt;li&gt;在解析空间里点的集合称为&lt;code&gt;点集 (Piontset)&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;点集 $P$&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;点集 $A$：$P_A$&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;点集的元素是解析点，记为 $D$&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;显然 $D \in P$&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>地区昼长计算公式</title>
+            <pubDate>Mon, 18 Feb 2019 14:02:12 +0000</pubDate>
+            <link>/di-qu-zhou-chang-ji-suan-gong-shi/</link>
+            <guid>/di-qu-zhou-chang-ji-suan-gong-shi/</guid>
+            <description>&lt;h1 id=&quot;ji-ben-jia-she&quot;&gt;基本假设&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;地球是标准的球形。&lt;&#x2F;li&gt;
+&lt;li&gt;太阳光是几何上的平行光。&lt;&#x2F;li&gt;
+&lt;li&gt;晨昏线是标准意义上的球环。&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;ji-suan-si-lu&quot;&gt;计算思路&lt;&#x2F;h1&gt;
+&lt;p&gt;将太阳光的垂直面切割地球球体，地球将被晨昏线分为两部分。&lt;&#x2F;p&gt;
+&lt;p&gt;通过计算靠近阳光部分与某地维度圆面的相交弦的弧度，推断昼长。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>明世隐大招被动解析</title>
+            <pubDate>Tue, 12 Feb 2019 10:16:02 +0000</pubDate>
+            <link>/ming-shi-yin-da-zhao-bei-dong-jie-xi/</link>
+            <guid>/ming-shi-yin-da-zhao-bei-dong-jie-xi/</guid>
+            <description>&lt;h1 id=&quot;fu-hao-shuo-ming&quot;&gt;符号说明&lt;&#x2F;h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文中我们设&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$C_0$：总血量&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;$C$：当前血量&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;$A_n$：第 n 秒时刻大招被动回复的血量&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;$S_n$：前 n 秒内由大招被动回复的血量&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+        </item>
+    </channel>
+</rss>

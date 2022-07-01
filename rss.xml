@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>BLOG</title>
+        <link>/</link>
+        <description></description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Mon, 07 Sep 2020 11:32:57 +0000</lastBuildDate>
+        <item>
+            <title>运营小程序之心路历程</title>
+            <pubDate>Mon, 07 Sep 2020 11:32:57 +0000</pubDate>
+            <link>/yun-ying-xiao-cheng-xu-zhi-xin-lu-li-cheng/</link>
+            <guid>/yun-ying-xiao-cheng-xu-zhi-xin-lu-li-cheng/</guid>
+            <description>&lt;h1 id=&quot;yuan-qi&quot;&gt;缘起&lt;&#x2F;h1&gt;
+&lt;p&gt;在此之前，我并没有尝试过微信小程序的开发，虽然之前我对微信小程序有所谅解，但是我还是觉得它的局限性比较多，不能拥抱广泛的前端生态，所以一直没有此过多关心。&lt;&#x2F;p&gt;
+&lt;p&gt;直至去年，三国杀推出了一个新武将张昌蒲，我对她繁琐的计算感到困惑，游戏过程中也是经常手忙脚乱，频频出错。&lt;&#x2F;p&gt;
+&lt;p&gt;然而对于这种纯计算的数学问题，我首先想到的就是利用编程来对它进行暴力穷举，虽然这个逻辑比较复杂，但是还是可以成功写出来的，然后我就在浏览器里面跑了一下，结果还是可以认可的。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>音乐的走向 —— 从古典到现代</title>
+            <pubDate>Sun, 07 Jun 2020 14:06:57 +0000</pubDate>
+            <link>/yin-le-de-zou-xiang-cong-gu-dian-dao-xian-dai/</link>
+            <guid>/yin-le-de-zou-xiang-cong-gu-dian-dao-xian-dai/</guid>
+            <description>&lt;p&gt;在人类历史的长河中，音乐是人类文明的一颗璀璨的明珠，古今中外，各个伟大的艺术家，在音乐这个艺术的山峰操作出了各种各样美丽的宝石，而随着时间的推移，这些产出的宝石也随之发生了一些变化。而音乐也是历史的记录者和载体，通过对过去乃至现在的音乐发展的研究，也可以清晰地推出未来音乐的走向。&lt;&#x2F;p&gt;
+&lt;p&gt;在音乐的发展初期，音乐的格调都是很简单的，甚至残存着原始社会流传下来的粗犷的风格。我国最早的一部诗集《诗经》，其中就包含了一些民间的小调或是庙堂之上的颂歌，我们根据其现有的流传至今的文字记录，也可以看出那个时候的音乐格调简单，节奏也不复杂。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Matable 文档</title>
+            <pubDate>Sat, 25 Apr 2020 19:42:12 +0000</pubDate>
+            <link>/matable/</link>
+            <guid>/matable/</guid>
+            <description>&lt;h1 id=&quot;matable&quot;&gt;Matable&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;code&gt;Matable&lt;&#x2F;code&gt;是一个高效便利的 &lt;code&gt;XLSX文件转网页&lt;&#x2F;code&gt; 的开源工具。&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;Matable&lt;&#x2F;code&gt;支持自定义配置，支持各种检索模式，使用简单方便。&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;Matable&lt;&#x2F;code&gt;是一个开源的项目，其使用了如下的开源项目&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;vuejs.org&#x2F;&quot;&gt;vue&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;axios&#x2F;axios&quot;&gt;axios&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;muse-ui.org&#x2F;&quot;&gt;muse-ui&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;pic.imgdb.cn&#x2F;item&#x2F;610e0dfc5132923bf8e69301.jpg&quot; alt=&quot;demo&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>解决 Github 无法加载的问题</title>
+            <pubDate>Mon, 20 Apr 2020 10:03:34 +0000</pubDate>
+            <link>/jie-jue-githubwu-fa-jia-zai-de-wen-ti/</link>
+            <guid>/jie-jue-githubwu-fa-jia-zai-de-wen-ti/</guid>
+            <description>&lt;h1 id=&quot;bei-jing&quot;&gt;背景&lt;&#x2F;h1&gt;
+&lt;p&gt;很明显，Github 上面的东西太多，以至于几乎都打不开。&lt;&#x2F;p&gt;
+&lt;p&gt;对此我们只需要修改本机的 hosts 文件就可以解决这个问题，能不科学上网就不科学上网了。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>微信公众号简明教程</title>
+            <pubDate>Tue, 31 Mar 2020 14:10:29 +0000</pubDate>
+            <link>/wei-xin-gong-zhong-hao-jiao-cheng/</link>
+            <guid>/wei-xin-gong-zhong-hao-jiao-cheng/</guid>
+            <description>&lt;h1 id=&quot;bei-jing&quot;&gt;背景&lt;&#x2F;h1&gt;
+&lt;p&gt;班级公众号其实在很早之前就创建了，那个时候还是因为在导生的建议下，才有了这个公众号，如今已经过去一年多了，如果不是最近辅导员又再次关注起班级公众号来，我恐怕都要忘记这件事了。&lt;&#x2F;p&gt;
+&lt;!--
+匆忙中，我发现很久就没有关注过的那个公众号已经是灰尘满布，可怜的班长因为没有良好的公众号，可能也要挨骂了，但是无论如何，今后的这个公众号，在辅导员的要求下，也必须得有文章可看。
+ --&gt;
+</description>
+        </item>
+        <item>
+            <title>inject-provide 文档</title>
+            <pubDate>Tue, 31 Mar 2020 13:11:26 +0000</pubDate>
+            <link>/inject-providewen-dang/</link>
+            <guid>/inject-providewen-dang/</guid>
+            <description>&lt;h1 id=&quot;inject-provide&quot;&gt;Inject-Provide&lt;&#x2F;h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gitee.com&#x2F;shawroger&#x2F;inject-provide&quot;&gt;项目地址&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;当前版本：&lt;code&gt;V0.3.5&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;code&gt;inject-provide&lt;&#x2F;code&gt; 是一个极简洁的 &lt;strong&gt;nodejs&lt;&#x2F;strong&gt; 注入框架，运行过程中需要装饰器的支持，建议使用 &lt;strong&gt;TypeScript&lt;&#x2F;strong&gt; 作为运行环境。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>推荐一些软件</title>
+            <pubDate>Sun, 29 Mar 2020 17:36:33 +0000</pubDate>
+            <link>/tui-jian-yi-xie-ruan-jian/</link>
+            <guid>/tui-jian-yi-xie-ruan-jian/</guid>
+            <description>&lt;h1 id=&quot;bei-jing&quot;&gt;背景&lt;&#x2F;h1&gt;
+&lt;p&gt;在 2020 年 3 月 29 日，我难以忍受电脑的卡顿，决心优化电脑，卸载一些无用庞大的软件，更新一波 APP，然后重塑一个新的环境。&lt;&#x2F;p&gt;
+&lt;p&gt;我的行动开始于斩除一个名为 alibabaprotect 的服务，在此过程中我发现一些好的软和方法，特在此记录。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>vue3 新特性</title>
+            <pubDate>Sun, 01 Mar 2020 18:21:31 +0000</pubDate>
+            <link>/vue3-xin-te-xing/</link>
+            <guid>/vue3-xin-te-xing/</guid>
+            <description>&lt;h1 id=&quot;po-jie-vue3-xin-te-xing&quot;&gt;破解 vue3 新特性&lt;&#x2F;h1&gt;
+&lt;p&gt;根据 vue 作者尤雨溪去年发布的 vue 3.0 开发路线，vue 3.0 很可能在 2019 年下半年与大家见面。&lt;&#x2F;p&gt;
+&lt;p&gt;与此同时，今年下半年初，Vue 团队先后对外发布了 &lt;code&gt;vue-function-api&lt;&#x2F;code&gt; 和 &lt;code&gt;vue-compisition-api&lt;&#x2F;code&gt; 的 RFC，供开发者提前体验 vue 3.0 的新特性，并且希望通过这些预览版的 API，来征求广大开发者的意见与反馈，从而为 vue 3.0 的后续开发和落地打下坚实与稳定的基础。&lt;&#x2F;p&gt;
+&lt;p&gt;本次公开课围绕最新发布的 &lt;code&gt;vue-compisition-api&lt;&#x2F;code&gt;，来讲解大家最关心的、同时也是 vue 3.0 最重要的一些新特性，例如 &lt;code&gt;setup()&lt;&#x2F;code&gt; 函数、&lt;code&gt;reactive()&lt;&#x2F;code&gt;、&lt;code&gt;ref()&lt;&#x2F;code&gt; 等这些 Vue Hooks。&lt;&#x2F;p&gt;
+&lt;p&gt;通过学习本次公开课，你可以先人一步掌握 vue 3.0 中的新特性，为将来 vue 3.0 的发布提前做好相应知识的储备，也为提升自己在前端行业中的竞争力添砖加瓦！&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Math Complex 文档</title>
+            <pubDate>Sun, 16 Feb 2020 17:37:54 +0000</pubDate>
+            <link>/mathcomplexwen-dang/</link>
+            <guid>/mathcomplexwen-dang/</guid>
+            <description>&lt;h1 id=&quot;jian-jie&quot;&gt;简介&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gitee.com&#x2F;shawroger&#x2F;math-complex&quot;&gt;项目仓库&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;shawroger.gitee.io&#x2F;math-complex&quot;&gt;项目文档&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Math Complex 是一个采用 TypeScript 编写的 JavaScript 扩展数学库，它扩展了 Math 数学类的一些方法，让 JavaScript 支持复数计算。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ji-chu-gong-neng&quot;&gt;基础功能&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;扩展了复数类&lt;&#x2F;li&gt;
+&lt;li&gt;实现了复数类的四则、乘方开方运算&lt;&#x2F;li&gt;
+&lt;li&gt;扩充了辐角、指数转换计算&lt;&#x2F;li&gt;
+&lt;li&gt;通过 &lt;strong&gt;Reflect&lt;&#x2F;strong&gt; 静态类实现函数式&lt;&#x2F;li&gt;
+&lt;li&gt;函数式对原生 &lt;strong&gt;number&lt;&#x2F;strong&gt; 类型兼容&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+        </item>
+        <item>
+            <title>写一个 vue 的 hooks</title>
+            <pubDate>Mon, 20 Jan 2020 00:54:57 +0000</pubDate>
+            <link>/xie-yi-ge-vuede-hooks/</link>
+            <guid>/xie-yi-ge-vuede-hooks/</guid>
+            <description>&lt;h1 id=&quot;qian-yan&quot;&gt;前言&lt;&#x2F;h1&gt;
+&lt;p&gt;在 &lt;code&gt;vue&lt;&#x2F;code&gt; 采用了 &lt;code&gt;composition-api&lt;&#x2F;code&gt; 之后，利用函数式特性，我们可以很简单地完成几个 hooks（就和 react hooks 相似），帮助我们实现以往方式难以完成的功能。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>新 · 宁中公案</title>
+            <pubDate>Sun, 15 Sep 2019 09:50:38 +0000</pubDate>
+            <link>/xin-zhu-zhong-gong-an/</link>
+            <guid>/xin-zhu-zhong-gong-an/</guid>
+            <description>&lt;h1 id=&quot;qi-yi&quot;&gt;其一&lt;&#x2F;h1&gt;
+&lt;p&gt;在今年高考临近之时，要求班上所有人都给她写信。&lt;&#x2F;p&gt;
+&lt;p&gt;大部分人苦于学习时间紧迫，疲于应付，随便写写草率敷衍。&lt;&#x2F;p&gt;
+&lt;p&gt;惟有潘政科，敢说真话，在信中真情实感地写到：&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;你就像一个装在盒子里的西瓜，看起来光鲜亮丽，其实里面已经烂透了&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;于是被班主任教训了两个小时。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>泽火革卦解析</title>
+            <pubDate>Wed, 17 Apr 2019 20:34:38 +0000</pubDate>
+            <link>/ze-huo-ge-gua-jie-xi/</link>
+            <guid>/ze-huo-ge-gua-jie-xi/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;原题： 除旧布新 从易经“泽火革”卦看发展变革之道&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h1 id=&quot;yin-yan&quot;&gt;引言&lt;&#x2F;h1&gt;
+&lt;p&gt;“泽火革”是易经中的第四十九个卦象，其上卦为泽兑，下卦为火离，根据自然现象，我们也能注意到，火与泽会相互影响，使得当前的现象不断发生变化，难以稳定在一个稳定的状态。&lt;&#x2F;p&gt;
+&lt;p&gt;由此我们就可以引申出其“变革”、“发展”、“变化”的含义。&lt;&#x2F;p&gt;
+&lt;p&gt;变化其实本就是易经的根本智慧，“革”本身就是一个不断发展的卦象，每个卦之间都是在相互影响，彼此相应，而正是其自我的激励才让整个自然环境生生不息勃然发展。&lt;&#x2F;p&gt;
+&lt;p&gt;对于“革”卦，如果我们可以认真学习其中的无上智慧，博达至理，我们就能在困境中寻找出变革之法。
+古语云：“穷则变，变则通，通则久”，在灰暗的环境中披荆斩棘是困难的，但是变革也是必须的，痛苦也是需要忍耐的。&lt;&#x2F;p&gt;
+&lt;p&gt;对于当下社会环境，在大力推荐改革的氛围下，理解活用革卦的理念就显得更加重要，这也是本文的社会意义所在。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>点集杂谈</title>
+            <pubDate>Tue, 19 Feb 2019 14:17:33 +0000</pubDate>
+            <link>/dian-ji-za-tan/</link>
+            <guid>/dian-ji-za-tan/</guid>
+            <description>&lt;h1 id=&quot;ding-yi&quot;&gt;定义&lt;&#x2F;h1&gt;
+&lt;ol&gt;
+&lt;li&gt;在解析空间里点的集合称为&lt;code&gt;点集 (Piontset)&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;点集 $P$&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;点集 $A$：$P_A$&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;点集的元素是解析点，记为 $D$&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;显然 $D \in P$&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>地区昼长计算公式</title>
+            <pubDate>Mon, 18 Feb 2019 14:02:12 +0000</pubDate>
+            <link>/di-qu-zhou-chang-ji-suan-gong-shi/</link>
+            <guid>/di-qu-zhou-chang-ji-suan-gong-shi/</guid>
+            <description>&lt;h1 id=&quot;ji-ben-jia-she&quot;&gt;基本假设&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;地球是标准的球形。&lt;&#x2F;li&gt;
+&lt;li&gt;太阳光是几何上的平行光。&lt;&#x2F;li&gt;
+&lt;li&gt;晨昏线是标准意义上的球环。&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;ji-suan-si-lu&quot;&gt;计算思路&lt;&#x2F;h1&gt;
+&lt;p&gt;将太阳光的垂直面切割地球球体，地球将被晨昏线分为两部分。&lt;&#x2F;p&gt;
+&lt;p&gt;通过计算靠近阳光部分与某地维度圆面的相交弦的弧度，推断昼长。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>你叫什么名字</title>
+            <pubDate>Mon, 18 Feb 2019 06:03:11 +0000</pubDate>
+            <link>/ni-jiao-shi-yao-ming-zi/</link>
+            <guid>/ni-jiao-shi-yao-ming-zi/</guid>
+            <description>&lt;p&gt;每当有人跑过， 飞舞的风使便把花香弄得到处都是。&lt;&#x2F;p&gt;
+&lt;p&gt;那几株长满花儿的小树，一直就生长在教室旁边，一直长到走廊外的尽头。&lt;&#x2F;p&gt;
+&lt;p&gt;下课的时候， 我喜欢靠在树旁，让风把花儿吹落，肩弄到我的头发上， 我便带着满身花香回来。&lt;&#x2F;p&gt;
+&lt;p&gt;春天的上午，风又轻又软，吹过走廊，满是自然的芬芳。&lt;&#x2F;p&gt;
+&lt;p&gt;我在树下流连，直到风吹响了上午放学的铃声。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>兼巽志正体实录</title>
+            <pubDate>Sat, 16 Feb 2019 09:04:56 +0000</pubDate>
+            <link>/jian-xun-zhi-zheng-ti-shi-lu/</link>
+            <guid>/jian-xun-zhi-zheng-ti-shi-lu/</guid>
+            <description>&lt;h1 id=&quot;xu&quot;&gt;序&lt;&#x2F;h1&gt;
+&lt;p&gt;世之喪道者也久矣，由是人心相危者也苦矣。&lt;&#x2F;p&gt;
+&lt;p&gt;然今世觀盡，若問載道者，謂誰以當？&lt;&#x2F;p&gt;
+&lt;p&gt;惟九日宇龍世俊可稱之，雖今見或無名乏功，然日後大材，孰可輕之邪？&lt;&#x2F;p&gt;
+&lt;p&gt;蛟龍之升，起於微泉&lt;&#x2F;p&gt;
+&lt;p&gt;朝日之明，出於星夜&lt;&#x2F;p&gt;
+&lt;p&gt;覆世之才，亦見於危樓枯燈之下。&lt;&#x2F;p&gt;
+&lt;p&gt;特作此志以紀之。&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;二〇一七年 十月十九日&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+</description>
+        </item>
+        <item>
+            <title>兼  巽  志</title>
+            <pubDate>Sat, 16 Feb 2019 09:04:56 +0000</pubDate>
+            <link>/jian-xun-zhi/</link>
+            <guid>/jian-xun-zhi/</guid>
+            <description>&lt;h1 id=&quot;xu&quot;&gt;序&lt;&#x2F;h1&gt;
+&lt;p&gt;世之丧道者也久矣，由是人心相危者也苦矣。&lt;&#x2F;p&gt;
+&lt;p&gt;然今世观尽，若问载道者，谓谁以当？&lt;&#x2F;p&gt;
+&lt;p&gt;惟九日宇龙世俊可称之，虽今见或无名乏功，然日后大材，孰可轻之邪？&lt;&#x2F;p&gt;
+&lt;p&gt;蛟龙之升，起于微泉&lt;&#x2F;p&gt;
+&lt;p&gt;朝日之明，出于星夜&lt;&#x2F;p&gt;
+&lt;p&gt;覆世之才，亦见于危楼枯灯之下。&lt;&#x2F;p&gt;
+&lt;p&gt;特作此志以纪之。&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;二〇一七年 十月十九日&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+</description>
+        </item>
+        <item>
+            <title>神们自己</title>
+            <pubDate>Sat, 16 Feb 2019 08:15:23 +0000</pubDate>
+            <link>/shen-men-zi-ji/</link>
+            <guid>/shen-men-zi-ji/</guid>
+            <description>&lt;p&gt;不禁又拿起了挂在胸前的照片。&lt;&#x2F;p&gt;
+&lt;p&gt;照片上的人，英俊潇洒，玉树临风，高挺的鼻梁上，架看精致的眼镜， 可惜遮住了一半的俊美五官。&lt;&#x2F;p&gt;
+&lt;p&gt;我感慨万分，赶忙把校牌又放了回去。&lt;&#x2F;p&gt;
+&lt;p&gt;仿佛听见有人风传，说有一个高二学弟好帅，这事竟然传到了我的耳里。&lt;&#x2F;p&gt;
+&lt;p&gt;“又在瞎说，唉，尽传我的谣言…”&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>主席台</title>
+            <pubDate>Sat, 16 Feb 2019 07:41:38 +0000</pubDate>
+            <link>/zhu-xi-tai/</link>
+            <guid>/zhu-xi-tai/</guid>
+            <description>&lt;p&gt;广播室取缔之后， 学校失去了唯一的对接底层的途径。&lt;&#x2F;p&gt;
+&lt;p&gt;所以，要定期举行集会，以维持思想的纯正 …&lt;&#x2F;p&gt;
+&lt;p&gt;话筒连着发霉的电线，电线缠了一圈又一圈，像蛇一样匍匐在地上，扭曲前行，一口咬在臃肿的大喇叭的屁股上。&lt;&#x2F;p&gt;
+&lt;p&gt;主席站在主席台上， 手得话筒，脸色苍白，另一只手不住颤抖。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>宁中公案</title>
+            <pubDate>Thu, 14 Feb 2019 15:30:34 +0000</pubDate>
+            <link>/zhu-zhong-gong-an/</link>
+            <guid>/zhu-zhong-gong-an/</guid>
+            <description>&lt;h1 id=&quot;xu&quot;&gt;序&lt;&#x2F;h1&gt;
+&lt;p&gt;民国一〇六年，吾登于南山之上，四野尽收眼内，草木动而不息。&lt;&#x2F;p&gt;
+&lt;p&gt;草木无常，人亦如也。时人之谈笑雅言，若不录之，则必失之。&lt;&#x2F;p&gt;
+&lt;p&gt;今于南山之巅，名士云集之地，特辑以公案，形以盛况。&lt;&#x2F;p&gt;
+&lt;p&gt;鄙人不才，闲记其文，特为序也。&lt;&#x2F;p&gt;
+&lt;p&gt;至于此文，先以为传，后以为事，传以录人，事以纳情。&lt;&#x2F;p&gt;
+&lt;p&gt;先以传传名士之风，后以事事雅行之状。&lt;&#x2F;p&gt;
+&lt;p&gt;所以者何？当以正世风、抒己志耳。&lt;&#x2F;p&gt;
+&lt;p&gt;—— 特谢舍予之录本，鄙人文笔不佳，望勿见笑。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>这算是越来越好了吧</title>
+            <pubDate>Thu, 14 Feb 2019 12:16:03 +0000</pubDate>
+            <link>/zhe-suan-shi-yue-lai-yue-hao-liao-ba/</link>
+            <guid>/zhe-suan-shi-yue-lai-yue-hao-liao-ba/</guid>
+            <description>&lt;p&gt;我看这个学校走歪路很久了，就算我们都知道一七届是少有的奇迹，也不可能指望这个奇迹在接下来频繁上演，但是可以知道的是，一七届不仅是难得少有的一届，却也是补课极少的一届。&lt;&#x2F;p&gt;
+&lt;p&gt;这一届补课之少 少到使这成为绝无仅有的一届，不信我们再看看，一八届理科实验班疯狂的补课竞赛，自从高一下学期，喊出了竞赛优先的口号，仿佛三年之内就能追上衡水，高产放卫星，所有时间都被榨干去学习，甚至是真实的上课时间。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>不曾发生的事</title>
+            <pubDate>Tue, 12 Feb 2019 10:24:34 +0000</pubDate>
+            <link>/bu-ceng-fa-sheng-de-shi/</link>
+            <guid>/bu-ceng-fa-sheng-de-shi/</guid>
+            <description>&lt;h1 id=&quot;ti-ji&quot;&gt;题记&lt;&#x2F;h1&gt;
+&lt;p&gt;历史巨大的车轮轧过的路面上&lt;&#x2F;p&gt;
+&lt;p&gt;凹下的印迹里总有平凡人的血与泪&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>明世隐大招被动解析</title>
+            <pubDate>Tue, 12 Feb 2019 10:16:02 +0000</pubDate>
+            <link>/ming-shi-yin-da-zhao-bei-dong-jie-xi/</link>
+            <guid>/ming-shi-yin-da-zhao-bei-dong-jie-xi/</guid>
+            <description>&lt;h1 id=&quot;fu-hao-shuo-ming&quot;&gt;符号说明&lt;&#x2F;h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文中我们设&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$C_0$：总血量&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;$C$：当前血量&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;$A_n$：第 n 秒时刻大招被动回复的血量&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;$S_n$：前 n 秒内由大招被动回复的血量&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+        </item>
+        <item>
+            <title>既离书</title>
+            <pubDate>Wed, 09 Jan 2019 12:14:23 +0000</pubDate>
+            <link>/ji-chi-shu/</link>
+            <guid>/ji-chi-shu/</guid>
+            <description>&lt;p&gt;忆昔相见时，飞雪时节，覆霜冰，沐寒日，尔来期年有余矣。犹记丙申岁薯，满街火树银花，阖家灰有除。&lt;&#x2F;p&gt;
+&lt;p&gt;然愚独苦坐焦思，在叹前途之未卜,来年未可期。&lt;&#x2F;p&gt;
+&lt;p&gt;今日抚之,惟感期岁之广庸碌，三秋之蹉跎，此生之无为也。&lt;&#x2F;p&gt;
+&lt;p&gt;悲矣，怆然而欲泣，衰矣，黯然而独伤。&lt;&#x2F;p&gt;
+&lt;p&gt;吾不感此生之事，又能何哉？是以有负平生。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>对考古未来工作发展的展望</title>
+            <pubDate>Wed, 09 Jan 2019 12:08:38 +0000</pubDate>
+            <link>/dui-kao-gu-wei-lai-gong-zuo-fa-zhan-de-zhan-wang/</link>
+            <guid>/dui-kao-gu-wei-lai-gong-zuo-fa-zhan-de-zhan-wang/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;原题：走进考古--对考古未来工作发展的展望&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;古代巴蜀古国就是在今天的四川地区，自古就有辉煌的历史。从五王出世，再到蚕丛鱼凫的开创的盛世，再到开明王朝的发展，直到秦朝司马错平蜀之前，蜀地文化都是在茁壮地自我成长的。&lt;&#x2F;p&gt;
+&lt;p&gt;我国四川古代的古蜀文化创造了非常灿烂辉煌的历史，是我国西南地区的一颗璀璨的明珠，对我国古代来自今天的文化气息都产生了不可估量的影响，充分体现了我国璀璨的中华文化是在不同文明的碰撞和发展求同存异共同影响中产生的。&lt;&#x2F;p&gt;
+&lt;p&gt;但是对于古蜀文明之研究，大抵从三星堆、全沙遗址出世之后，前前后后已经有许多专业考古工作人士考与。然而古蜀文明一定不止此一处。&lt;&#x2F;p&gt;
+&lt;p&gt;那未来的文化文明考古工作文化遗址的发展将会采取什么方法呢？
+纯粹的手工人力考察当然是不可少的，不过或许我们可以考虑一些其他更好的方法。我们需要注意的是对跑古文化遗址的机械化智能化的方法。&lt;&#x2F;p&gt;
+&lt;p&gt;由于考古是对地下历史文化的考查传说的方式自然并不可少，新式的技术也在该参与其中，众所国知，科学技术对其他工作的促进作用是不可小觑的。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>世界的认知与意志</title>
+            <pubDate>Tue, 08 Jan 2019 18:14:59 +0000</pubDate>
+            <link>/shi-jie-de-ren-zhi-yu-yi-zhi/</link>
+            <guid>/shi-jie-de-ren-zhi-yu-yi-zhi/</guid>
+            <description>&lt;h1 id=&quot;qian-yan&quot;&gt;前言&lt;&#x2F;h1&gt;
+&lt;p&gt;对于这个世界的存在，&lt;&#x2F;p&gt;
+&lt;p&gt;我们总是习以为常，&lt;&#x2F;p&gt;
+&lt;p&gt;可事实上并非如北简单。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>明 祓 经</title>
+            <pubDate>Tue, 08 Jan 2019 07:31:25 +0000</pubDate>
+            <link>/ming-fu-jing/</link>
+            <guid>/ming-fu-jing/</guid>
+            <description>&lt;h1 id=&quot;ming-wu-pin-di-yi&quot;&gt;明物品 第一&lt;&#x2F;h1&gt;
+&lt;p&gt;夫天地者，由物而成，而不与人焉。&lt;&#x2F;p&gt;
+&lt;p&gt;物物相动，物物相灭，物物相易，物物相成，物物相和，物物相杀。夫非独物物也，物亦可自易也。由是万物生而化之，化而易之。&lt;&#x2F;p&gt;
+&lt;p&gt;夫人者，至于形也，与物一也。以是刀俎之下人木皆碎，弱水之中人沙俱沉。若彼无食，人畜同饥；从高而坠，人石共裂。故彼无识也，人物一也。&lt;&#x2F;p&gt;
+&lt;p&gt;所以者何？天地万物常以理存。此理在物，而非在人焉。况举世无常物，物常则无动，无动则天地不化，则物之存也无因也。&lt;&#x2F;p&gt;
+&lt;p&gt;以夫无常物，故无常存。是以泰山万年可倾，东海万世乃平。日月之行，终有已矣。
+故曰：世由物成，理于物存。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>十六行箴言</title>
+            <pubDate>Thu, 25 Oct 2018 07:31:25 +0000</pubDate>
+            <link>/shi-liu-xing-zhen-yan/</link>
+            <guid>/shi-liu-xing-zhen-yan/</guid>
+            <description>&lt;p&gt;自由从来都是建立在自我体验上的。没有体验，自由就像夜里的镜子，纵然里面藏有大千世界，却什么也看不见。&lt;&#x2F;p&gt;
+&lt;p&gt;为什么会悲伤呢？事实上一切的现象都是没有喜怒哀乐的，其实还是因为意志没有得到满足吧。&lt;&#x2F;p&gt;
+&lt;p&gt;别人说过的话，做过的事，即使我们再重复，也不可能有一样的效果。道理很简单，我们不是别人，此时不是彼时，一切已经发生的事情，再也不可能重现了。&lt;&#x2F;p&gt;
+&lt;p&gt;事情有了安排，就要尽早完成，因为一件事情准备开始的时候是最利于完成的。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>月光下，南山上</title>
+            <pubDate>Sat, 13 Oct 2018 18:10:47 +0000</pubDate>
+            <link>/yue-guang-xia-nan-shan-shang/</link>
+            <guid>/yue-guang-xia-nan-shan-shang/</guid>
+            <description>&lt;h1 id=&quot;xu&quot;&gt;序&lt;&#x2F;h1&gt;
+&lt;p&gt;从前晚上的南门山岗，灯会一直亮到晚上 11 点多。&lt;&#x2F;p&gt;
+&lt;p&gt;月光下，草地上散布着一排排教学楼。其中一块上面的三楼，那里有三个班。&lt;&#x2F;p&gt;
+&lt;p&gt;每天晚上，那里都会从死寂变得热闹，再从热闹恢复死寂。而这个变化只取决于室内酒精的浓度。&lt;&#x2F;p&gt;
+&lt;p&gt;如果我们把室内酒精浓度的变化，画一条曲线，你会发现浓度总是忽大忽小，这是因为酒精产生源会进入室内，有时进来又出去，有时一直不进来，有时一直不出去。&lt;&#x2F;p&gt;
+&lt;p&gt;就这样反反复复。不知不觉，一个晚上就结束了。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>拱墅十三天</title>
+            <pubDate>Wed, 10 Oct 2018 09:10:31 +0000</pubDate>
+            <link>/gong-shu-shi-san-tian/</link>
+            <guid>/gong-shu-shi-san-tian/</guid>
+            <description>&lt;p&gt;二〇一六年的数竞预赛在一个上午之后就结束了。&lt;&#x2F;p&gt;
+&lt;p&gt;“这卷子肯定是稳过。”&lt;&#x2F;p&gt;
+&lt;p&gt;数学课代表如是说，事后果然说得没错，整个高一也竟然入围了三个人。&lt;&#x2F;p&gt;
+&lt;p&gt;很顺利，四个人计划出发了。&lt;&#x2F;p&gt;
+&lt;p&gt;七月中旬的早上，天气一直比较热，四人先后到达了酒店。毕竟，第二天就要在酒店会议室参加培训了。&lt;&#x2F;p&gt;
+&lt;p&gt;才准备休息一下，四人中，一位长得白净的突然说:“下午学姐就要来了。”&lt;&#x2F;p&gt;
+&lt;p&gt;原来之前他拨通了电话，知道了她也要来培训，并且同着高一届的一些同学。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>消极的自由</title>
+            <pubDate>Sun, 30 Sep 2018 11:17:34 +0000</pubDate>
+            <link>/xiao-ji-de-zi-you/</link>
+            <guid>/xiao-ji-de-zi-you/</guid>
+            <description>&lt;h1 id=&quot;yi&quot;&gt;壹&lt;&#x2F;h1&gt;
+&lt;p&gt;我曾多次怀疑世界的真实，却不敢对自己存在质疑。或许与古贤笛卡尔一般：我若是曾怀疑过自己，我早已失去了怀疑的能力。每一个存在都无法怀疑本身,于是有能力者则去观察外部。无疑每一个观察者 都发现了一个世界这是否意味着有多个世界呢？&lt;&#x2F;p&gt;
+&lt;p&gt;能够明确的是，每一个观察者得到的世界都不尽相同，但却彼此相似，不得不怀疑,一个客观的世界是否存在。但无疑的是，这个世界是多个观察到的世界的交集，永远有一处只有观察者本身观察到的地方。&lt;&#x2F;p&gt;
+&lt;p&gt;在一个共有的世界，观察者们彼必观察相互体认。让世界分外清晰了。多重的观察，定有多方面的约束，约束让观察的现象维持与改变，世界因此相对稳定发展。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>浅论恋爱初期心理</title>
+            <pubDate>Sun, 26 Aug 2018 08:47:34 +0000</pubDate>
+            <link>/qian-lun-lian-ai-chu-qi-xin-li/</link>
+            <guid>/qian-lun-lian-ai-chu-qi-xin-li/</guid>
+            <description>&lt;p&gt;对于人的存在，我们做出如下假设，人在没有约束的情况下会做出对自己最有利的决定，基于这样的基础，我们能得到什么?&lt;&#x2F;p&gt;
+&lt;p&gt;例如，在人最基础的需求（性冲动，自我价值的肯定等）与既有生存环境的规则成考现实产生矛盾对立时，人们会考量自己在满足需求和付出代价之间的平衡点。&lt;&#x2F;p&gt;
+&lt;p&gt;理想情况下的恋爱早期，二者间会产生一种互相吸引，彼此之间会存在一种暖味互相的暗示，这种暗示为之后的进步发展提供了可能性。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>周五的广播室</title>
+            <pubDate>Sun, 26 Aug 2018 08:23:04 +0000</pubDate>
+            <link>/zhou-wu-de-yan-bo-shi/</link>
+            <guid>/zhou-wu-de-yan-bo-shi/</guid>
+            <description>&lt;p&gt;又是一个周五的上午。&lt;&#x2F;p&gt;
+&lt;p&gt;或许，可以说是周五的凌晨。天还没有亮，昏暗的窗外，乱风夹着碎雨飘散。窗内，拥挤的桌椅上堆叠着古怪的书。一群神情疲惫的人倚在桌边，头也不抬一下。&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;距听力开始还有三分钟！&lt;&#x2F;strong&gt;? 布满灰尘的广播喇叭里吐出一丝声音，随后被淹没在教室的死气里。&lt;&#x2F;p&gt;
+&lt;p&gt;有的人头抬起来了，看翻了一下本来枕在头下的书，又砸了下去。&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;这样的生活还有什么意义！&lt;&#x2F;strong&gt;? 他生坐在我后面，这样的牢骚话，他已经说了几十回了，我从未在意过。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>小镇文集</title>
+            <pubDate>Sun, 26 Aug 2018 08:05:57 +0000</pubDate>
+            <link>/xiao-zhen-wen-ji/</link>
+            <guid>/xiao-zhen-wen-ji/</guid>
+            <description>&lt;h1 id=&quot;xia-che&quot;&gt;下车&lt;&#x2F;h1&gt;
+&lt;p&gt;汽笛声不住地响着，小镇又要恢复往日的喧嚣。&lt;&#x2F;p&gt;
+&lt;p&gt;曾几何时，小镇前一批的村民逃了出去，小镇成了一座空城。可是空城注定不会长久，废墟之上，新任的镇长又要驱赶另一批移民入驻小镇了。&lt;&#x2F;p&gt;
+&lt;p&gt;下车伊始，新官便约法三章，一切法令受由民众议定，不过终要由镇长批核。&lt;br &#x2F;&gt;
+所以开始到时候，似乎还要摆一个民主的幌子的。&lt;&#x2F;p&gt;
+&lt;p&gt;九月的天气依旧问热，镇上的村民刚入驻还没有几天，但依照历任镇长定下的规矩，村民全部要去服兵役的。镇长向村民们宣说了诸多好处，兵役又一次开征了。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>清明信笺（二）</title>
+            <pubDate>Sun, 08 Apr 2018 12:14:23 +0000</pubDate>
+            <link>/qing-ming-xin-jian-er/</link>
+            <guid>/qing-ming-xin-jian-er/</guid>
+            <description>&lt;p&gt;很早就想和你写些什么。&lt;&#x2F;p&gt;
+&lt;p&gt;刚刚过去的清明小长假里，我好好地休息了一番，学习之余也有余闲思考一下我所面对的世界。&lt;&#x2F;p&gt;
+&lt;p&gt;我已经应父母之命，卸戴了聊天软件，决意搬离网络这个虚伪的世界。&lt;&#x2F;p&gt;
+&lt;p&gt;网络其实是一个很好的工具只是我们滥用了它。&lt;&#x2F;p&gt;
+&lt;p&gt;我想了一下我俩在现实生活中说过的所有话似乎还没有在网络上一次聊天的内容多。&lt;&#x2F;p&gt;
+&lt;p&gt;我俩还是在现实中交说说话吧。&lt;&#x2F;p&gt;
+&lt;p&gt;有些遗憾地想，我能在这于学校里的时间，也仅仅剩下六十天了。&lt;&#x2F;p&gt;
+&lt;p&gt;我们可以碰上一面的 时间又还有多少呢？&lt;&#x2F;p&gt;
+&lt;p&gt;不得不承认，有一种外在的力量推动着我们一直向前，远非我们个人的意志可以与之抗争。&lt;&#x2F;p&gt;
+&lt;p&gt;我们好好想一想，我们从小到大，经历的种种难道不都是不由我们掌控的吗？&lt;&#x2F;p&gt;
+&lt;p&gt;我们在同一个城市，同一个学校，或许很早以前就能注定。&lt;&#x2F;p&gt;
+&lt;p&gt;我在想，我在想:&lt;&#x2F;p&gt;
+&lt;p&gt;我们的未来世界又是如何呢？&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>清明信笺（一）</title>
+            <pubDate>Fri, 06 Apr 2018 12:14:23 +0000</pubDate>
+            <link>/qing-ming-xin-jian-yi/</link>
+            <guid>/qing-ming-xin-jian-yi/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;寒食一夜雨，日出见清明&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;清明小长假一转眼就飞逝一半了，下午我将又安坐在教室里书写时光。&lt;&#x2F;p&gt;
+&lt;p&gt;这样的日子不会再重复六十次了，我们仿佛一直手活在巨大的齿轮之下，每一步都烙上了时间的印记。&lt;&#x2F;p&gt;
+&lt;p&gt;匆匆地，我们每日起来拥胞新生的阳光，又在黯淡的月光下踏上归途。&lt;&#x2F;p&gt;
+&lt;p&gt;我们很少去问为何如此，既定的生活若不加改变，我们便不会拥有想要的未来。&lt;&#x2F;p&gt;
+&lt;p&gt;十二年寒窗，末年的疯狂接着个暑假的沉沦，四年的浑噩接着忙于立业、成家。&lt;&#x2F;p&gt;
+&lt;p&gt;然后疲于奔命养家糊口看看同时代的稍长者，无不在生活的怪圈里。&lt;&#x2F;p&gt;
+&lt;p&gt;悲观点讲，我俩也不会走出来。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>浙大之旅</title>
+            <pubDate>Mon, 25 May 2015 11:32:57 +0000</pubDate>
+            <link>/zhe-da-zhi-lu/</link>
+            <guid>/zhe-da-zhi-lu/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;原题：记夏令营的最后一站 —— 浙大之旅&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;借着六一儿童节的幌子，天不亮我便来到学校门前，翘首期盼汽车的到来。&lt;&#x2F;p&gt;
+&lt;p&gt;今天55名同学及几位老师，将乘坐两辆大客车前往浙江大学参观。&lt;&#x2F;p&gt;
+&lt;p&gt;同学兴奋不已，都在想象浙大的风光，我望着窗外，也想着浙大，心中十分激动。&lt;&#x2F;p&gt;
+&lt;p&gt;途中雾浓，远景朦胧，如披白沙；进了杭州城郊，雾渐散去，视野清晰了：&lt;&#x2F;p&gt;
+&lt;p&gt;路的两旁是耸立的高楼大厦，前方道路塞满了汽车，我们的汽车随着车流慢慢移动。&lt;&#x2F;p&gt;
+&lt;p&gt;车行没多久，一座造型优美而庞大的建筑物闯入了我的眼球，车通过了一道关卡便驶入了。&lt;&#x2F;p&gt;
+&lt;p&gt;这是哪里？我仔细地观察，发现四周树上都系上了两面旗帜，右边的旗帜红底，中央绘制了鹰，左边旗帜上书写着“118”这三个数字。&lt;&#x2F;p&gt;
+&lt;p&gt;我很费解，百般思索却不知其意。而一路欣赏着风景，碧树掩映下的自行车、匆匆的行人以及两旁高耸大厦都不知不觉地留在车后。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>另一条新闻</title>
+            <pubDate>Wed, 14 Jan 2015 08:47:34 +0000</pubDate>
+            <link>/ling-yi-tiao-xin-wen/</link>
+            <guid>/ling-yi-tiao-xin-wen/</guid>
+            <description>&lt;p&gt;云层之中，一架客机平稳地飞行。&lt;&#x2F;p&gt;
+&lt;p&gt;机舱内有很多乘客在飞机后部，有两位乘客正在交谈。&lt;&#x2F;p&gt;
+&lt;p&gt;甲：“我给你说，这块手表真值些钱呢！”&lt;&#x2F;p&gt;
+&lt;p&gt;乙：“算你识货，别看这块手，现在戴在我手上，之前还是别人的呢。”&lt;&#x2F;p&gt;
+&lt;p&gt;甲：“怎么，刚买的啊？”&lt;&#x2F;p&gt;
+&lt;p&gt;乙（小声地）：“哥，我给你讲实话，这不是我的。”&lt;&#x2F;p&gt;
+&lt;p&gt;甲：“你偷的？”&lt;&#x2F;p&gt;
+</description>
+        </item>
+    </channel>
+</rss>

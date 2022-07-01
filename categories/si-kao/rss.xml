@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>BLOG - 思考</title>
+        <link>/</link>
+        <description></description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="/categories/si-kao/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Tue, 08 Jan 2019 18:14:59 +0000</lastBuildDate>
+        <item>
+            <title>世界的认知与意志</title>
+            <pubDate>Tue, 08 Jan 2019 18:14:59 +0000</pubDate>
+            <link>/shi-jie-de-ren-zhi-yu-yi-zhi/</link>
+            <guid>/shi-jie-de-ren-zhi-yu-yi-zhi/</guid>
+            <description>&lt;h1 id=&quot;qian-yan&quot;&gt;前言&lt;&#x2F;h1&gt;
+&lt;p&gt;对于这个世界的存在，&lt;&#x2F;p&gt;
+&lt;p&gt;我们总是习以为常，&lt;&#x2F;p&gt;
+&lt;p&gt;可事实上并非如北简单。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>明 祓 经</title>
+            <pubDate>Tue, 08 Jan 2019 07:31:25 +0000</pubDate>
+            <link>/ming-fu-jing/</link>
+            <guid>/ming-fu-jing/</guid>
+            <description>&lt;h1 id=&quot;ming-wu-pin-di-yi&quot;&gt;明物品 第一&lt;&#x2F;h1&gt;
+&lt;p&gt;夫天地者，由物而成，而不与人焉。&lt;&#x2F;p&gt;
+&lt;p&gt;物物相动，物物相灭，物物相易，物物相成，物物相和，物物相杀。夫非独物物也，物亦可自易也。由是万物生而化之，化而易之。&lt;&#x2F;p&gt;
+&lt;p&gt;夫人者，至于形也，与物一也。以是刀俎之下人木皆碎，弱水之中人沙俱沉。若彼无食，人畜同饥；从高而坠，人石共裂。故彼无识也，人物一也。&lt;&#x2F;p&gt;
+&lt;p&gt;所以者何？天地万物常以理存。此理在物，而非在人焉。况举世无常物，物常则无动，无动则天地不化，则物之存也无因也。&lt;&#x2F;p&gt;
+&lt;p&gt;以夫无常物，故无常存。是以泰山万年可倾，东海万世乃平。日月之行，终有已矣。
+故曰：世由物成，理于物存。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>十六行箴言</title>
+            <pubDate>Thu, 25 Oct 2018 07:31:25 +0000</pubDate>
+            <link>/shi-liu-xing-zhen-yan/</link>
+            <guid>/shi-liu-xing-zhen-yan/</guid>
+            <description>&lt;p&gt;自由从来都是建立在自我体验上的。没有体验，自由就像夜里的镜子，纵然里面藏有大千世界，却什么也看不见。&lt;&#x2F;p&gt;
+&lt;p&gt;为什么会悲伤呢？事实上一切的现象都是没有喜怒哀乐的，其实还是因为意志没有得到满足吧。&lt;&#x2F;p&gt;
+&lt;p&gt;别人说过的话，做过的事，即使我们再重复，也不可能有一样的效果。道理很简单，我们不是别人，此时不是彼时，一切已经发生的事情，再也不可能重现了。&lt;&#x2F;p&gt;
+&lt;p&gt;事情有了安排，就要尽早完成，因为一件事情准备开始的时候是最利于完成的。&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>消极的自由</title>
+            <pubDate>Sun, 30 Sep 2018 11:17:34 +0000</pubDate>
+            <link>/xiao-ji-de-zi-you/</link>
+            <guid>/xiao-ji-de-zi-you/</guid>
+            <description>&lt;h1 id=&quot;yi&quot;&gt;壹&lt;&#x2F;h1&gt;
+&lt;p&gt;我曾多次怀疑世界的真实，却不敢对自己存在质疑。或许与古贤笛卡尔一般：我若是曾怀疑过自己，我早已失去了怀疑的能力。每一个存在都无法怀疑本身,于是有能力者则去观察外部。无疑每一个观察者 都发现了一个世界这是否意味着有多个世界呢？&lt;&#x2F;p&gt;
+&lt;p&gt;能够明确的是，每一个观察者得到的世界都不尽相同，但却彼此相似，不得不怀疑,一个客观的世界是否存在。但无疑的是，这个世界是多个观察到的世界的交集，永远有一处只有观察者本身观察到的地方。&lt;&#x2F;p&gt;
+&lt;p&gt;在一个共有的世界，观察者们彼必观察相互体认。让世界分外清晰了。多重的观察，定有多方面的约束，约束让观察的现象维持与改变，世界因此相对稳定发展。&lt;&#x2F;p&gt;
+</description>
+        </item>
+    </channel>
+</rss>
